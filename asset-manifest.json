@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MidnightLaunchGamesSite/static/css/main.5f361e03.chunk.css",
+    "main.js": "/MidnightLaunchGamesSite/static/js/main.10ffa501.chunk.js",
+    "main.js.map": "/MidnightLaunchGamesSite/static/js/main.10ffa501.chunk.js.map",
+    "runtime-main.js": "/MidnightLaunchGamesSite/static/js/runtime-main.7624f80d.js",
+    "runtime-main.js.map": "/MidnightLaunchGamesSite/static/js/runtime-main.7624f80d.js.map",
+    "static/js/2.631ba81c.chunk.js": "/MidnightLaunchGamesSite/static/js/2.631ba81c.chunk.js",
+    "static/js/2.631ba81c.chunk.js.map": "/MidnightLaunchGamesSite/static/js/2.631ba81c.chunk.js.map",
+    "index.html": "/MidnightLaunchGamesSite/index.html",
+    "precache-manifest.335d36c2c3ce2997b67e7d3c68d468af.js": "/MidnightLaunchGamesSite/precache-manifest.335d36c2c3ce2997b67e7d3c68d468af.js",
+    "service-worker.js": "/MidnightLaunchGamesSite/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/MidnightLaunchGamesSite/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.631ba81c.chunk.js.LICENSE.txt": "/MidnightLaunchGamesSite/static/js/2.631ba81c.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/MidnightLaunchGamesSite/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7624f80d.js",
+    "static/js/2.631ba81c.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.10ffa501.chunk.js"
+  ]
+}
