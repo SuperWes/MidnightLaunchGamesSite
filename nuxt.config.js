@@ -15,7 +15,12 @@ export default {
   ** See https://nuxtjs.org/api/configuration-router#base
   */
   router: {
-    base: '/'
+    base: '/',
+    extendRoutes(routes) {
+      for (const key in routes) {
+        routes[key].caseSensitive = false
+      }
+    }
   },
   /*
   ** Headers of the page
@@ -36,7 +41,7 @@ export default {
   ** Global CSS
   */
   css: [
-    
+
   ],
   /*
   ** Plugins to load before mounting the App
