@@ -1,5 +1,5 @@
 <template>
-  <img class="NuxtLogo" src="~assets/mlgLogo_dark.png"/>
+  <img class="NuxtLogo" src="~/assets/mlgLogo_dark.png"/>
 </template>
 
 <style>

@@ -8,7 +8,7 @@
               <div class>
                 <img
                   class="h-12 object-contain block mx-4 mt-2 md:mt-0"
-                  src="~assets/mlg-badge.png"
+                  src="~/assets/mlg-badge.png"
                 />
               </div>
               <div class="text-xl font-semibold text-gray-700">

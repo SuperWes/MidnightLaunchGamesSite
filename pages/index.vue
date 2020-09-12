@@ -27,10 +27,6 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.header-bg {
-  background-image: url("~assets/mlgLogo_dark.png");
-  height: 32rem;
-}
 
 .description {
   padding-inline: 2em;
