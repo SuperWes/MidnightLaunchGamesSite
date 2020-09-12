@@ -11,6 +11,13 @@ export default {
   */
   target: 'static',
   /*
+  ** This is important for some reason
+  ** See https://nuxtjs.org/api/configuration-router#base
+  */
+  router: {
+    base: '/MidnightLaunchGamesSite/'
+  },
+  /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
   */
