@@ -1,72 +1,38 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <header>
-      <nav class="bg-white shadow">
-        <div class="container mx-auto px-6 py-3">
-          <div class="md:flex md:items-center md:justify-between">
-            <div class="flex justify-between items-center">
-              <div class>
-                <img
-                  class="h-12 object-contain block mx-4 mt-2 md:mt-0"
-                  src="~/assets/mlg-badge.png"
-                />
-              </div>
-              <div class="text-xl font-semibold text-gray-700">
-                <a
-                  href="#"
-                  class="text-gray-800 text-xl font-bold hover:text-gray-700 md:text-2xl"
-                >Midnight Launch Games</a>
-              </div>
-
-              <!-- Mobile menu button -->
-              <div class="flex md:hidden">
-                <button
-                  type="button"
-                  class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
-                  aria-label="toggle menu"
-                >
-                  <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div class="hidden -mx-4 md:flex md:items-center">
-              <a
-                href="#"
-                class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
-              >About</a>
-              <a
-                href="#"
-                class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
-              >Games</a>
-              <a
-                href="#"
-                class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
-              >Contact</a>
-              <a
-                href="#"
-                class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
-              >Twitter</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <TheHeader />
+    <TheSideNav />
     <Nuxt class="flex-grow" />
-    <footer class="bg-white mt-3">
-      <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-        <div class="text-xs text-gray-600">© 2020 Midnight Launch Games</div>
-        <div class="text-xs text-gray-600">Site design and development by Wes Ehrlichman</div>
-      </div>
-    </footer>
+    <TheFooter />
   </div>
 </template>
+
+<script>
+import TheHeader from "~/components/TheHeader";
+import TheFooter from "~/components/TheFooter";
+import TheSideNav from "~/components/TheSideNav";
+export default {
+  components: {
+    TheHeader,
+    TheSideNav,
+    TheFooter,
+  },
+
+  computed: {
+    isSidebar() {
+      return this.$store.getters["nav/toggleSidebar"];
+    },
+  },
+
+  watch: {
+    $route: function () {
+      if (process.client && this.isSidebar && window.innerWidth < 768) {
+        this.$store.dispatch("nav/toggleSidebar");
+      }
+    },
+  },
+};
+</script>
 
 <style>
 html {
