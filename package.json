@@ -2,6 +2,7 @@
   "name": "midnight-launch-games-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "http://superwes.github.io/MidnightLaunchGamesSite",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -9,7 +10,8 @@
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
@@ -28,6 +30,7 @@
     "babel-jest": "^26.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0",
+    "gh-pages": "^3.1.0",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.3",
     "vue-jest": "^3.0.4"
