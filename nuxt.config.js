@@ -15,7 +15,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-router#base
   */
   router: {
-    base: '/MidnightLaunchGamesSite/'
+    base: '/'
   },
   /*
   ** Headers of the page

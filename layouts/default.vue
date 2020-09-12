@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <header>
       <nav class="bg-white shadow">
         <div class="container mx-auto px-6 py-3">
@@ -58,7 +58,13 @@
         </div>
       </nav>
     </header>
-    <Nuxt />
+    <Nuxt class="flex-grow" />
+    <footer class="bg-white mt-3">
+      <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="text-xs text-gray-600">© 2020 Midnight Launch Games</div>
+        <div class="text-xs text-gray-600">Site design and development by Wes Ehrlichman</div>
+      </div>
+    </footer>
   </div>
 </template>
 
