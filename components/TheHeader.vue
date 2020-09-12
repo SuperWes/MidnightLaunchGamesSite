@@ -32,7 +32,7 @@
               </button>
             </div>
           </div>
-          <AppLinks/>
+          <AppLinks class="hidden -mx-4"/>
         </div>
       </div>
     </nav>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import AppLinks from "~/components/appLinks";
+import AppLinks from "~/components/AppLinks";
 export default {
   components: {
     AppLinks,
