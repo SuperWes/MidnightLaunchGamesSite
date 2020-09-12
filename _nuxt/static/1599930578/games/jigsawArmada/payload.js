@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/games/jigsawArmada", {data:[{}],fetch:[],mutations:[]});
