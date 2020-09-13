@@ -1,15 +1,15 @@
 <template>
   <div class="content">
-    <h1 class="text-xl font-bold text-white text-center mt-4">Games</h1>
-    <div class="flex mb-2">
-      <div class="md:flex-1 p-4 w-1/2 card m-5">
+    <h1 class="pageTitle mt-4">Games</h1>
+    <div class="md:flex mb-2">
+      <div class="md:flex-1 md:w-1/2 card">
         <a href="/games/jigsawarmada">
-          <h1 class="text-xl font-bold mb-3">Jigsaw Armada</h1>
+          <h1 class="gameTitle mb-3">Jigsaw Armada</h1>
           <img src="~/assets/JigsawArmada-boxtop.png" />
         </a>
       </div>
-      <div class="md:flex-1 p-4 w-1/2 card m-5">
-        <h1 class="text-xl font-bold mb-3">Spectrum 12</h1>
+      <div class="md:flex-1 md:w-1/2 card">
+        <h1 class="gameTitle mb-3">Spectrum 12</h1>
         <img class="justify-center w-1/2 m-auto" src="~/assets/Spectrum12-boxtop.png" />
       </div>
     </div>
@@ -17,12 +17,28 @@
 </template>
 
 <style scoped>
-.content {
-  margin: auto;
-}
+@layer base {
+  h1.pageTitle {
+    @apply text-xl;
+    @apply font-bold;
+    @apply text-white;
+    @apply text-center;
+  }
 
-.card {
-  background-color: #78D5DD;
-  border-radius: 0.5rem;
+  h1.gameTitle {
+    @apply text-xl;
+    @apply font-bold;
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .card {
+    @apply p-4;
+    @apply m-5;
+    background-color: #78d5dd;
+    border-radius: 0.5rem;
+  }
 }
 </style>
