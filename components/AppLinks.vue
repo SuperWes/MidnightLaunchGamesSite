@@ -13,7 +13,7 @@
       class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
     >Contact</a>
     <a
-      href="http://www.twitter.com/mnl_games"
+      href="http://www.twitter.com/MidnightLGs"
       target="_blank"
       class="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600"
     >Twitter</a>
