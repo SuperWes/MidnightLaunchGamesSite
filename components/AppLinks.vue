@@ -12,16 +12,14 @@
 </template>
 
 <style scoped>
-@layer base {
-  .linkOption {
-    @apply block;
-    @apply text-sm;
-    @apply text-gray-700;
-    @apply capitalize;
-  }
+.linkOption {
+  @apply block;
+  @apply text-sm;
+  @apply text-gray-700;
+  @apply capitalize;
+}
 
-  .linkOption:hover {
-    @apply text-blue-600;
-  }
+.linkOption:hover {
+  @apply text-blue-600;
 }
 </style>

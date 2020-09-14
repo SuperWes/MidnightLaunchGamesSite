@@ -17,28 +17,26 @@
 </template>
 
 <style scoped>
-@layer base {
-  h1.pageTitle {
-    @apply text-xl;
-    @apply font-bold;
-    @apply text-white;
-    @apply text-center;
-  }
+h1.pageTitle {
+  @apply text-xl;
+  @apply font-bold;
+  @apply text-white;
+  @apply text-center;
+}
 
-  h1.gameTitle {
-    @apply text-xl;
-    @apply font-bold;
-  }
+h1.gameTitle {
+  @apply text-xl;
+  @apply font-bold;
+}
 
-  .content {
-    margin: auto;
-  }
+.content {
+  margin: auto;
+}
 
-  .card {
-    @apply p-4;
-    @apply m-5;
-    background-color: #78d5dd;
-    border-radius: 0.5rem;
-  }
+.card {
+  @apply p-4;
+  @apply m-5;
+  background-color: #78d5dd;
+  border-radius: 0.5rem;
 }
 </style>
