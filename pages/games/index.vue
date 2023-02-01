@@ -8,6 +8,14 @@
           <img src="~/assets/JigsawArmada-boxtop.png" />
         </a>
       </div>
+    </div>
+    <div class="md:flex mb-2">
+      <div class="md:flex-1 md:w-1/2 card">
+        <a href="/games/bumpitup">
+          <h1 class="gameTitle mb-3">Bump it Up!</h1>
+          <img src="~/assets/BumpItUp-boxtop.png" />
+        </a>
+      </div>
       <div class="md:flex-1 md:w-1/2 card">
         <h1 class="gameTitle mb-3">Spectrum 12</h1>
         <img class="justify-center w-1/2 m-auto" src="~/assets/Spectrum12-boxtop.png" />
