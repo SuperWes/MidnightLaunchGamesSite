@@ -3,24 +3,24 @@
     <h1 class="pageTitle mt-4">Games</h1>
     <div class="md:flex mb-2">
       <div class="md:flex-1 md:w-1/2 card">
-        <a href="/games/gravesweeper">
+        <nuxt-link to="/games/gravesweeper">
           <h1 class="gameTitle mb-3">Gravesweeper</h1>
           <img src="~/assets/Gravesweeper-logo.png" />
-        </a>
+        </nuxt-link>
       </div>
       <div class="md:flex-1 md:w-1/2 card">
-        <a href="/games/jigsawarmada">
+        <nuxt-link to="/games/jigsawarmada">
           <h1 class="gameTitle mb-3">Jigsaw Armada</h1>
           <img src="~/assets/JigsawArmada-boxtop.png" />
-        </a>
+        </nuxt-link>
       </div>
     </div>
     <div class="md:flex mb-2">
       <div class="md:flex-1 md:w-1/2 card">
-        <a href="/games/bumpitup">
+        <nuxt-link to="/games/bumpitup">
           <h1 class="gameTitle mb-3">Bump it Up!</h1>
           <img src="~/assets/BumpItUp-boxtop.png" />
-        </a>
+        </nuxt-link>
       </div>
       <div class="md:flex-1 md:w-1/2 card">
         <h1 class="gameTitle mb-3">Spectrum 12</h1>

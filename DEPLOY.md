@@ -9,12 +9,21 @@ npm run deploy
 ```
 
 This will:
-1. Generate the static site with the latest changes
-2. Deploy to the `gh-pages` branch
-3. Push to GitHub
+1. Clean build with the latest changes
+2. Generate the static site with correct asset paths
+3. Deploy to the `gh-pages` branch
+4. Push to GitHub
 
 ### The site will be available at:
-**https://superwes.github.io/MidnightLaunchGamesSite/**
+**https://midnightlaunchgames.com/**
+
+(Also accessible via: https://superwes.github.io/MidnightLaunchGamesSite/)
+
+### Important Configuration
+The following settings are configured for the custom domain:
+- `router.base: '/'` in `nuxt.config.js` (set to `/` for custom domains)
+- `.nojekyll` file in the `static/` folder (prevents Jekyll processing)
+- `CNAME` file in `static/` folder containing `midnightlaunchgames.com`
 
 ### Manual Deploy (if needed)
 If you want to deploy step-by-step:
@@ -35,8 +44,9 @@ gh-pages --dotfiles --dist dist --repo git@github.com:SuperWes/MidnightLaunchGam
 - Wait 1-2 minutes for GitHub Pages to rebuild
 
 **404 errors?**
-- Make sure `router.base` in `nuxt.config.js` is set to `/MidnightLaunchGamesSite/`
+- Make sure `router.base` in `nuxt.config.js` is set to `/` (for custom domain)
 - Check that `.nojekyll` file exists in the `static` folder
+- Verify CNAME file exists with your custom domain
 
 **Assets not loading?**
 - Verify all asset paths use `~/assets/` in your Vue files
