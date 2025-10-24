@@ -3,6 +3,12 @@
     <h1 class="pageTitle mt-4">Games</h1>
     <div class="md:flex mb-2">
       <div class="md:flex-1 md:w-1/2 card">
+        <a href="/games/gravesweeper">
+          <h1 class="gameTitle mb-3">Gravesweeper</h1>
+          <img src="~/assets/Gravesweeper-logo.png" />
+        </a>
+      </div>
+      <div class="md:flex-1 md:w-1/2 card">
         <a href="/games/jigsawarmada">
           <h1 class="gameTitle mb-3">Jigsaw Armada</h1>
           <img src="~/assets/JigsawArmada-boxtop.png" />
