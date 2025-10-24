@@ -10,23 +10,19 @@
           procedurally generated dungeon, avoiding traps and finding the stairs to escape.
         </p>
         
-        <div class="flex flex-col items-center gap-3">
-          <a
-            href="https://apps.apple.com/app/gravesweeper"
-            target="_blank"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-          >Download on iOS</a>
+        <div class="flex flex-col items-center gap-3 mt-4">
+          <div class="bg-gray-600 text-white font-bold py-2 px-4 border border-gray-700 rounded">
+            Coming Soon to iOS
+          </div>
           
-          <a
-            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
-            target="_blank"
-            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded"
-          >Download on Android</a>
+          <div class="bg-gray-600 text-white font-bold py-2 px-4 border border-gray-700 rounded">
+            Coming Soon to Android
+          </div>
         </div>
 
         <div class="mt-6 text-center">
           <nuxt-link
-            to="/gravesweeper/privacy"
+            to="/games/gravesweeper/privacy"
             class="text-blue-400 hover:text-blue-300 underline"
           >Privacy Policy</nuxt-link>
         </div>
