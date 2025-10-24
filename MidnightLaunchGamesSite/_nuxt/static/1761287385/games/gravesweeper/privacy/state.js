@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002FMidnightLaunchGamesSite\u002F_nuxt\u002Fstatic\u002F1761287385",layout:"default",error:null,state:{nav:{toggleSidebar:false}},serverRendered:true,routePath:"\u002Fgames\u002Fgravesweeper\u002Fprivacy",config:{}};
