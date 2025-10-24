@@ -15,7 +15,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "deploy": "gh-pages --dotfiles --dist dist --repo git@github.com:SuperWes/MidnightLaunchGamesSite.git"
+    "deploy": "npm run generate && gh-pages --dotfiles --dist dist --repo git@github.com:SuperWes/MidnightLaunchGamesSite.git"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",

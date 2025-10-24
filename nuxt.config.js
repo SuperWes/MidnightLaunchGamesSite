@@ -15,7 +15,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-router#base
   */
   router: {
-    base: '/',
+    base: '/MidnightLaunchGamesSite/',
     extendRoutes(routes) {
       for (const key in routes) {
         routes[key].caseSensitive = false

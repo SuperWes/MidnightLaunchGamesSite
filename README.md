@@ -39,4 +39,20 @@ npm run dev
 
 The site will be available at http://localhost:3000
 
+## Deploying to GitHub Pages
+
+To deploy your changes to the live site:
+
+```bash
+npm run deploy
+```
+
+This will automatically:
+1. Generate the static site
+2. Deploy to GitHub Pages
+
+Your site will be live at: **https://superwes.github.io/MidnightLaunchGamesSite/**
+
+For more deployment details, see [DEPLOY.md](./DEPLOY.md)
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
