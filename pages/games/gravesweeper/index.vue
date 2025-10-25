@@ -11,6 +11,12 @@
         </p>
         
         <div class="flex flex-col items-center gap-3 mt-4">
+          <a
+            href="/games/gravesweeper/reapers_run/"
+            target="_blank"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
+          >🎮 Play Web Demo</a>
+          
           <div class="bg-gray-600 text-white font-bold py-2 px-4 border border-gray-700 rounded">
             Coming Soon to iOS
           </div>

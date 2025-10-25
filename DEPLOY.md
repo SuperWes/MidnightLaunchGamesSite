@@ -11,8 +11,9 @@ npm run deploy
 This will:
 1. Clean build with the latest changes
 2. Generate the static site with correct asset paths
-3. Deploy to the `gh-pages` branch
-4. Push to GitHub
+3. Copy all files from `static/` (including demos) to the dist folder
+4. Deploy to the `gh-pages` branch
+5. Push to GitHub
 
 ### The site will be available at:
 **https://midnightlaunchgames.com/**
@@ -24,6 +25,7 @@ The following settings are configured for the custom domain:
 - `router.base: '/'` in `nuxt.config.js` (set to `/` for custom domains)
 - `.nojekyll` file in the `static/` folder (prevents Jekyll processing)
 - `CNAME` file in `static/` folder containing `midnightlaunchgames.com`
+- Game demos and static files in `static/games/` folder (e.g., `static/games/gravesweeper/gravesweeper_demo/`)
 
 ### Manual Deploy (if needed)
 If you want to deploy step-by-step:
