@@ -1,11 +1,11 @@
 {
-    "name": "Reaper's Run",
-    "short_name": "Reaper's Run",
+    "name": "gravesweeper",
+    "short_name": "gravesweeper",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#1a0a2e",
-    "theme_color": "#2d1b4e",
-    "description": "Reaper's Run - A Gravesweeper roguelike demo. Navigate deadly grids and survive as long as you can!",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
