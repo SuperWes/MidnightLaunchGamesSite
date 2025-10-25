@@ -68,6 +68,15 @@ export default {
   modules: [
   ],
   /*
+  ** Generate configuration
+  ** See https://nuxtjs.org/api/configuration-generate
+  */
+  generate: {
+    exclude: [
+      /^\/games\/gravesweeper\/reapers_run/  // Exclude Flutter demo from route generation
+    ]
+  },
+  /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
