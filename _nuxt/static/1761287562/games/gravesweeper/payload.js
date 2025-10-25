@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/games/gravesweeper", {data:[{}],fetch:[],mutations:[]});
