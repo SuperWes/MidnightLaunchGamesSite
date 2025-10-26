@@ -52,7 +52,7 @@
           </div>
         </div>
         
-        <div class="flex flex-col items-center gap-3 mt-6">
+        <div class="flex flex-col items-center gap-4 mt-6">
           <a
             href="/games/gravesweeper/reapers_run/"
             target="_blank"
@@ -62,8 +62,14 @@
           <a
             href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
             target="_blank"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 border border-blue-700 rounded"
-          >📱 Download on iOS</a>
+            class="inline-block"
+          >
+            <img 
+              src="~/assets/app-store-badge.svg" 
+              alt="Download on the App Store" 
+              class="h-12 hover:opacity-80 transition-opacity"
+            />
+          </a>
           
           <div class="bg-gray-600 text-white font-bold py-2 px-4 border border-gray-700 rounded">
             Coming Soon to Android
