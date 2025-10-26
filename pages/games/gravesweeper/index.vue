@@ -4,13 +4,55 @@
       <h1 class="text-xl font-bold text-white text-center mt-4">Gravesweeper</h1>
       <img class="BoxTop" src="~/assets/Gravesweeper-logo.png" />
 
-      <div class="text-center mt-3">
-        <p class="text-white mb-4">
-          A Halloween-themed Minesweeper game! Control a skeleton character through a 
-          procedurally generated dungeon, avoiding traps and finding the stairs to escape.
+      <div class="text-center mt-3 max-w-4xl mx-auto px-4">
+        <p class="text-white text-lg font-semibold mb-4">
+          Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
         </p>
         
-        <div class="flex flex-col items-center gap-3 mt-4">
+        <div class="text-white text-left mb-6 space-y-4">
+          <div>
+            <h2 class="text-xl font-bold mb-2 text-purple-300">🎮 Core Gameplay</h2>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Classic Minesweeper mechanics in a dungeon adventure format</li>
+              <li>Swipe or tap to move your skeleton character</li>
+              <li>Numbers reveal nearby trap counts - use logic to find safe paths</li>
+              <li>Find the stairs to escape each level</li>
+              <li>Progressive difficulty - levels get larger and more dangerous</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-2 text-purple-300">🎯 Three Game Modes</h2>
+            <div class="space-y-2">
+              <div>
+                <h3 class="font-semibold text-lg">Campaign Mode</h3>
+                <p class="text-sm">Start at level 1 and climb as high as you can! Unlock 50+ permanent abilities in the shop, collect candies to purchase game-changing upgrades, and unlock spooky costumes as you progress.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Reaper's Run (Roguelike Mode)</h3>
+                <p class="text-sm">Pure skill-based challenge with permanent death! Draft abilities every few floors to build unique combos. No shop, no saves - just you vs the dungeon.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Daily Run</h3>
+                <p class="text-sm">Fresh challenge every 24 hours with pre-selected abilities. Compete with friends on the same seed and track your performance in the calendar!</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-2 text-purple-300">✨ Key Features</h2>
+            <ul class="list-disc list-inside space-y-1">
+              <li>50+ unlockable abilities (Second Chance, Oracle Vision, Invincibility Burst, and more!)</li>
+              <li>20+ unlockable costumes (Ghost, Vampire, Witch, Demon...)</li>
+              <li>Beautiful Halloween-themed graphics with multiple biomes</li>
+              <li>Heat Levels - extra challenging floors with 1.5x traps</li>
+              <li>Perfect Play rewards for clearing levels without mistakes</li>
+              <li>3 Save Slots + Auto-Save</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex flex-col items-center gap-3 mt-6">
           <a
             href="/games/gravesweeper/reapers_run/"
             target="_blank"
