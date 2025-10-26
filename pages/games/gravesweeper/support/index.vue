@@ -15,17 +15,24 @@
         <section class="mb-6">
           <h2 class="text-xl font-semibold mb-3">Contact Us</h2>
           <p class="mb-3">
-            For support requests, bug reports, or general questions, please contact us through our contact form:
+            For support requests, bug reports, or general questions, please contact us:
           </p>
           <div class="text-center my-4">
+            <p class="mb-3">
+              <strong>Email:</strong> 
+              <a href="mailto:superwes@gmail.com" class="text-blue-400 hover:text-blue-300 underline">
+                superwes@gmail.com
+              </a>
+            </p>
+            <p class="text-sm text-gray-400 mb-4">Or use our contact form:</p>
             <nuxt-link
               to="/contact"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 border border-blue-700 rounded inline-block"
             >
-              📧 Contact Support
+              📧 Contact Form
             </nuxt-link>
           </div>
-          <p class="text-sm text-gray-400 text-center">
+          <p class="text-sm text-gray-400 text-center mt-4">
             We typically respond within 24-48 hours.
           </p>
         </section>
