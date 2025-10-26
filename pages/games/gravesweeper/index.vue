@@ -26,7 +26,11 @@
           </div>
         </div>
 
-        <div class="mt-6 text-center">
+        <div class="mt-6 text-center flex flex-col gap-2">
+          <nuxt-link
+            to="/games/gravesweeper/support"
+            class="text-blue-400 hover:text-blue-300 underline"
+          >Support & FAQ</nuxt-link>
           <nuxt-link
             to="/games/gravesweeper/privacy"
             class="text-blue-400 hover:text-blue-300 underline"
