@@ -1,5 +1,11 @@
 {
- "name": "App",
+ "name": "Midnight Launch Games",
+ "short_name": "MLG",
+ "description": "Midnight Launch Games - Wes Ehrlichman and Andrew Rauscher",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#2d3666",
+ "theme_color": "#2d3666",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
