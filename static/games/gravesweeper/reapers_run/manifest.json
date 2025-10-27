@@ -1,11 +1,11 @@
 {
-    "name": "Gravesweeper",
-    "short_name": "Gravesweeper",
+    "name": "Reaper's Run",
+    "short_name": "Reaper's Run",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#1a0a2e",
     "theme_color": "#2d1b4e",
-    "description": "Navigate haunted dungeons as a brave skeleton using Minesweeper-style logic!",
+    "description": "Reaper's Run - A Gravesweeper roguelike demo. Navigate deadly grids and survive as long as you can!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
