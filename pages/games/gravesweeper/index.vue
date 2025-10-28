@@ -71,18 +71,18 @@
             />
           </a>
           
-          <div class="relative inline-block">
+          <button @click="showComingSoon" class="inline-block cursor-pointer">
             <img 
               src="~/assets/google-play-badge.png" 
               alt="Coming Soon to Google Play" 
-              class="h-12 opacity-60 cursor-not-allowed"
+              class="h-12 hover:opacity-80 transition-opacity"
             />
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">
-                Coming Soon
-              </span>
-            </div>
-          </div>
+          </button>
+        </div>
+        
+        <!-- Coming Soon Toast -->
+        <div v-if="showToast" class="toast">
+          🎮 Android version coming soon!
         </div>
 
         <!-- Screenshots Carousel -->
@@ -134,6 +134,7 @@ export default {
   data() {
     return {
       currentScreenshot: 0,
+      showToast: false,
       screenshots: [
         '01_gameplay_graveyard',
         '02_title_screen',
@@ -158,6 +159,12 @@ export default {
       this.currentScreenshot = this.currentScreenshot === 0 
         ? this.screenshots.length - 1 
         : this.currentScreenshot - 1
+    },
+    showComingSoon() {
+      this.showToast = true
+      setTimeout(() => {
+        this.showToast = false
+      }, 3000)
     }
   }
 }
@@ -279,6 +286,33 @@ export default {
   
   .carousel-button-right {
     right: 0.75rem;
+  }
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(128, 90, 213, 0.95);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
