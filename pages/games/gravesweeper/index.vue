@@ -124,40 +124,56 @@
 
 .screenshot-gallery {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   overflow-x: auto;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scroll-padding: 0 1rem;
 }
 
 .screenshot {
   flex: 0 0 auto;
-  width: 280px;
-  max-width: 90vw;
+  width: 220px;
+  max-width: 75vw;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: center;
-  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
 }
 
-.screenshot:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+/* Remove hover effects on mobile - they don't work well on touch */
+@media (hover: hover) and (pointer: fine) {
+  .screenshot {
+    cursor: pointer;
+  }
+  
+  .screenshot:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (min-width: 768px) {
   .screenshot-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     overflow-x: visible;
+    scroll-snap-type: none;
   }
   
   .screenshot {
     width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screenshot-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
