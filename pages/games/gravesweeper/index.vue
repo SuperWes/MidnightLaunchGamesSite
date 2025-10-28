@@ -71,8 +71,17 @@
             />
           </a>
           
-          <div class="bg-gray-600 text-white font-bold py-2 px-4 border border-gray-700 rounded">
-            Coming Soon to Android
+          <div class="relative inline-block">
+            <img 
+              src="~/assets/google-play-badge.png" 
+              alt="Coming Soon to Google Play" 
+              class="h-12 opacity-60 cursor-not-allowed"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">
+                Coming Soon
+              </span>
+            </div>
           </div>
         </div>
 
