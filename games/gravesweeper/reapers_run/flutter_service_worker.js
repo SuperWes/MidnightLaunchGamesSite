@@ -3,11 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "c39313137995087442854d07a9cdf7af",
+const RESOURCES = {"flutter_bootstrap.js": "52be0fd5cfc3d5d82810649f0b460ffd",
 "version.json": "baa9eca6fa319950b81f2949588e7af8",
 "index.html": "0b7373cbbe0dc0b699470f317839f27c",
 "/": "0b7373cbbe0dc0b699470f317839f27c",
-"main.dart.js": "cd28bda69d3e0be42bc041df0582550e",
+"main.dart.js": "b9dee5f9183be3fb69ad7b3a7348e3b0",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
 "favicon.png": "86ffb81ab3145471430d020eb4a4596c",
 "icons/Icon-192.png": "8442f1049360d317aa2087905ddce4a3",
@@ -22,7 +22,7 @@ const RESOURCES = {"flutter_bootstrap.js": "c39313137995087442854d07a9cdf7af",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "33b7d9392238c04c131b6ce224e13711",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/AssetManifest.bin": "3939137198286762f312d633c8934db6",
-"assets/fonts/MaterialIcons-Regular.otf": "8437f13a9337aeb67783afb19a6f6009",
+"assets/fonts/MaterialIcons-Regular.otf": "569a2546095a926b3a6869afaf9d4e1b",
 "assets/assets/images/gravesweeper-logo1024x500.png": "125c6dd8bf85c6c5652467c2beb420df",
 "assets/assets/images/gameicon512x512.png": "aa3f2bd6ca6a3906ed6fdd075c1e8224",
 "assets/assets/images/gameicon.png": "0a27b2ebd364117a48d390ab459ceeba",
