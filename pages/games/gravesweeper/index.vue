@@ -76,6 +76,18 @@
           </div>
         </div>
 
+        <!-- Screenshots Gallery -->
+        <div class="mt-8 mb-6">
+          <h2 class="text-xl font-bold mb-4 text-purple-300 text-center">📸 Screenshots</h2>
+          <div class="screenshot-gallery">
+            <img src="~/assets/gravesweeper_screenshots/01_gameplay_graveyard.png" alt="Gameplay in Graveyard biome" class="screenshot" />
+            <img src="~/assets/gravesweeper_screenshots/02_title_screen.png" alt="Title Screen" class="screenshot" />
+            <img src="~/assets/gravesweeper_screenshots/03_gameplay_underworld.png" alt="Gameplay in Underworld biome" class="screenshot" />
+            <img src="~/assets/gravesweeper_screenshots/04_ability_selection.png" alt="Ability Selection" class="screenshot" />
+            <img src="~/assets/gravesweeper_screenshots/05_daily_run_calendar.png" alt="Daily Run Calendar" class="screenshot" />
+          </div>
+        </div>
+
         <div class="mt-6 text-center flex flex-col gap-2">
           <nuxt-link
             to="/games/gravesweeper/support"
@@ -99,6 +111,64 @@
 .BoxTop {
   max-width: 400px;
   margin: 0 auto;
+}
+
+.screenshot-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshot {
+  flex: 0 0 auto;
+  width: 280px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    overflow-x: visible;
+  }
+  
+  .screenshot {
+    width: 100%;
+  }
+}
+
+/* Scrollbar styling for webkit browsers */
+.screenshot-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshot-gallery::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.screenshot-gallery::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.6);
+  border-radius: 4px;
+}
+
+.screenshot-gallery::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.8);
 }
 </style>
 
