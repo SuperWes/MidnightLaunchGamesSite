@@ -67,15 +67,15 @@
             <img 
               src="~/assets/app-store-badge.svg" 
               alt="Download on the App Store" 
-              class="h-12 hover:opacity-80 transition-opacity"
+              class="store-badge"
             />
           </a>
           
-          <button @click="showComingSoon" class="inline-block cursor-pointer">
+          <button @click="showComingSoon" class="inline-block cursor-pointer border-0 bg-transparent p-0">
             <img 
               src="~/assets/google-play-badge.png" 
               alt="Coming Soon to Google Play" 
-              class="h-12 hover:opacity-80 transition-opacity"
+              class="store-badge"
             />
           </button>
         </div>
@@ -178,6 +178,17 @@ export default {
 .BoxTop {
   max-width: 400px;
   margin: 0 auto;
+}
+
+/* Store badges */
+.store-badge {
+  height: 3rem;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+.store-badge:hover {
+  opacity: 0.8;
 }
 
 /* Carousel Styles */
