@@ -85,15 +85,32 @@
           </div>
         </div>
 
-        <!-- Screenshots Gallery -->
+        <!-- Screenshots Carousel -->
         <div class="mt-8 mb-6">
           <h2 class="text-xl font-bold mb-4 text-purple-300 text-center">📸 Screenshots</h2>
-          <div class="screenshot-gallery">
-            <img src="~/assets/gravesweeper_screenshots/01_gameplay_graveyard.png" alt="Gameplay in Graveyard biome" class="screenshot" />
-            <img src="~/assets/gravesweeper_screenshots/02_title_screen.png" alt="Title Screen" class="screenshot" />
-            <img src="~/assets/gravesweeper_screenshots/03_gameplay_underworld.png" alt="Gameplay in Underworld biome" class="screenshot" />
-            <img src="~/assets/gravesweeper_screenshots/04_ability_selection.png" alt="Ability Selection" class="screenshot" />
-            <img src="~/assets/gravesweeper_screenshots/05_daily_run_calendar.png" alt="Daily Run Calendar" class="screenshot" />
+          <div class="carousel-container">
+            <button @click="prevScreenshot" class="carousel-button carousel-button-left" aria-label="Previous screenshot">
+              ‹
+            </button>
+            <div class="carousel-image-wrapper">
+              <img 
+                :src="require(`~/assets/gravesweeper_screenshots/${screenshots[currentScreenshot]}.png`)" 
+                :alt="screenshotAlts[currentScreenshot]" 
+                class="carousel-image" 
+              />
+            </div>
+            <button @click="nextScreenshot" class="carousel-button carousel-button-right" aria-label="Next screenshot">
+              ›
+            </button>
+          </div>
+          <div class="carousel-dots">
+            <button 
+              v-for="(screenshot, index) in screenshots" 
+              :key="index"
+              @click="currentScreenshot = index"
+              :class="['carousel-dot', { active: currentScreenshot === index }]"
+              :aria-label="`Go to screenshot ${index + 1}`"
+            ></button>
           </div>
         </div>
 
@@ -112,6 +129,40 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      currentScreenshot: 0,
+      screenshots: [
+        '01_gameplay_graveyard',
+        '02_title_screen',
+        '03_gameplay_underworld',
+        '04_ability_selection',
+        '05_daily_run_calendar'
+      ],
+      screenshotAlts: [
+        'Gameplay in Graveyard biome',
+        'Title Screen',
+        'Gameplay in Underworld biome',
+        'Ability Selection',
+        'Daily Run Calendar'
+      ]
+    }
+  },
+  methods: {
+    nextScreenshot() {
+      this.currentScreenshot = (this.currentScreenshot + 1) % this.screenshots.length
+    },
+    prevScreenshot() {
+      this.currentScreenshot = this.currentScreenshot === 0 
+        ? this.screenshots.length - 1 
+        : this.currentScreenshot - 1
+    }
+  }
+}
+</script>
+
 <style scoped>
 .content {
   margin: auto;
@@ -122,58 +173,112 @@
   margin: 0 auto;
 }
 
-.screenshot-gallery {
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
-  gap: 0.75rem;
-  overflow-x: auto;
-  padding: 0.5rem 0;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-padding: 0 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.screenshot {
-  flex: 0 0 auto;
-  width: 220px;
-  max-width: 75vw;
+.carousel-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-image {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  scroll-snap-align: start;
-  transition: transform 0.2s ease;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
-/* Remove hover effects on mobile - they don't work well on touch */
-@media (hover: hover) and (pointer: fine) {
-  .screenshot {
-    cursor: pointer;
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(128, 90, 213, 0.8);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.carousel-button:hover {
+  background: rgba(128, 90, 213, 1);
+}
+
+.carousel-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-button-left {
+  left: 1.5rem;
+}
+
+.carousel-button-right {
+  right: 1.5rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: rgba(168, 85, 247, 0.9);
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .carousel-container {
+    padding: 0 0.5rem;
   }
   
-  .screenshot:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media (min-width: 768px) {
-  .screenshot-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    overflow-x: visible;
-    scroll-snap-type: none;
+  .carousel-button {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
   }
   
-  .screenshot {
-    width: 100%;
-    max-width: 100%;
+  .carousel-button-left {
+    left: 0.75rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .screenshot-gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  
+  .carousel-button-right {
+    right: 0.75rem;
   }
 }
 
