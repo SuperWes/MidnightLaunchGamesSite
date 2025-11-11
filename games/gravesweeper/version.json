@@ -14,6 +14,48 @@
     "fr": "Une nouvelle version est disponible avec des corrections et améliorations!",
     "zh": "新版本可用，包含错误修复和改进！",
     "ja": "バグ修正と改善を含む新しいバージョンが利用可能です！"
-  }
+  },
+  "news": [
+    {
+      "id": "2025-01-15-winning-streak-fix",
+      "title": "🏃 Winning Streak Upgrade Fixed!",
+      "message": "The Winning Streak ability now works as intended! Instead of adding a small bonus to every candy, it now grants a substantial one-time bonus when you complete each level. The bonus scales with both your progress and the candy multiplier, making deep runs extremely rewarding. Try disabling level skip upgrades for maximum candy farming!",
+      "date": "2025-01-15T00:00:00Z",
+      "priority": 2
+    },
+    {
+      "id": "2025-01-15-trap-counter-update",
+      "title": "💣 Trap Counter Now Shows Progress",
+      "message": "The Trap Counter upgrade now displays how many gravestones you've placed vs total traps (e.g., '💣 12/45'). The counter turns green when you've marked all traps! This helps you track your progress and know when you've found everything.",
+      "date": "2025-01-15T00:00:00Z",
+      "priority": 1
+    },
+    {
+      "id": "2025-01-10-quality-of-life",
+      "title": "✨ Quality of Life Improvements",
+      "message": "We've added several small improvements based on your feedback: better haptic feedback when placing markers, improved tile animations, and smoother transitions between levels. The game should feel more polished overall!",
+      "date": "2025-01-10T00:00:00Z",
+      "priority": 0
+    },
+    {
+      "id": "2025-01-01-happy-new-year",
+      "title": "🎉 Happy New Year!",
+      "message": "Thank you for playing Gravesweeper! We're excited to bring you more updates, abilities, and challenges in 2025. Keep an eye out for seasonal events and new biomes coming soon!",
+      "date": "2025-01-01T00:00:00Z",
+      "priority": 0
+    }
+  ],
+  "tips": [
+    "Buy boots, for your thumbs' sake",
+    "If you tap the 🎃 in the corner you can access settings, where you can turn on \"transparent\" mode",
+    "Clearing a level refreshes fireworks",
+    "Candy is NEVER on a trap",
+    "Make a new save file to try hard mode",
+    "When you're not sure, use fireworks",
+    "Skip levels to take advantage of candy multipliers",
+    "You can toggle off abilities",
+    "Unlock Reaper's Run for $2 for surprisingly fun single-run challenges where you can try out new abilities",
+    "Share your scores with your friends in text threads and social media using the share button"
+  ]
 }
 
