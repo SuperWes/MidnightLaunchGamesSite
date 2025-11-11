@@ -17,21 +17,18 @@
   },
   "news": [
     {
-      "id": "2025-11-10-trap-counter-update",
       "title": "💣 Trap Counter Now Shows Progress",
       "message": "The Trap Counter upgrade now displays how many gravestones you've placed vs total traps (e.g., '💣 12/45'). The counter turns green when you've marked all traps! This helps you track your progress and know when you've found everything.",
       "date": "2025-11-10T00:00:00Z",
       "priority": 2
     },
     {
-      "id": "2025-11-04-quality-of-life",
       "title": "✨ Quality of Life Improvements",
       "message": "We've added several small improvements based on your feedback: better haptic feedback when placing markers, improved tile animations, and smoother transitions between levels. The game should feel more polished overall!",
       "date": "2025-11-04T00:00:00Z",
       "priority": 1
     },
     {
-      "id": "2025-10-30-stlgamedev-update",
       "title": "Did you know?",
       "message": "The initial version of Gravesweeper was designed, developed, and released in under two weeks by one person? If you also want to be inspired and motivated, find a local community like the one in St. Louis. Check out https://stlgame.dev for information about the St. Louis Game Development community!",
       "date": "2025-10-30T00:00:00Z",
