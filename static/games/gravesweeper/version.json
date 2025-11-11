@@ -24,7 +24,7 @@
     },
     {
       "title": "✨ Quality of Life Improvements",
-      "message": "We've added several small improvements based on your feedback: better haptic feedback when placing markers, improved tile animations, and smoother transitions between levels. The game should feel more polished overall!",
+      "message": "We've added several small improvements based on your feedback: haptic feedback when placing markers, improved animations, and a few lower prices in the shop. The game should feel more polished overall!",
       "date": "2025-11-04T00:00:00Z",
       "priority": 1
     },
@@ -33,7 +33,7 @@
       "message": "The initial version of Gravesweeper was designed, developed, and released in under two weeks by one person? If you also want to be inspired and motivated, find a local community like the one in St. Louis. Check out https://stlgame.dev for information about the St. Louis Game Development community!",
       "date": "2025-10-30T00:00:00Z",
       "priority": 0,
-      "image_url": "https://midnightlaunchgames.com/games/gravesweeper/images/stlgamedevLogo.svg"
+      "image_url": "https://midnightlaunchgames.com/games/gravesweeper/images/stlgamedevLogo.png"
     }
   ],
   "tips": [
