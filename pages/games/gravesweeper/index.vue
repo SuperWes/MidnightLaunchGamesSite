@@ -8,7 +8,39 @@
         <p class="text-white text-lg font-semibold mb-4">
           Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
         </p>
-        
+
+        <div class="flex flex-col items-center gap-4 mt-6 mb-6">
+          <a
+            href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
+            target="_blank"
+            class="inline-block"
+          >
+            <img
+              src="~/assets/app-store-badge.svg"
+              alt="Download on the App Store"
+              class="store-badge"
+            />
+          </a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
+            target="_blank"
+            class="inline-block"
+          >
+            <img
+              src="~/assets/google-play-badge.png"
+              alt="Get it on Google Play"
+              class="store-badge"
+            />
+          </a>
+
+          <a
+            href="/games/gravesweeper/reapers_run/"
+            target="_blank"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
+          >🎮 Play Web Demo</a>
+        </div>
+
         <div class="text-white text-left mb-6 space-y-4">
           <div>
             <h2 class="text-xl font-bold mb-2 text-purple-300">🎮 Core Gameplay</h2>
@@ -51,39 +83,7 @@
             </ul>
           </div>
         </div>
-        
-        <div class="flex flex-col items-center gap-4 mt-6">
-          <a
-            href="/games/gravesweeper/reapers_run/"
-            target="_blank"
-            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
-          >🎮 Play Web Demo</a>
-          
-          <a
-            href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
-            target="_blank"
-            class="inline-block"
-          >
-            <img 
-              src="~/assets/app-store-badge.svg" 
-              alt="Download on the App Store" 
-              class="store-badge"
-            />
-          </a>
-          
-          <a
-            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
-            target="_blank"
-            class="inline-block"
-          >
-            <img
-              src="~/assets/google-play-badge.png"
-              alt="Get it on Google Play"
-              class="store-badge"
-            />
-          </a>
-        </div>
-        
+
 
         <!-- Screenshots Carousel -->
         <div class="mt-8 mb-6">
@@ -123,6 +123,39 @@
             to="/games/gravesweeper/privacy"
             class="text-blue-400 hover:text-blue-300 underline"
           >Privacy Policy</nuxt-link>
+        </div>
+
+        <!-- Bottom Download Links -->
+        <div class="flex flex-col items-center gap-4 mt-8 mb-4">
+          <a
+            href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
+            target="_blank"
+            class="inline-block"
+          >
+            <img
+              src="~/assets/app-store-badge.svg"
+              alt="Download on the App Store"
+              class="store-badge"
+            />
+          </a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
+            target="_blank"
+            class="inline-block"
+          >
+            <img
+              src="~/assets/google-play-badge.png"
+              alt="Get it on Google Play"
+              class="store-badge"
+            />
+          </a>
+
+          <a
+            href="/games/gravesweeper/reapers_run/"
+            target="_blank"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
+          >🎮 Play Web Demo</a>
         </div>
       </div>
     </div>
