@@ -71,19 +71,19 @@
             />
           </a>
           
-          <button @click="showComingSoon" class="inline-block cursor-pointer border-0 bg-transparent p-0">
-            <img 
-              src="~/assets/google-play-badge.png" 
-              alt="Coming Soon to Google Play" 
+          <a
+            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
+            target="_blank"
+            class="inline-block"
+          >
+            <img
+              src="~/assets/google-play-badge.png"
+              alt="Get it on Google Play"
               class="store-badge"
             />
-          </button>
+          </a>
         </div>
         
-        <!-- Coming Soon Toast -->
-        <div v-if="showToast" class="toast">
-          🎮 Android version coming soon!
-        </div>
 
         <!-- Screenshots Carousel -->
         <div class="mt-8 mb-6">
@@ -134,7 +134,6 @@ export default {
   data() {
     return {
       currentScreenshot: 0,
-      showToast: false,
       screenshots: [
         '01_gameplay_graveyard',
         '02_title_screen',
@@ -160,12 +159,6 @@ export default {
         ? this.screenshots.length - 1 
         : this.currentScreenshot - 1
     },
-    showComingSoon() {
-      this.showToast = true
-      setTimeout(() => {
-        this.showToast = false
-      }, 3000)
-    }
   }
 }
 </script>
@@ -300,32 +293,6 @@ export default {
   }
 }
 
-/* Toast notification */
-.toast {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(128, 90, 213, 0.95);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  font-weight: 600;
-  z-index: 1000;
-  animation: slideUp 0.3s ease;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
 
 /* Scrollbar styling for webkit browsers */
 .screenshot-gallery::-webkit-scrollbar {
