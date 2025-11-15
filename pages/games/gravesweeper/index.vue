@@ -9,6 +9,8 @@
           Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
         </p>
 
+        <p class="text-green-400 font-semibold text-lg mb-2">🎁 FREE TO DOWNLOAD</p>
+
         <div class="flex flex-col items-center gap-4 mt-6 mb-6">
           <a
             href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
@@ -114,16 +116,7 @@
           </div>
         </div>
 
-        <div class="mt-6 text-center flex flex-col gap-2">
-          <nuxt-link
-            to="/games/gravesweeper/support"
-            class="text-blue-400 hover:text-blue-300 underline"
-          >Support & FAQ</nuxt-link>
-          <nuxt-link
-            to="/games/gravesweeper/privacy"
-            class="text-blue-400 hover:text-blue-300 underline"
-          >Privacy Policy</nuxt-link>
-        </div>
+        <p class="text-green-400 font-semibold text-lg mb-2 text-center">🎁 FREE TO DOWNLOAD</p>
 
         <!-- Bottom Download Links -->
         <div class="flex flex-col items-center gap-4 mt-8 mb-4">
@@ -157,9 +150,24 @@
             class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
           >🎮 Play Web Demo</a>
         </div>
+
+        <div class="mt-6 text-center flex flex-col gap-2">
+          <nuxt-link
+            to="/games/gravesweeper/support"
+            class="text-blue-400 hover:text-blue-300 underline"
+          >Support & FAQ</nuxt-link>
+          <nuxt-link
+            to="/games/gravesweeper/privacy"
+            class="text-blue-400 hover:text-blue-300 underline"
+          >Privacy Policy</nuxt-link>
+        </div>
       </div>
     </div>
   </div>
+
+  <footer class="text-center text-gray-400 text-sm py-6 border-t border-gray-700">
+    <p>&copy;{{ new Date().getFullYear() }} Wes Ehrlichman. All rights reserved.</p>
+  </footer>
 </template>
 
 <script>
