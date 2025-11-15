@@ -1,11 +1,13 @@
 <template>
   <div class="content">
     <div class="flex flex-col">
-      <h1 class="text-xl font-bold text-white text-center mt-4">Gravesweeper</h1>
-      <img class="BoxTop" src="~/assets/Gravesweeper-logo.png" />
+      <img class="BoxTop" src="~/assets/Gravesweeper-logo.png" alt="Gravesweeper - Halloween Puzzle Dungeon" />
 
       <div class="text-center mt-3 max-w-4xl mx-auto px-4">
-        <p class="text-white text-lg font-semibold mb-4">
+        <p class="text-white text-lg font-semibold mb-2">
+          Halloween Puzzle Dungeon
+        </p>
+        <p class="text-white text-base mb-4">
           Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
         </p>
 
