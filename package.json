@@ -5,7 +5,7 @@
   "homepage": "http://superwes.github.io/MidnightLaunchGamesSite",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SuperWes/MidnightLaunchGamesSite.git"
+    "url": "https://github.com/SuperWes/MidnightLaunchGamesSite.git"
   },
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider nuxt-ts",
@@ -15,7 +15,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "deploy": "npm run generate && gh-pages --dotfiles --dist dist --repo git@github.com:SuperWes/MidnightLaunchGamesSite.git"
+    "deploy": "npm run generate && gh-pages --dotfiles --dist dist"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
