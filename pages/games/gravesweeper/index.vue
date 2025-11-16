@@ -221,7 +221,7 @@ export default {
           property: 'og:description',
           content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
         },
-        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' },
         { hid: 'og:image:width', property: 'og:image:width', content: '400' },
         { hid: 'og:image:height', property: 'og:image:height', content: '400' },
         // Twitter
@@ -233,7 +233,7 @@ export default {
           name: 'twitter:description',
           content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
         },
-        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo.png' }
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' }
       ]
     }
   }
