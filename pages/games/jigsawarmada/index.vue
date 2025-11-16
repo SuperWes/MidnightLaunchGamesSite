@@ -15,6 +15,43 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'Jigsaw Armada - Midnight Launch Games',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Command your fleet in Jigsaw Armada! A strategic naval puzzle game where tactical thinking meets ship placement challenges.'
+        },
+        // Open Graph / Facebook
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/jigsawarmada/' },
+        { hid: 'og:title', property: 'og:title', content: 'Jigsaw Armada - Midnight Launch Games' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Command your fleet in Jigsaw Armada! A strategic naval puzzle game where tactical thinking meets ship placement challenges.'
+        },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/JigsawArmada-boxtop.png' },
+        // Twitter
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/jigsawarmada/' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Jigsaw Armada - Midnight Launch Games' },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Command your fleet in Jigsaw Armada! A strategic naval puzzle game where tactical thinking meets ship placement challenges.'
+        },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/JigsawArmada-boxtop.png' }
+      ]
+    }
+  }
+}
+</script>
+
 <style scoped>
 .content {
   margin: auto;

@@ -16,7 +16,34 @@ export default Vue.extend({
 <script>
 export default {
   head: {
-    title: "Midnight Launch Games",
+    title: "Midnight Launch Games - Indie Game Studio",
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Midnight Launch Games is Wes Ehrlichman and Andrew Rauscher. Discover our unique indie games including Gravesweeper, Jigsaw Armada, and Bump it Up! Free to download on mobile platforms.'
+      },
+      // Open Graph / Facebook
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/' },
+      { hid: 'og:title', property: 'og:title', content: 'Midnight Launch Games - Indie Game Studio' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Midnight Launch Games creates unique indie games. Check out Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and more!'
+      },
+      { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' },
+      // Twitter
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Midnight Launch Games - Indie Game Studio' },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Midnight Launch Games creates unique indie games. Check out Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and more!'
+      },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' }
+    ]
   },
 };
 </script>

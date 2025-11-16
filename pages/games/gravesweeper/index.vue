@@ -198,10 +198,44 @@ export default {
       this.currentScreenshot = (this.currentScreenshot + 1) % this.screenshots.length
     },
     prevScreenshot() {
-      this.currentScreenshot = this.currentScreenshot === 0 
-        ? this.screenshots.length - 1 
+      this.currentScreenshot = this.currentScreenshot === 0
+        ? this.screenshots.length - 1
         : this.currentScreenshot - 1
     },
+  },
+  head() {
+    return {
+      title: 'Gravesweeper - Halloween Puzzle Dungeon',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom! Free to download on iOS and Android.'
+        },
+        // Open Graph / Facebook
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/gravesweeper/' },
+        { hid: 'og:title', property: 'og:title', content: 'Gravesweeper - Halloween Puzzle Dungeon' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+        },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo.png' },
+        { hid: 'og:image:width', property: 'og:image:width', content: '400' },
+        { hid: 'og:image:height', property: 'og:image:height', content: '400' },
+        // Twitter
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/gravesweeper/' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Gravesweeper - Halloween Puzzle Dungeon' },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+        },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo.png' }
+      ]
+    }
   }
 }
 </script>

@@ -30,6 +30,43 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'Games - Midnight Launch Games',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Explore our collection of indie puzzle and adventure games including Gravesweeper, Jigsaw Armada, and Bump it Up! Free to download on mobile platforms.'
+        },
+        // Open Graph / Facebook
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/' },
+        { hid: 'og:title', property: 'og:title', content: 'Games - Midnight Launch Games' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Discover unique indie games: Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and Bump it Up! (physics puzzle game).'
+        },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' },
+        // Twitter
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Games - Midnight Launch Games' },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Discover unique indie games: Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and Bump it Up! (physics puzzle game).'
+        },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' }
+      ]
+    }
+  }
+}
+</script>
+
 <style scoped>
 h1.pageTitle {
   @apply text-xl;
