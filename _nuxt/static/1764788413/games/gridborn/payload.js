@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/games/gridborn", {data:[{}],fetch:[],mutations:[]});
