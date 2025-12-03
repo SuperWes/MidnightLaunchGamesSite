@@ -2,21 +2,23 @@
   <div>
     <div class="content">
       <div class="flex flex-col">
-      <img class="BoxTop" src="~/assets/Gravesweeper-logo.png" alt="Gravesweeper - Halloween Puzzle Dungeon" />
+      <!-- TODO: Add Gridborn logo image to assets folder -->
+      <img v-if="false" class="BoxTop" src="~/assets/Gridborn-logo.png" alt="Gridborn" />
+      <h1 v-else class="text-4xl font-bold text-white text-center mt-6 mb-4">GRIDBORN</h1>
 
       <div class="text-center mt-3 max-w-4xl mx-auto px-4">
         <p class="text-white text-lg font-semibold mb-2">
-          Halloween Puzzle Dungeon
+          A Spatial Grid-Based Deck-Builder Roguelike
         </p>
         <p class="text-white text-base mb-4">
-          Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
+          Build your deck with powerful cards featuring directional attacks and shields as you navigate a treacherous hex grid map. Master the spatial combat system where positioning matters—chain element generation with powerful effects, apply devastating status effects, and use strategic card placement to overcome increasingly difficult enemies!
         </p>
 
-        <p class="text-green-400 font-semibold text-lg mb-2">🎁 FREE TO DOWNLOAD</p>
+        <p class="text-green-400 font-semibold text-lg mb-2">🎁 COMING SOON</p>
 
         <div class="flex flex-col items-center gap-4 mt-6 mb-6">
           <a
-            href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
+            href="https://apps.apple.com/us/app/gridborn/[APP_ID]"
             target="_blank"
             class="inline-block"
           >
@@ -28,7 +30,7 @@
           </a>
 
           <a
-            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
+            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gridborn"
             target="_blank"
             class="inline-block"
           >
@@ -38,59 +40,52 @@
               class="store-badge"
             />
           </a>
-
-          <a
-            href="/games/gravesweeper/reapers_run/"
-            target="_blank"
-            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
-          >🎮 Play Web Demo</a>
         </div>
 
         <div class="text-white text-left mb-6 space-y-4">
           <div>
             <h2 class="text-xl font-bold mb-2 text-purple-300">🎮 Core Gameplay</h2>
             <ul class="list-disc list-inside space-y-1">
-              <li>Classic Minesweeper mechanics in a dungeon adventure format</li>
-              <li>Swipe or tap to move your skeleton character</li>
-              <li>Numbers reveal nearby trap counts - use logic to find safe paths</li>
-              <li>Find the stairs to escape each level</li>
-              <li>Progressive difficulty - levels get larger and more dangerous</li>
+              <li>Tactical 3x3 grid combat where positioning is everything</li>
+              <li>Directional attacks and shields—cards attack in 5 directions (forward, diagonals, sides)</li>
+              <li>6 Element System: Generate and consume Fire, Ice, Lightning, Earth, Nature, and Poison for bonus damage</li>
+              <li>Navigate procedurally generated hex grid maps with multiple paths</li>
+              <li>Every run is unique with random encounters, rewards, and strategic choices</li>
             </ul>
           </div>
 
           <div>
-            <h2 class="text-xl font-bold mb-2 text-purple-300">🎯 Three Game Modes</h2>
+            <h2 class="text-xl font-bold mb-2 text-purple-300">⚔️ Choose Your Archetype</h2>
             <div class="space-y-2">
-              <div>
-                <h3 class="font-semibold text-lg">Campaign Mode</h3>
-                <p class="text-sm">Start at level 1 and climb as high as you can! Unlock 50+ permanent abilities in the shop, collect candies to purchase game-changing upgrades, and unlock spooky costumes as you progress.</p>
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">Reaper's Run (Roguelike Mode)</h3>
-                <p class="text-sm">Pure skill-based challenge with permanent death! Draft abilities every few floors to build unique combos. No shop, no saves - just you vs the dungeon.</p>
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">Daily Run</h3>
-                <p class="text-sm">Fresh challenge every 24 hours with pre-selected abilities. Compete with friends on the same seed and track your performance in the calendar!</p>
-              </div>
+              <p class="font-semibold">6 Unique Playstyles:</p>
+              <ul class="list-disc list-inside space-y-1 ml-4">
+                <li>⚔️ <strong>Warrior</strong> - Pure physical combat with frontline pressure</li>
+                <li>🔮 <strong>Caster</strong> - Fire/Ice magic with powerful elemental combos</li>
+                <li>🗡️ <strong>Assassin</strong> - Poison/Nature specialist with flanking attacks</li>
+                <li>🛡️ <strong>Paladin</strong> - Earth magic with defensive shield walls</li>
+                <li>🌳 <strong>Druid</strong> - Nature magic with zone control and healing</li>
+                <li>⚡ <strong>Stormcaller</strong> - Lightning magic with multi-target strikes</li>
+              </ul>
             </div>
           </div>
 
           <div>
             <h2 class="text-xl font-bold mb-2 text-purple-300">✨ Key Features</h2>
             <ul class="list-disc list-inside space-y-1">
-              <li>50+ unlockable abilities (Second Chance, Oracle Vision, Invincibility Burst, and more!)</li>
-              <li>20+ unlockable costumes (Ghost, Vampire, Witch, Demon...)</li>
-              <li>Beautiful Halloween-themed graphics with multiple biomes</li>
-              <li>Heat Levels - extra challenging floors with 1.5x traps</li>
-              <li>Perfect Play rewards for clearing levels without mistakes</li>
-              <li>3 Save Slots + Auto-Save</li>
+              <li>121 Player Cards across 6 archetypes with unique abilities</li>
+              <li>63 Enemy Cards with 7 dynamic archetype combinations</li>
+              <li>Strategic deck-building with shop and rest sites between battles</li>
+              <li>7 Positioning Abilities: Frontline, Backline, Flanking, Zone Control, and more</li>
+              <li>Roguelike progression with strike system—three chances before game over</li>
+              <li>Boss encounters that test your deck-building skills</li>
+              <li>Artifact system for permanent bonuses and unique strategies</li>
             </ul>
           </div>
         </div>
 
 
-        <!-- Screenshots Carousel -->
+        <!-- Screenshots Carousel - Uncomment when you have screenshots -->
+        <!--
         <div class="mt-8 mb-6">
           <h2 class="text-xl font-bold mb-4 text-purple-300 text-center">📸 Screenshots</h2>
           <div class="carousel-container">
@@ -99,7 +94,7 @@
             </button>
             <div class="carousel-image-wrapper">
               <img 
-                :src="require(`~/assets/gravesweeper_screenshots/${screenshots[currentScreenshot]}.png`)" 
+                :src="require(`~/assets/gridborn_screenshots/${screenshots[currentScreenshot]}.png`)" 
                 :alt="screenshotAlts[currentScreenshot]" 
                 class="carousel-image" 
               />
@@ -118,13 +113,16 @@
             ></button>
           </div>
         </div>
+        -->
 
-        <p class="text-green-400 font-semibold text-lg mb-2 text-center">🎁 FREE TO DOWNLOAD</p>
+        <p class="text-green-400 font-semibold text-lg mb-2 text-center">🎁 COMING SOON</p>
 
         <!-- Bottom Download Links -->
         <div class="flex flex-col items-center gap-4 mt-8 mb-4">
+          <!-- Coming Soon - Links will be added when game is released -->
+          <!--
           <a
-            href="https://apps.apple.com/us/app/gravesweeper/id6754204296"
+            href="https://apps.apple.com/us/app/gridborn/[APP_ID]"
             target="_blank"
             class="inline-block"
           >
@@ -136,7 +134,7 @@
           </a>
 
           <a
-            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gravesweeper"
+            href="https://play.google.com/store/apps/details?id=com.midnightlaunchgames.gridborn"
             target="_blank"
             class="inline-block"
           >
@@ -146,23 +144,17 @@
               class="store-badge"
             />
           </a>
-
-          <a
-            href="/games/gravesweeper/reapers_run/"
-            target="_blank"
-            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
-          >🎮 Play Web Demo</a>
+          -->
+          <p class="text-white text-center">
+            Gridborn is currently in development. Check back soon for release information!
+          </p>
         </div>
 
         <div class="mt-6 text-center flex flex-col gap-2">
           <nuxt-link
-            to="/games/gravesweeper/support"
+            to="/games/gridborn/support"
             class="text-blue-400 hover:text-blue-300 underline"
           >Support & FAQ</nuxt-link>
-          <nuxt-link
-            to="/games/gravesweeper/privacy"
-            class="text-blue-400 hover:text-blue-300 underline"
-          >Privacy Policy</nuxt-link>
         </div>
       </div>
     </div>
@@ -180,18 +172,16 @@ export default {
     return {
       currentScreenshot: 0,
       screenshots: [
-        '01_gameplay_graveyard',
-        '02_title_screen',
-        '03_gameplay_underworld',
-        '04_ability_selection',
-        '05_daily_run_calendar'
+        // Add screenshot filenames here when ready
+        // '01_screenshot',
+        // '02_screenshot',
+        // etc...
       ],
       screenshotAlts: [
-        'Gameplay in Graveyard biome',
-        'Title Screen',
-        'Gameplay in Underworld biome',
-        'Ability Selection',
-        'Daily Run Calendar'
+        // Add screenshot descriptions here
+        // 'Screenshot 1',
+        // 'Screenshot 2',
+        // etc...
       ]
     }
   },
@@ -207,35 +197,35 @@ export default {
   },
   head() {
     return {
-      title: 'Gravesweeper - Halloween Puzzle Dungeon',
+      title: 'Gridborn - Spatial Grid Deck-Builder Roguelike',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom! Free to download on iOS and Android.'
+          content: 'Build your deck with powerful cards featuring directional attacks and shields. Master the spatial combat system where positioning matters in this strategic deck-builder roguelike. Coming soon to iOS and Android.'
         },
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/gravesweeper/' },
-        { hid: 'og:title', property: 'og:title', content: 'Gravesweeper - Halloween Puzzle Dungeon' },
+        { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/gridborn/' },
+        { hid: 'og:title', property: 'og:title', content: 'Gridborn - Spatial Grid Deck-Builder Roguelike' },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: 'Build your deck with powerful cards featuring directional attacks and shields as you navigate a treacherous hex grid map. Master the spatial combat system where positioning matters!'
         },
-        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gridborn-logo-solid.png' },
         { hid: 'og:image:width', property: 'og:image:width', content: '400' },
         { hid: 'og:image:height', property: 'og:image:height', content: '400' },
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
-        { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/gravesweeper/' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'Gravesweeper - Halloween Puzzle Dungeon' },
+        { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/gridborn/' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Gridborn - Spatial Grid Deck-Builder Roguelike' },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: 'Build your deck with powerful cards featuring directional attacks and shields as you navigate a treacherous hex grid map. Master the spatial combat system where positioning matters!'
         },
-        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' }
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gridborn-logo-solid.png' }
       ]
     }
   }
