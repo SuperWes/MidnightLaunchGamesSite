@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/games/gridborn/privacy", {data:[{}],fetch:[],mutations:[]});
