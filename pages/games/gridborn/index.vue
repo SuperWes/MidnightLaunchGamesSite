@@ -155,6 +155,10 @@
             to="/games/gridborn/support"
             class="text-blue-400 hover:text-blue-300 underline"
           >Support & FAQ</nuxt-link>
+          <nuxt-link
+            to="/games/gridborn/privacy"
+            class="text-blue-400 hover:text-blue-300 underline"
+          >Privacy Policy</nuxt-link>
         </div>
       </div>
     </div>
