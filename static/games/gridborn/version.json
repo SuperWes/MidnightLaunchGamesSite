@@ -11,6 +11,9 @@
   "update_message": {
     "en": "A new version is available with important fixes."
   },
+  "feature_flags": {
+    "enable_auto_play": true
+  },
   "news": [
     {
       "title": "Welcome to Gridborn!",
@@ -26,4 +29,5 @@
     "Elements can be consumed for powerful bonuses - match your equipment!"
   ]
 }
+
 
