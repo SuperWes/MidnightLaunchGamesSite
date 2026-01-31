@@ -1,0 +1,4 @@
+# This directory will contain the Flutter web build
+# Run the publish script from the web_of_deceit project to populate it:
+#   cd /Users/wes/Documents/Twine/Stories
+#   ./scripts/publish.sh
