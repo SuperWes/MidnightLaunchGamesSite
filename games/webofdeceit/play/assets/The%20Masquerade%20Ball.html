@@ -1377,7 +1377,440 @@ It&#39;s not a suggestion.
 
 //Suspicion increased.//
 
-[[Return downstairs|Ballroom]]</tw-passagedata><tw-passagedata pid="82" name="Meet Joker" tags="joker" position="2200,400" size="100,100">{(set: $time to $time + 5)
+[[Return downstairs|Ballroom]]</tw-passagedata><tw-passagedata pid="111" name="Master Bedroom" tags="" position="650,50" size="100,100">{(set: $time to $time + 10)
+(set: $suspicion to $suspicion + 15)}
+{(if: $alliedVictoria)[
+Victoria's trust gave you access to this private space. The master bedroom is elegant but tells a story of separation—two distinct areas, his and hers, with clear boundaries.
+
+"Look wherever you need to," Victoria says quietly from the doorway. "I'll keep watch."
+](else:)[
+You slip into the master bedroom quickly, heart pounding. This is the most private space in the estate—if you're caught here, there's no explaining it away.
+
+The room is elegant but reveals cracks in the facade—separate sleeping areas, his space and hers, telling a story of a marriage long dead.
+]}
+
+//Suspicion significantly increased.//
+
+{(if: not ($evidence contains "Love letters between Senator and Joey"))[
+[[Search the Senator's nightstand|Bedroom Search Senator]]
+]}
+{(if: not ($evidence contains "Victoria's private financial documents"))[
+[[Search Victoria's desk|Bedroom Search Victoria]]
+]}
+[[Check the master bathroom|Master Bathroom]]
+[[Return to landing|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="112" name="Bedroom Search Senator" tags="" position="700,50" size="100,100">{(set: $time to $time + 5)
+(set: $suspicion to $suspicion + 10)}
+You carefully open the Senator's nightstand drawer. Beneath some books and papers, you find a false bottom.
+
+Inside: a bundle of letters tied with a ribbon. Love letters. Between the Senator and Joey Reed, spanning nearly two years. Passionate, intimate, and completely incriminating.
+
+"My dearest J—The renovation project gives us the perfect cover. No one questions why we spend so much time together..."
+
+"Marcus—When this is over, when we have enough, we can disappear together. Just like we planned..."
+
+These aren't just evidence of an affair. They're evidence of conspiracy—planning the fraud together, discussing the smuggling operation, even mentioning "dealing with problems" like the reporter who asked too many questions.
+
+{(set: $evidence to $evidence + (a: "Love letters between Senator and Joey", "Letters discuss planning the fraud together"))
+(set: $cluesFound to $cluesFound + (a: "Senator and Joey's affair spans two years", "They planned the smuggling operation together", "Letters reference eliminating threats"))}
+
+{(if: $photosRemaining >= 3)[
+(set: $photosRemaining to $photosRemaining - 3)
+You photograph the most damaging letters.
+
+//Film remaining: {(print: $photosRemaining)}/30//
+](else:)[
+//Not enough film to photograph the letters!//
+]}
+
+{(if: $alliedVictoria)[
+Victoria appears in the doorway, sees what you're holding, and her face goes white. "So it's true. All this time, I hoped I was wrong..."
+
+She steadies herself against the doorframe. "At least now I know. At least now I can be free."
+
+{(set: $cluesFound to $cluesFound + (a: "Victoria saw proof of the affair", "She's more determined than ever to help"))}
+]}
+
+[[Continue searching|Master Bedroom]]</tw-passagedata><tw-passagedata pid="113" name="Bedroom Search Victoria" tags="" position="750,50" size="100,100">{(set: $time to $time + 5)
+(set: $suspicion to $suspicion + 5)}
+Victoria's desk is neat, organized—a finance professional's workspace even in her private space.
+
+In a locked drawer (the key is in a jewelry box—she wanted these found), you discover her insurance policy: complete copies of Care Health financial documents, highlighted and annotated in her own hand.
+
+"Discrepancy: $2.3M unaccounted for - offshore transfer?"
+"Program expenditure: only 12% of claimed amount"
+"Same shipping dates as church donation pickups - connection?"
+
+She's been investigating too. Building her own case. Preparing her escape.
+
+{(set: $evidence to $evidence + (a: "Victoria's private financial documents", "Her analysis of Care Health fraud"))
+(set: $cluesFound to $cluesFound + (a: "Victoria has been building her own case against them", "She documented everything, planning her exit"))}
+
+{(if: $photosRemaining >= 3)[
+(set: $photosRemaining to $photosRemaining - 3)
+You photograph her annotated documents.
+
+//Film remaining: {(print: $photosRemaining)}/30//
+](else:)[
+//Not enough film!//
+]}
+
+There's also a business card: "Morrison & Associates - Divorce Attorneys." Consultation scheduled for next week.
+
+She was already planning to leave. You just gave her the courage to do it sooner.
+
+[[Continue searching|Master Bedroom]]</tw-passagedata><tw-passagedata pid="114" name="Master Bathroom" tags="" position="650,100" size="100,100">{(set: $time to $time + 5)}
+An elegant marble bathroom connecting the bedroom to a dressing area. Gold fixtures, a large soaking tub, a mirror that spans one wall.
+
+{(if: $suspicion >= 60)[
+You hear voices in the hallway—security making rounds!
+
+"Check all the rooms up here. Someone reported movement on the second floor."
+
+Your heart races. If they find you in here, in the master bedroom suite, there's no explanation that will work.
+
+[[Hide in the bathroom|Hide in Bathroom]]
+[[Try to slip out quickly|Caught in Bedroom]]
+](else:)[
+The medicine cabinet reveals interesting details: prescription bottles with doctors' names, addresses, even a phone number scrawled on one label in the Senator's handwriting.
+
+{(if: not ($cluesFound contains "Senator's private phone number"))[
+{(set: $cluesFound to $cluesFound + (a: "Senator's private phone number from prescription bottle"))}
+
+You photograph the label with the phone number.
+]}
+
+Eleanor's name is on an anxiety medication bottle. She mentioned being nervous, but this confirms it—she's terrified, medicated to cope with the stress of the operation.
+
+{(set: $cluesFound to $cluesFound + (a: "Eleanor takes anxiety medication", "She's more trapped than she appeared"))}
+
+[[Return to bedroom|Master Bedroom]]
+]}</tw-passagedata><tw-passagedata pid="115" name="Hide in Bathroom" tags="" position="700,100" size="100,100">{(set: $time to $time + 10)
+(set: $suspicion to $suspicion - 10)}
+You quickly slip into the bathroom and ease the door almost closed, leaving just a crack to see through.
+
+Footsteps enter the bedroom. Two security guards, doing a sweep.
+
+"Master bedroom is clear," one says into his radio.
+
+But they're thorough. One approaches the bathroom door. Your hand moves to your camera—if this goes badly, at least you have the evidence...
+
+"Hold on," a voice crackles over the radio. "We've got movement on the first floor. Possible intruder in the kitchen area."
+
+"Copy that. Responding."
+
+The guards leave quickly. You hear their footsteps fade down the stairs.
+
+You wait a full minute before emerging, heart still pounding. That was close.
+
+{(if: $alliedVictoria)[
+Victoria appears in the doorway. "Are you alright? I heard them coming and created a distraction downstairs. We should leave before they come back."
+
+{(set: $cluesFound to $cluesFound + (a: "Victoria created a distraction to save you"))}
+]}
+
+//Suspicion decreased - the guards didn't find you.//
+
+[[Leave quickly|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="116" name="Caught in Bedroom" tags="" position="750,100" size="100,100">{(set: $suspicion to $suspicion + 40)}
+You try to slip out, but the door opens before you reach it. Two security guards block your path.
+
+"What are you doing in the Senator's private bedroom?"
+
+There's no good answer. No excuse that will work.
+
+{(if: $alliedVictoria)[
+Before you can respond, Victoria appears behind the guards. "He's with me. I asked him to retrieve something from my desk."
+
+The guards look uncertain. "Ma'am, this area is restricted during the party—"
+
+"I'm aware of the security protocols," Victoria says coolly. "I also own this house. He was helping me. Is that a problem?"
+
+The guards exchange glances. "No, ma'am. But we'll need to escort you both back downstairs."
+
+//Suspicion significantly increased, but Victoria's intervention prevented immediate disaster.//
+
+[[Return downstairs with escort|Ballroom]]
+](else:)[
+"I was looking for the restroom and got turned around—"
+
+"In the master bedroom? Sir, you'll need to come with us."
+
+They're professional but firm. You're caught.
+
+[[Let them escort you out|Caught Ending]]
+]}</tw-passagedata><tw-passagedata pid="117" name="Balcony" tags="" position="600,150" size="100,100">{(set: $time to $time + 5)}
+You step through the French doors onto a wide stone balcony. The night air is cool, a welcome relief from the crowded party below.
+
+The balcony overlooks the gardens and greenhouse. From this vantage point, you can see the entire estate grounds—the delivery area, the path to the wine cellar, everything.
+
+{(if: $time >= 1030 and $time < 1100)[
+**Perfect timing.** Below, you can see activity near the delivery entrance. Staff members are clearing the area, preparing for something.
+
+{(if: not ($cluesFound contains "Observed delivery preparation from balcony"))[
+{(set: $cluesFound to $cluesFound + (a: "Observed delivery preparation from balcony", "Staff coordinating for 11 PM arrival"))}
+]}
+
+{(if: $photosRemaining > 0)[
+[[Position yourself to photograph the delivery|Balcony Photograph Prep]]
+]}
+]}
+
+{(if: $time >= 1100)[
+Below, a truck has arrived. You watch from above as crates are quickly unloaded and moved through the garden toward the greenhouse and wine cellar. From up here, you can see the full scope of the operation—at least a dozen people coordinating, armed security watching the perimeter.
+
+{(if: $photosRemaining >= 5)[
+[[Photograph the entire operation from above|Balcony Photograph Delivery]]
+](else:)[
+//Not enough film to document what you're seeing!//
+]}
+]}
+
+{(if: $time >= 930 and $time < 1000 and not ($identities's peacock))[
+The door opens behind you. Joey Reed steps out, not noticing you at first. He's alone, lighting a cigarette with shaking hands.
+
+He looks stressed, vulnerable—very different from his composed public persona.
+
+[[Speak with Joey|Balcony Joey]]
+[[Observe quietly|Balcony Observe Joey]]
+](else-if: $time >= 1000 and $time < 1045 and $alliedVictoria and not ($cluesFound contains "Victoria confided on balcony"))[
+Victoria is standing at the railing, staring at the stars. She doesn't seem to notice you approach.
+
+"I used to love these parties," she says quietly. "Before I knew what they really were. Before I understood what I'd married into."
+
+[[Talk with Victoria|Balcony Victoria]]
+[[Give her privacy|Second Floor Landing]]
+](else-if: $time >= 1015 and $time < 1100 and not ($identities's dove))[
+Eleanor Hartwick is on the balcony, hands clasped as if in prayer, staring out at the garden.
+
+She looks deeply troubled, lips moving in what might be silent prayer.
+
+[[Approach Eleanor|Balcony Eleanor]]
+[[Leave her to her prayers|Second Floor Landing]]
+](else:)[
+[[Observe the grounds|Balcony Observe]]
+[[Return inside|Second Floor Landing]]
+]}</tw-passagedata><tw-passagedata pid="118" name="Balcony Photograph Prep" tags="" position="650,150" size="100,100">{(set: $time to $time + 5)
+(set: $photosRemaining to $photosRemaining - 2)}
+You position yourself at the corner of the balcony where the shadows are deepest. From here, you have a clear view of the delivery entrance and the paths to both the greenhouse and cellar.
+
+You take several shots of the preparation: staff clearing the area, someone checking the path for obstructions, security taking positions.
+
+{(set: $evidence to $evidence + (a: "Photos of delivery preparation from balcony"))
+(set: $cluesFound to $cluesFound + (a: "Documented the coordination before delivery", "Multiple security personnel involved"))}
+
+//Film remaining: {(print: $photosRemaining)}/30//
+
+Now you just need to wait for the truck to arrive.
+
+[[Wait for 11 PM|Balcony]]</tw-passagedata><tw-passagedata pid="119" name="Balcony Photograph Delivery" tags="" position="700,150" size="100,100">{(set: $time to $time + 10)
+(set: $photosRemaining to $photosRemaining - 5)
+(set: $suspicion to $suspicion - 5)}
+From your elevated position, you capture everything. The truck backing up. The crates being unloaded—at least twenty of them. The armed security forming a perimeter. The coordination between multiple teams.
+
+You get clear shots of faces, license plates, the shipping labels on the crates. From up here, they don't see you—you're just another shadow on a dark balcony.
+
+This is better than being in the garden. You can see the full operation, document every piece.
+
+{(set: $evidence to $evidence + (a: "Complete photographic documentation of delivery from balcony", "Photos show full scope of smuggling operation"))
+(set: $cluesFound to $cluesFound + (a: "Documented entire 11 PM delivery from above", "Photos capture at least 20 crates of contraband", "Multiple armed security personnel visible", "Clear photos of truck and participants"))}
+
+//Film remaining: {(print: $photosRemaining)}/30//
+
+This is it. This is your front-page story.
+
+//Suspicion decreased - they didn't see you up here.//
+
+[[Slip back inside while they're busy|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="120" name="Balcony Joey" tags="peacock" position="750,150" size="100,100">{(set: $time to $time + 10)}
+"Joey Reed," you say softly.
+
+He spins around, startled, cigarette nearly falling from his fingers. "Jesus! You scared me. How long have you been—" He stops, recognizing you. "The photographer."
+
+"Needed some air," you say. "You too?"
+
+He laughs bitterly. "Something like that." He takes a long drag. "Beautiful view, isn't it? I renovated this balcony myself. Reinforced the structure, replaced the railings, added the lighting. I'm proud of it."
+
+"You do good work."
+
+"I used to think so." He's quiet for a moment. "When did I stop being an architect and become... whatever this is?"
+
+{(set: $identities to $identities + (dm: "peacock", "Joey Reed"))}
+{(set: $cluesFound to $cluesFound + (a: "Joey is troubled by what he's become", "He remembers when his work was honest"))}
+
+[[Ask about his relationship with the Senator|Balcony Joey Relationship]]
+[[Ask what he means|Balcony Joey Confession]]
+[[Give him space|Balcony]]</tw-passagedata><tw-passagedata pid="121" name="Balcony Joey Relationship" tags="peacock" position="800,150" size="100,100">{(set: $time to $time + 5)}
+"Your relationship with Senator Blackwood," you say carefully. "It's more than professional, isn't it?"
+
+Joey's jaw tightens. "Is that what you think this is about? Love?" He laughs harshly. "Maybe it started that way. Maybe I believed in him once. Believed we were building something together."
+
+"But now?"
+
+"Now I'm in too deep to get out." He flicks ash over the railing. "They showed me what happens to people who try to leave. The reporter. The accountant. 'Accidents,' they say. But I know better."
+
+{(set: $cluesFound to $cluesFound + (a: "Joey feels trapped in the operation", "He's afraid of what happens to people who leave", "His relationship with the Senator has become toxic"))}
+
+"You could testify," you say. "Turn state's evidence. They'd protect you."
+
+"Would they?" He meets your eyes. "The operation goes beyond the Senator. Beyond this estate. Federal officials, judges, police chiefs—how do I know who's compromised?"
+
+{(if: $evidence contains "Photos of fraudulent shipping manifests" or $evidence contains "Real financial ledger from hidden compartment")[
+"I have evidence," you tell him. "Enough to force an investigation they can't bury. But I need more. I need someone on the inside."
+
+Joey considers this, smoking in silence. "The safe," he finally says. "In the Senator's office. Code is 1-8-4-7. Our... his wedding anniversary. Ironic, right?"
+
+{(set: $cluesFound to $cluesFound + (a: "Joey confirmed safe code: 1-8-4-7"))
+(set: $alliedPeacock to true)}
+
+"Why are you helping me?"
+
+"Because I'm tired of being scared. Tired of being whatever this has made me." He drops the cigarette and grinds it out. "Just... make it count. Make sure this means something."
+
+//Joey has become your ally.//
+]}
+
+[[Return inside|Balcony]]</tw-passagedata><tw-passagedata pid="122" name="Balcony Joey Confession" tags="peacock" position="850,150" size="100,100">{(set: $time to $time + 5)}
+"What do you mean, 'whatever this is'?"
+
+Joey leans against the railing, looking out at the gardens. "I built those greenhouses. Renovated the wine cellar. Designed the hidden storage compartments. I knew what they were for. I told myself it was just construction work, just following the client's specifications. But I knew."
+
+{(set: $cluesFound to $cluesFound + (a: "Joey designed the hidden storage for smuggling", "He's complicit in the operation from the beginning"))}
+
+"And now?"
+
+"Now I can't sleep. Now I see that reporter's face—the one who died asking questions. Now I wonder if the walls I built are going to become my prison too."
+
+He's genuinely tormented. Whatever this started as—love, ambition, money—it's eating him alive.
+
+[[Offer him a way out|Balcony Joey Relationship]]
+[[Leave him to his thoughts|Balcony]]</tw-passagedata><tw-passagedata pid="123" name="Balcony Observe Joey" tags="peacock" position="900,150" size="100,100">{(set: $time to $time + 5)}
+You stay quiet, observing. Joey doesn't notice you in the shadows.
+
+He smokes nervously, checking his phone repeatedly. Waiting for something. A text arrives and he reads it, then types a response. His hands are shaking.
+
+You catch a glimpse of the screen: "Status?" and Joey's reply: "All clear. On schedule."
+
+He's coordinating something. The delivery, maybe. Or security. He's more involved than just romantic attachment—he's part of the operation's logistics.
+
+{(set: $identities to $identities + (dm: "peacock", "Joey Reed"))}
+{(set: $cluesFound to $cluesFound + (a: "Joey coordinates operations via phone", "He's actively involved in logistics tonight"))}
+
+{(if: $photosRemaining > 0)[
+You could photograph him with that phone, catch the messages...
+
+[[Take a photo|Balcony Photo Joey]]
+]}
+
+[[Continue observing|Balcony]]</tw-passagedata><tw-passagedata pid="124" name="Balcony Photo Joey" tags="peacock" position="950,150" size="100,100">{(set: $time to $time + 2)
+(set: $photosRemaining to $photosRemaining - 1)
+(set: $suspicion to $suspicion + 15)}
+You raise your camera quietly and snap a shot—Joey with his phone visible, the text messages clear.
+
+The flash goes off.
+
+Joey spins around. "What the hell—you're photographing me?"
+
+"I'm photographing everything," you say calmly.
+
+"You don't understand what you're doing," Joey says, but there's more fear than anger in his voice. "If they think I'm talking to you—"
+
+"Then talk to me properly. Help me expose this before it's too late."
+
+{(set: $evidence to $evidence + (a: "Photo of Joey coordinating via phone"))}
+
+//Film remaining: {(print: $photosRemaining)}/30//
+
+//Suspicion significantly increased - Joey knows you're investigating.//
+
+[[Press him for information|Balcony Joey Relationship]]
+[[Back away|Balcony]]</tw-passagedata><tw-passagedata pid="125" name="Balcony Victoria" tags="swan" position="1000,150" size="100,100">{(set: $time to $time + 10)}
+You step beside her at the railing. For a moment, neither of you speaks.
+
+"I grew up in a modest home," Victoria says quietly. "My parents were accountants. Honest people. They taught me that numbers don't lie—people do."
+
+She turns to face you. "I have a degree in finance. I volunteered for Care Health because I believed in it. Because I thought I could make a difference. And then I started seeing the numbers that didn't add up."
+
+"When did you realize?"
+
+"About a year ago. Little things at first. Then bigger things. Donations that vanished. Programs that existed on paper but nowhere else. I confronted Marcus about it."
+
+She laughs bitterly. "He said I was confused. That I didn't understand nonprofit accounting. Me. With my finance degree and ten years of volunteer experience. He thought I was stupid."
+
+{(set: $cluesFound to $cluesFound + (a: "Victoria confided on balcony", "She discovered the fraud a year ago", "Senator dismissed her concerns", "Victoria has finance expertise"))}
+
+"I started keeping my own records," she continues. "Copying documents. Building a case. But I was scared. Scared of what he'd do if he found out. Scared of what would happen if I left."
+
+She meets your eyes. "You gave me courage. Showing up here, asking the right questions. You reminded me that the truth matters more than safety."
+
+"You've been very brave," you say.
+
+"No. Brave would have been leaving a year ago. I'm just finally doing what I should have done then."
+
+{(if: not ($evidence contains "Victoria's balcony confession"))[
+{(set: $evidence to $evidence + (a: "Victoria's balcony confession"))}
+
+She pulls a folded paper from her clutch. "This is the name of a federal agent who isn't corrupt. Agent Morrison. She's at the field office downtown. When you have everything you need, go to her. She'll listen."
+
+{(set: $cluesFound to $cluesFound + (a: "Victoria provided contact for Agent Morrison", "Federal agent who can be trusted"))}
+]}
+
+[[Thank her|Balcony]]
+[[Return inside together|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="126" name="Balcony Eleanor" tags="dove" position="1050,150" size="100,100">{(set: $time to $time + 10)}
+You approach quietly. Eleanor doesn't turn, but she knows you're there.
+
+"I pray here sometimes," she says. "When the parties get to be too much. When I need to remember why I'm doing this."
+
+"Why are you doing this?"
+
+She turns to face you, and you see tears on her cheeks. "I was doing it for the children. That's what I told myself. The orphanages, the medical programs. St. Michael's was struggling, and Care Health promised to help."
+
+"But there are no children," you say gently.
+
+"No." Her voice breaks. "There are no children. Just crates of expensive liquor and designer goods. Just money laundering through a church. And I'm the face of it. Me, with my collar and my prayers. I'm the one who makes it look legitimate."
+
+{(set: $identities to $identities + (dm: "dove", "Eleanor Hartwick"))}
+{(set: $cluesFound to $cluesFound + (a: "Eleanor is wracked with guilt", "She believed she was helping children", "St. Michael's was struggling financially"))}
+
+"You can stop," you tell her. "Testify. Help bring them down."
+
+"They'll kill me." She says it matter-of-factly. "Like the reporter. Like the accountant. They make it look like accidents, but I know."
+
+"Not if you have protection. Federal protection. Witness protection."
+
+Eleanor looks at you with desperate hope. "You'd help me? You'd protect me?"
+
+{(if: $evidence contains "Photos of fraudulent shipping manifests" or $evidence contains "Real financial ledger from hidden compartment")[
+"I have evidence," you tell her. "Enough to force an investigation. But I need more. I need testimony from someone inside."
+
+Eleanor is quiet for a long moment, staring out at the garden. "There's a flash drive," she finally says. "In my office at St. Michael's. Complete shipping manifests, donation records, everything. I made copies. Insurance, I thought. In case they ever came for me."
+
+She meets your eyes. "If I give that to you, if I testify, you promise they'll protect me?"
+
+"I promise I'll do everything I can."
+
+She nods slowly. "Then I'll help. God forgive me, I should have done this months ago."
+
+{(set: $alliedDove to true)
+(set: $evidence to $evidence + (a: "Received flash drive from Eleanor with shipping manifests", "Complete donation and smuggling records"))}
+{(set: $cluesFound to $cluesFound + (a: "Eleanor is willing to testify with protection", "She has complete shipping and donation records"))}
+
+//Eleanor has become your ally.//
+]}
+
+[[Return inside|Balcony]]</tw-passagedata><tw-passagedata pid="127" name="Balcony Observe" tags="" position="1100,150" size="100,100">{(set: $time to $time + 5)}
+You lean against the balcony railing, surveying the estate grounds.
+
+From up here, you can see the layout of the entire operation: the greenhouse where contraband arrives, the wine cellar where it's stored, the garden paths that connect them, the delivery area screened from the main driveway.
+
+It's brilliantly designed. Someone with architectural knowledge planned this—every line of sight, every access point, every security consideration.
+
+Joey Reed's work, you realize. The Director of Capital Projects didn't just renovate these spaces—he designed them specifically for smuggling.
+
+{(if: not ($cluesFound contains "Balcony observation reveals full estate layout"))[
+{(set: $cluesFound to $cluesFound + (a: "Balcony observation reveals full estate layout", "Estate designed specifically for smuggling operations", "Joey Reed's renovations facilitated the operation"))}
+]}
+
+The cool night air clears your head. From up here, you can see the full picture.
+
+[[Return inside|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="82" name="Meet Joker" tags="joker" position="2200,400" size="100,100">{(set: $time to $time + 5)
 (set: $suspicion to $suspicion + 20)}
 
 A hush falls over the ballroom. The music doesn&#39;t stop, but conversations die mid-sentence. Everyone&#39;s attention shifts to the entrance.
