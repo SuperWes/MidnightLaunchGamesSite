@@ -51,7 +51,8 @@ tw-story {
 (set: $photoTakenBalconyDelivery to false)
 (set: $photoTakenSenatorLetters to false)
 (set: $photoTakenVictoriaDocs to false)
-(set: $photoTakenBathroom to false)}
+(set: $photoTakenBathroom to false)
+(set: $suspicionRaisedPassages to (a:))}
 
 //BLACKWOOD MANOR//
 //Senator Blackwood&#39;s Annual Masquerade Ball//
@@ -116,7 +117,10 @@ A small room lined with hanging coats and wraps. The attendant—a young man in 
 
 (if: $suspicion &lt; 40)[[[Search the coats|Search Coats]]](else:)[//Too risky with the attendant watching.//]
 [[Leave|Grand Foyer]]</tw-passagedata><tw-passagedata pid="6" name="Search Coats" tags="" position="500,400" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Search Coats")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Search Coats"))
+]}
 You wait until the attendant turns away, then quickly rifle through the nearest coat pockets.
 
 A monogrammed handkerchief: **&quot;J.R.&quot;**
@@ -189,7 +193,10 @@ How do you respond?
 [[&quot;Yes, I&#39;m covering it for the paper. Great architecture.&quot;|Peacock Architecture]]
 [[&quot;I&#39;ve heard a lot about Senator Blackwood&#39;s parties.&quot;|Peacock Neutral]]
 [[&quot;You seem pretty familiar with the place.&quot;|Peacock Direct]]</tw-passagedata><tw-passagedata pid="11" name="Peacock Architecture" tags="peacock" position="700,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Peacock Architecture")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Architecture"))
+]}
 The Peacock&#39;s eyes light up. &quot;Ah, you appreciate the structure? This place is remarkable. The load-bearing walls, the ceiling vaults—whoever did the renovations knew what they were doing.&quot;
 
 He catches himself. &quot;Not that I&#39;m an expert, just... appreciate good construction.&quot;
@@ -243,7 +250,10 @@ A glass-walled room filled with potted plants and the scent of flowers. Moonligh
 (if: $time &gt;= 1030 and $time &lt; 1130)[[[Watch more carefully|Watch Senator Peacock]]]
 [[Go to the greenhouse|Greenhouse]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="15" name="Second Floor Landing" tags="" position="600,100" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Second Floor Landing")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Second Floor Landing"))
+]}
 You climb the marble staircase, trying to look casual. A few guests are up here, but it&#39;s much quieter than below.
 
 The landing overlooks the ballroom. Several doors branch off: the master bedroom, Senator&#39;s office, and a library. French doors at the end lead to a balcony.
@@ -266,7 +276,10 @@ In the corner, you notice several wooden shipping crates partially hidden behind
 (if: $suspicion &lt; 50)[[[Examine the crates|Examine Crates]]]
 [[Step outside to the garden|Garden]]
 [[Return to conservatory|Conservatory]]</tw-passagedata><tw-passagedata pid="17" name="Swan Stories" tags="swan" position="950,450" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Swan Stories")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Swan Stories"))
+]}
 Victoria studies you for a moment, then a bitter smile crosses her lips. &quot;Stories? Oh, there are always stories at these parties.&quot; She gestures around the ballroom. &quot;Care Health&#39;s generous donations to the arts. The Senator&#39;s tireless work for the community. The charity foundation supporting disadvantaged children.&quot;
 
 She takes another sip of champagne, her voice dropping. &quot;But you&#39;re a photographer. You know that the most interesting things are often just outside the frame.&quot;
@@ -295,7 +308,10 @@ The word &#39;image&#39; carries particular weight.
 [[&quot;I appreciate your honesty, Mrs. Blackwood.&quot;|Swan Trust Building]]
 [[Change subject: &quot;Have you met all the guests?&quot;|Swan Guests]]</tw-passagedata><tw-passagedata pid="19" name="Swan Personal" tags="swan" position="950,550" size="100,100">{(set: $time to $time + 5)
 (set: $alliedVictoria to true)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Swan Personal")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Swan Personal"))
+]}
 Victoria&#39;s mask doesn&#39;t hide the pain in her eyes. She&#39;s quiet for a long moment, then speaks very softly.
 
 &quot;Troubled? That&#39;s... diplomatic.&quot; She looks toward where the Senator was standing earlier. &quot;I married a man I thought was passionate about justice and helping people. That&#39;s what he told me, at least.&quot;
@@ -332,7 +348,10 @@ She starts to rise, then pauses. &quot;A word of advice, though—if you&#39;re 
 It&#39;s both a warning and an invitation.
 
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="22" name="Swan Charity" tags="swan" position="1050,550" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Swan Charity")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Swan Charity"))
+]}
 Victoria&#39;s expression hardens. &quot;The Care Health Children&#39;s Fund? My husband&#39;s pride and joy.&quot; The bitterness is unmistakable. &quot;Do you know how much money flows through that foundation? Millions. From wealthy donors who want tax writeoffs and photo opportunities with sick children.&quot;
 
 She sets down her glass. &quot;I used to volunteer there, you know. Before I realized something was wrong. The donation totals kept growing, but the actual programs stayed the same. No new equipment. No expansion. Just... the same services with a much larger budget.&quot;
@@ -385,7 +404,10 @@ She glances around quickly. &quot;Listen carefully. My husband keeps files in hi
 &quot;Find the evidence. Then we can both get out of this nightmare.&quot;
 
 [[Thank her and return to the party|Ballroom]]</tw-passagedata><tw-passagedata pid="26" name="Swan Vague" tags="swan" position="1100,650" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Swan Vague")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Swan Vague"))
+]}
 Victoria gives you a knowing look. &quot;Starting to wonder? That&#39;s how it begins. You come for champagne and dancing, and you leave with questions you can&#39;t answer.&quot;
 
 She stands, smoothing her dress. &quot;When you figure out what you&#39;re really doing here, come find me again. I might be able to help.&quot;
@@ -495,16 +517,26 @@ You approach the crates together. Victoria produces a letter opener from her clu
 
 [[Open the crates|Examine Crates Victoria]]
 [[Reconsider|Conservatory]]</tw-passagedata><tw-passagedata pid="39" name="Examine Crates Victoria" tags="swan" position="1350,550" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 10)
-(set: $photosRemaining to $photosRemaining - 2)}
+(if: $suspicionRaisedPassages does not contain "Examine Crates Victoria")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Examine Crates Victoria"))
+]}
 Together, you pry open the nearest crate. Inside: expensive wine bottles, jewelry boxes, designer handbags—luxury goods, not church supplies at all.
 
 Victoria&#39;s face goes pale. &quot;They&#39;re smuggling. The charity is a front for smuggling luxury goods. No import taxes, no customs declarations. Just &#39;charitable donations&#39; going to a &#39;church.&#39;&quot;
 
-{(set: $evidence to $evidence + (a: &quot;Photo: Crates contain luxury goods (wine, jewelry, designer items)&quot;, &quot;Photo: Crates labeled &#39;church supplies&#39; but contain smuggled merchandise&quot;))
-(set: $cluesFound to $cluesFound + (a: &quot;Charity is a front for smuggling operation&quot;, &quot;Luxury goods hidden in &#39;church supplies&#39; crates&quot;))}
+{(set: $cluesFound to $cluesFound + (a: &quot;Charity is a front for smuggling operation&quot;, &quot;Luxury goods hidden in &#39;church supplies&#39; crates&quot;))}
+
+{(if: $photosRemaining > 0)[
+(set: $photosRemaining to $photosRemaining - 2)
+(set: $evidence to $evidence + (a: &quot;Photo: Crates contain luxury goods (wine, jewelry, designer items)&quot;, &quot;Photo: Crates labeled &#39;church supplies&#39; but contain smuggled merchandise&quot;))
 
 You quickly photograph the contents, the shipping labels, everything.
+
+//Film remaining: {(print: $photosRemaining)}/30//
+][
+You want to photograph this, but you're out of film!
+]}
 
 A voice from the doorway makes you both freeze. &quot;Mrs. Blackwood? Is everything all right?&quot;
 
@@ -515,7 +547,10 @@ Victoria doesn&#39;t miss a beat. &quot;Oh yes, just showing our photographer th
 The guard eyes you both but nods. &quot;If you say so, ma&#39;am. But the Senator was asking for you.&quot;
 
 [[Return to the party|Ballroom]]</tw-passagedata><tw-passagedata pid="40" name="Peacock Push" tags="peacock" position="700,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Peacock Push")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Push"))
+]}
 &quot;I know you&#39;re more than just an admirer of architecture,&quot; you press. &quot;Joey Reed, right? Director of Capital Projects for the city. You&#39;ve been handling the Senator&#39;s private renovations—the greenhouse, the wine cellar, this very ballroom.&quot;
 
 The Peacock stiffens. His eyes dart around nervously. &quot;I don&#39;t know what you&#39;re implying.&quot;
@@ -534,7 +569,10 @@ He turns and walks away quickly, leaving you with more questions than answers.
 //Suspicion increased.//
 
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="41" name="Peacock Neutral" tags="peacock" position="800,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Peacock Neutral")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Neutral"))
+]}
 &quot;You clearly have an eye for quality work,&quot; you say diplomatically. &quot;The renovations here are impressive. The Senator must trust you completely to handle such significant projects.&quot;
 
 The Peacock relaxes slightly. &quot;He does. We&#39;ve worked together for years. He has... specific tastes. Attention to detail. Privacy requirements.&quot;
@@ -553,7 +591,10 @@ Joey meets your eyes. &quot;The Senator has been good to me. I wouldn&#39;t betr
 [[Ask about Care Health charity work|Peacock Charity]]
 [[Ask about shipments to the greenhouse|Peacock Shipments]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="42" name="Peacock Direct" tags="peacock" position="900,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Peacock Direct")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Direct"))
+]}
 You decide to be direct. &quot;Mr. Reed—it is Joey Reed, isn&#39;t it? I&#39;ve been observing tonight. The way you and the Senator interact. The glances. The body language. This isn&#39;t just a professional relationship, is it?&quot;
 
 Joey&#39;s face goes pale, then red. &quot;You need to leave. Now.&quot;
@@ -588,7 +629,10 @@ Joey&#39;s expression becomes guarded. &quot;Some. Small projects—office renov
 
 [[Press further|Peacock Push]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="44" name="Peacock Shipments" tags="peacock" position="900,700" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Peacock Shipments")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Shipments"))
+]}
 &quot;I&#39;ve heard there are regular shipments to the greenhouse. Late-night deliveries. You oversee those?&quot;
 
 Joey&#39;s jaw tightens. &quot;The Senator has orchid shipments. Rare specimens from overseas. I make sure the greenhouse is ready to receive them.&quot;
@@ -640,7 +684,10 @@ Joey laughs bitterly. &quot;The Senator? He&#39;s just the front man. The face. 
 &quot;Get your evidence and get out,&quot; Joey urges. &quot;Before The Joker arrives. Before you become another &#39;accident.&#39;&quot;
 
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="47" name="Peacock Details" tags="peacock" position="1100,700" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Peacock Details")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Peacock Details"))
+]}
 &quot;I need specifics,&quot; you press. &quot;What exactly is being smuggled? Where does the money go? Who&#39;s in charge?&quot;
 
 Joey looks torn between fear and anger. &quot;Fine. You want details? The charity receives &#39;donations&#39;—luxury goods from overseas. Wine, jewelry, designer items. They come through as &#39;medical supplies&#39; or &#39;educational materials.&#39; No customs inspection. The items get stored briefly, then &#39;redistributed&#39; to private buyers at markup.&quot;
@@ -674,7 +721,10 @@ There&#39;s something too rehearsed about her response. Too smooth.
 [[Ask about the church donations|Dove Donations]]
 [[Ask about her relationship with the Senator|Dove Senator]]
 [[Ask about Care Health&#39;s programs|Dove Programs]]</tw-passagedata><tw-passagedata pid="49" name="Dove Donations" tags="dove" position="1000,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Dove Donations")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Donations"))
+]}
 &quot;What kind of donations does the church receive? For the children, you said?&quot;
 
 Eleanor&#39;s smile becomes slightly fixed. &quot;Oh, all kinds! Medical supplies, educational materials, food items. Generous people donate so much. We receive shipments several times a month.&quot;
@@ -724,7 +774,10 @@ It sounds like an excuse.
 
 [[Push harder|Dove Push]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="52" name="Dove Greenhouse" tags="dove" position="1000,600" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Dove Greenhouse")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Greenhouse"))
+]}
 &quot;How often do you use the Senator&#39;s greenhouse for storage?&quot;
 
 Eleanor looks uncomfortable. &quot;Several times a month. When shipments arrive.&quot;
@@ -745,7 +798,10 @@ She turns to walk away, but not before you see genuine fear in her eyes.
 
 [[Follow her|Dove Follow]]
 [[Let her go|Ballroom]]</tw-passagedata><tw-passagedata pid="53" name="Dove Shipments" tags="dove" position="1100,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Dove Shipments")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Shipments"))
+]}
 &quot;What&#39;s actually in those shipments, Ms. Hartwick? I&#39;ve heard they&#39;re not religious materials.&quot;
 
 Eleanor&#39;s face goes through several expressions—fear, anger, guilt. &quot;You need to stop asking questions. For your own safety.&quot;
@@ -763,7 +819,10 @@ Eleanor&#39;s face goes through several expressions—fear, anger, guilt. &quot;
 [[Offer to help her|Dove Help]]
 [[Ask who would kill|Dove Danger]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="54" name="Dove Discrepancy" tags="dove" position="1200,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Dove Discrepancy")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Discrepancy"))
+]}
 &quot;Two million dollars is a lot of money. But I&#39;ve heard the actual programs haven&#39;t grown. Where does all that money go?&quot;
 
 Eleanor&#39;s smile falters. &quot;I... administrative costs. Overhead. The Senator explained it all to me.&quot;
@@ -781,7 +840,10 @@ The question hits her like a physical blow. She can&#39;t answer. You can see th
 [[Press the advantage|Dove Truth]]
 [[Offer compassion|Dove Help]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="55" name="Dove Push" tags="dove" position="1200,450" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Dove Push")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Push"))
+]}
 &quot;Ms. Hartwick, I think you know the truth. I think you&#39;ve known for a while. Those crates don&#39;t contain medical supplies or educational materials. They contain luxury goods—wine, jewelry, designer items. And you help smuggle them.&quot;
 
 Eleanor&#39;s composure cracks completely. &quot;No! I mean... I didn&#39;t know! Not at first! I thought I was helping, I thought the Senator was a good man, I thought—&quot; She&#39;s nearly crying.
@@ -795,7 +857,10 @@ She nods miserably. &quot;For about six months. I found manifests that didn&#39;
 [[Ask why she continues|Dove Why]]
 [[Offer to help her escape|Dove Help]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="56" name="Dove Follow" tags="dove" position="1000,700" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Dove Follow")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Follow"))
+]}
 You follow Eleanor at a distance as she hurries away from the ballroom. She goes to a quiet alcove and pulls out her phone, making a call with shaking hands.
 
 You can&#39;t hear everything, but you catch fragments: &quot;...photographer asking questions...&quot; &quot;...knows about the greenhouse...&quot; &quot;...what should I do?&quot;
@@ -920,7 +985,10 @@ The smile tightens fractionally. &quot;Unfortunately, for privacy reasons, we do
 
 [[Press about the lack of transparency|Cardinal Transparency]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="64" name="Cardinal Budget" tags="cardinal" position="1500,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Cardinal Budget")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Budget"))
+]}
 &quot;A tripled budget is remarkable. Where does all that money come from?&quot;
 
 Walker straightens slightly. &quot;Donations, primarily. Individual donors, corporate sponsors, grants. The Senator&#39;s network has been invaluable—he knows everyone who matters in this state.&quot;
@@ -959,7 +1027,10 @@ He looks around nervously. &quot;This conversation is over.&quot;
 
 [[Press harder|Cardinal Pressure]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="66" name="Cardinal Transparency" tags="cardinal" position="1400,600" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Cardinal Transparency")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Transparency"))
+]}
 &quot;For a charity claiming to help vulnerable children, you&#39;re remarkably opaque. No site visits, no statistics, no transparency. That raises questions, Mr. Manning.&quot;
 
 Walker&#39;s corporate mask slips for a moment, revealing anger. &quot;Are you accusing me of something?&quot;
@@ -978,7 +1049,10 @@ Walker drains his scotch. &quot;You don&#39;t understand what you&#39;re involve
 
 [[Refuse to walk away|Cardinal Refuse]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="67" name="Cardinal Challenge" tags="cardinal" position="1500,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Cardinal Challenge")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Challenge"))
+]}
 &quot;You&#39;re the CEO and you can&#39;t give me a straight answer about how your charity spends its money? That&#39;s not &#39;complicated,&#39; Mr. Manning. That&#39;s evasive.&quot;
 
 Walker&#39;s jaw tightens. &quot;Fine. You want numbers? Maybe fifteen percent of our budget goes directly to programs. The rest is overhead, infrastructure, strategic reserves.&quot;
@@ -999,7 +1073,10 @@ Walker&#39;s hand trembles slightly as he sets down his empty glass. &quot;You&#
 
 [[Ask what he means|Cardinal Threat]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="68" name="Cardinal Pressure" tags="cardinal" position="1600,450" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Cardinal Pressure")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Pressure"))
+]}
 &quot;Don&#39;t walk away, Mr. Manning. We&#39;re just getting to the truth. You&#39;re laundering money through Care Health. Using charity status to bypass scrutiny while moving millions in illegal funds. And you keep detailed records of every transaction—you&#39;re too meticulous not to.&quot;
 
 Walker stops, his back still to you. When he turns, his face is a mixture of fear and resignation.
@@ -1015,7 +1092,10 @@ Walker stops, his back still to you. When he turns, his face is a mixture of fea
 [[Offer him a way out|Cardinal Alliance]]
 [[Ask about The Joker|Cardinal Joker]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="69" name="Cardinal Refuse" tags="cardinal" position="1400,700" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Cardinal Refuse")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Refuse"))
+]}
 &quot;I&#39;m not walking away. Too many people are being hurt by this fraud. The children you claim to help don&#39;t exist, but the criminals profiting from it certainly do.&quot;
 
 Walker looks genuinely disturbed. &quot;You don&#39;t understand. This isn&#39;t about charity fraud. The charity is just the vehicle. This operation moves millions in smuggled goods through a tax-exempt pipeline. Politicians get paid off. Businesses get kickbacks. And anyone who threatens it...&quot;
@@ -1080,7 +1160,10 @@ Walker glances around nervously before answering in a hushed tone. &quot;No one 
 &quot;He comes to these parties to remind everyone who&#39;s really in charge. To collect his share of the profits. And to deal with any... problems.&quot; Walker looks at you pointedly. &quot;You&#39;re a problem.&quot;
 
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="73" name="Examine Crates" tags="" position="1800,400" size="100,100">{(set: $time to $time + 15)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Examine Crates")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Examine Crates"))
+]}
 You slip out to the greenhouse alone. The air is humid and thick with the scent of orchids and jasmine. Moonlight filters through the glass panels, casting strange shadows.
 
 At the far end, partially hidden behind palm fronds, you find them: wooden crates stacked against the wall. They&#39;re labeled &quot;St. Michael&#39;s Parish - Religious Materials&quot; with shipping manifests attached.
@@ -1103,7 +1186,10 @@ You photograph the manifest and the exposed wine bottles, careful not to disturb
 
 A sound near the greenhouse entrance makes you freeze. Footsteps. Someone&#39;s coming.
 
-{(set: $suspicion to $suspicion + 10)}
+{(if: $suspicionRaisedPassages does not contain "Examine Crates")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Examine Crates"))
+]}
 
 You quickly close the crate and slip behind a large fern just as a security guard enters, sweeping the area with his flashlight.
 
@@ -1115,6 +1201,7 @@ He lingers for what feels like an eternity, then leaves. You wait another few mi
 
 {(set: $cluesFound to $cluesFound + (a: &quot;Guards patrol the greenhouse regularly&quot;, &quot;Security is alert to unusual activity&quot;))}
 
+[[Return to greenhouse|Greenhouse]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="74" name="Watch Senator Peacock" tags="" position="1800,500" size="100,100">{(if: $time &lt; 1030)[
 You position yourself near the conservatory, but it&#39;s still early. The Senator and the Peacock are both visible in the ballroom, mingling with other guests.
 
@@ -1125,7 +1212,10 @@ If they&#39;re planning a rendezvous, it will likely be later in the evening whe
 [[Return to ballroom|Ballroom]]
 ](else:)[
 {(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Watch Senator Peacock")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Watch Senator Peacock"))
+]}
 
 You position yourself discreetly near the conservatory entrance. Through the glass doors, you can see the lush tropical plants and a secluded seating area.
 
@@ -1169,7 +1259,10 @@ The refreshment area is busy with guests and servers attending to their duties. 
 [[Return to ballroom|Ballroom]]
 ](else:)[
 {(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Eavesdrop Servants")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Eavesdrop Servants"))
+]}
 
 You linger near the refreshment area, pretending to examine the elaborate ice sculpture while staying close to the service entrance. The crowd has thinned somewhat, and most guests have returned to the ballroom.
 
@@ -1203,7 +1296,10 @@ They fall silent as a guest approaches for champagne. You casually move away, yo
 
 [[Return to ballroom|Ballroom]]
 ]}</tw-passagedata><tw-passagedata pid="76" name="Photo Gallery" tags="" position="1900,400" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Photo Gallery")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Photo Gallery"))
+]}
 
 You enter the gallery, a long hallway lined with paintings and photographs. The lighting is intentionally dramatic—spotlights on key pieces, shadows everywhere else.
 
@@ -1254,7 +1350,10 @@ It&#39;s excellent champagne—probably not the smuggled goods, but the legitima
 The drink gives you an excuse to linger in any area without looking suspicious.
 
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="79" name="Office Locked" tags="" position="2000,400" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Office Locked")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Office Locked"))
+]}
 
 You climb the grand staircase to the second floor, trying to look casual. A few other guests have wandered up here—the gallery and library are both open to visitors.
 
@@ -1278,7 +1377,10 @@ Maybe Victoria or one of your other allies could help. Or perhaps there&#39;s an
 [[Try the library instead|Library]]
 [[Return downstairs|Ballroom]]
 ]}</tw-passagedata><tw-passagedata pid="80" name="Senators Office" tags="" position="2100,400" size="100,100">{(set: $time to $time + 20)
-(set: $suspicion to $suspicion + 20)}
+(if: $suspicionRaisedPassages does not contain "Senators Office")[
+  (set: $suspicion to $suspicion + 20)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Senators Office"))
+]}
 
 You slip inside the office and close the door quietly behind you. The room is exactly what you&#39;d expect from a powerful senator: mahogany desk, leather chairs, walls lined with law books and awards.
 
@@ -1346,7 +1448,10 @@ You need the code. Maybe one of your allies knows it.
 
 [[Give up for now|Ballroom]]
 ]}</tw-passagedata><tw-passagedata pid="81" name="Library" tags="" position="2000,500" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Library")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Library"))
+]}
 
 The library is impressive—floor-to-ceiling bookshelves filled with leather-bound volumes. A few guests browse the collection, drinks in hand, admiring the Senator&#39;s literary tastes.
 
@@ -1386,11 +1491,14 @@ It&#39;s not a suggestion.
 //Suspicion increased.//
 
 [[Return downstairs|Ballroom]]</tw-passagedata><tw-passagedata pid="111" name="Master Bedroom" tags="" position="650,50" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Master Bedroom")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Master Bedroom"))
+]}
 {(if: $alliedVictoria)[
 Victoria's trust gave you access to this private space. The master bedroom is elegant but tells a story of separation—two distinct areas, his and hers, with clear boundaries.
 
-"Look wherever you need to," Victoria says quietly from the doorway. "I'll keep watch."
+She removes her swan mask, setting it aside. "Look wherever you need to," Victoria says quietly from the doorway. "I'll keep watch."
 ](else:)[
 You slip into the master bedroom quickly, heart pounding. This is the most private space in the estate—if you're caught here, there's no explaining it away.
 
@@ -1407,7 +1515,10 @@ The room is elegant but reveals cracks in the facade—separate sleeping areas, 
 ]}
 [[Check the master bathroom|Master Bathroom]]
 [[Return to landing|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="112" name="Bedroom Search Senator" tags="" position="700,50" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Bedroom Search Senator")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Bedroom Search Senator"))
+]}
 You carefully open the Senator's nightstand drawer. Beneath some books and papers, you find a false bottom.
 
 Inside: a bundle of letters tied with a ribbon. Love letters. Between the Senator and Joey Reed, spanning nearly two years. Passionate, intimate, and completely incriminating.
@@ -1442,7 +1553,10 @@ She steadies herself against the doorframe. "At least now I know. At least now I
 ]}
 
 [[Continue searching|Master Bedroom]]</tw-passagedata><tw-passagedata pid="113" name="Bedroom Search Victoria" tags="" position="750,50" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Bedroom Search Victoria")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Bedroom Search Victoria"))
+]}
 Victoria's desk is neat, organized—a finance professional's workspace even in her private space.
 
 In a locked drawer (the key is in a jewelry box—she wanted these found), you discover her insurance policy: complete copies of Care Health financial documents, highlighted and annotated in her own hand.
@@ -1527,7 +1641,10 @@ Victoria appears in the doorway. "Are you alright? I heard them coming and creat
 
 //Suspicion decreased - the guards didn't find you.//
 
-[[Leave quickly|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="116" name="Caught in Bedroom" tags="" position="750,100" size="100,100">{(set: $suspicion to $suspicion + 40)}
+[[Leave quickly|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="116" name="Caught in Bedroom" tags="" position="750,100" size="100,100">{(if: $suspicionRaisedPassages does not contain "Caught in Bedroom")[
+  (set: $suspicion to $suspicion + 40)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Caught in Bedroom"))
+]}
 You try to slip out, but the door opens before you reach it. Two security guards block your path.
 
 "What are you doing in the Senator's private bedroom?"
@@ -1738,7 +1855,10 @@ You could photograph him with that phone, catch the messages...
 
 [[Continue observing|Balcony]]</tw-passagedata><tw-passagedata pid="124" name="Balcony Photo Joey" tags="peacock" position="950,150" size="100,100">{(set: $time to $time + 2)
 (set: $photosRemaining to $photosRemaining - 1)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Balcony Photo Joey")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Balcony Photo Joey"))
+]}
 You raise your camera quietly and snap a shot—Joey with his phone visible, the text messages clear.
 
 The flash goes off.
@@ -1848,7 +1968,10 @@ Joey Reed's work, you realize. The Director of Capital Projects didn't just reno
 The cool night air clears your head. From up here, you can see the full picture.
 
 [[Return inside|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="82" name="Meet Joker" tags="joker" position="2200,400" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 20)}
+(if: $suspicionRaisedPassages does not contain "Meet Joker")[
+  (set: $suspicion to $suspicion + 20)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Meet Joker"))
+]}
 
 A hush falls over the ballroom. The music doesn&#39;t stop, but conversations die mid-sentence. Everyone&#39;s attention shifts to the entrance.
 
@@ -1917,7 +2040,10 @@ The photo could be evidence of a relationship or just friendship. But combined w
 
 [[Return to Gallery|Gallery]]</tw-passagedata>
 <tw-passagedata pid="97" name="Wine Cellar" tags="" position="1200,800" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Wine Cellar")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Wine Cellar"))
+]}
 You descend the narrow stone staircase from the service hallway, your footsteps echoing off the walls. The air grows cooler and damper with each step.
 
 The wine cellar is impressive—temperature-controlled, dimly lit, rows upon rows of vintage bottles stretching into the shadows. But Joey Reed didn't renovate this space for wine storage.
@@ -1952,7 +2078,10 @@ A security guard is making rounds down here. Too risky to investigate thoroughly
 [[Try the hidden door|Back Entrance]]
 [[Return upstairs|Service Hallway]]</tw-passagedata>
 <tw-passagedata pid="98" name="Kitchen" tags="" position="1100,300" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Kitchen")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Kitchen"))
+]}
 A professional kitchen bustling with activity. Chefs in white uniforms work efficiently, preparing elegant hors d'oeuvres while servers in black masks carry trays through the swinging door to the refreshment area.
 
 The head chef—wearing a distinctive gold mask with chef's insignia—notices you lingering.
@@ -1972,7 +2101,10 @@ How do you respond?
 
 //Suspicion increased slightly.//</tw-passagedata>
 <tw-passagedata pid="99" name="Service Hallway" tags="" position="1100,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Service Hallway")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Service Hallway"))
+]}
 A narrow, utilitarian corridor connecting the service areas. Plain walls, harsh fluorescent lighting—a stark contrast to the opulent party spaces.
 
 Staff members hurry past carrying supplies, too busy to pay you much attention, but you definitely don't belong here.
@@ -2008,7 +2140,10 @@ You could linger here and listen more carefully, though it's risky if someone ne
 [[Check your appearance in the mirror—good excuse to be here|Powder Room Linger]]
 [[Leave|Gallery]]</tw-passagedata>
 <tw-passagedata pid="101" name="Garden" tags="" position="900,650" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 5)}
+(if: $suspicionRaisedPassages does not contain "Garden")[
+  (set: $suspicion to $suspicion + 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Garden"))
+]}
 You slip out through the greenhouse's exterior door into the mansion's garden. The cool night air is refreshing after the humid greenhouse.
 
 Manicured hedges line stone pathways. Garden lights cast long shadows. The sounds of the party drift faintly from the mansion's open windows.
@@ -2049,7 +2184,10 @@ Near the service hallway door, you spot a clipboard with delivery schedules. Ton
 
 [[Thank them and leave|Kitchen]]</tw-passagedata>
 <tw-passagedata pid="103" name="Back Entrance" tags="" position="1250,850" size="100,100">{(set: $time to $time + 3)
-(set: $suspicion to $suspicion + 15)}
+(if: $suspicionRaisedPassages does not contain "Back Entrance")[
+  (set: $suspicion to $suspicion + 15)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Back Entrance"))
+]}
 
 You try the hidden door. It's unlocked—meant for quick exits, not security.
 
@@ -2077,7 +2215,10 @@ This is incredibly risky. If anyone sees you here...
 [[Return to wine cellar|Wine Cellar]]
 (if: $time >= 1100)[[[Try to leave through the back door|Escape Attempt]]]</tw-passagedata>
 <tw-passagedata pid="104" name="Eavesdrop Office" tags="" position="1800,300" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Eavesdrop Office")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Eavesdrop Office"))
+]}
 
 You linger in the powder room, ear to the wall, trying to catch more of the conversation.
 
@@ -2118,6 +2259,11 @@ This could be powerful evidence—especially combined with Victoria's testimony 
 [[Return to watching|Garden]]</tw-passagedata>
 <tw-passagedata pid="107" name="Watch Delivery" tags="" position="950,750" size="100,100">{(set: $time to $time + 15)}
 
+{(if: $cluesFound contains "Documented 11 PM delivery operation")[
+You return to your hiding spot behind the hedge. The delivery area is quiet now—the truck has already left.
+
+[[Return to garden|Garden]]
+][
 You position yourself behind a hedge with a clear view of the back driveway.
 
 At exactly 11:00 PM, a large delivery truck pulls up. No markings, no company logo. Three men in dark clothing emerge and begin unloading crates—the same "St. Michael's Parish" boxes you've seen elsewhere.
@@ -2139,8 +2285,10 @@ You photograph the truck, the men, the crates. This is exactly what you came for
 
 One of the men looks in your direction. Did he see you?
 
-[[Duck down and stay hidden|Garden]]
-[[Leave quickly before they spot you|Greenhouse]]</tw-passagedata>
+[[Duck down and stay hidden|Stay Hidden Delivery]]
+[[Leave quickly before they spot you|Greenhouse]]
+]}
+</tw-passagedata>
 <tw-passagedata pid="108" name="Overhear Delivery" tags="" position="1150,650" size="100,100">{(set: $time to $time + 5)}
 
 You position yourself at the top of the cellar stairs, pretending to tie your shoe if anyone asks.
@@ -2159,6 +2307,24 @@ Voices drift up from below—staff coordinating the delivery.
 
 [[Return to kitchen|Kitchen]]
 [[Descend to wine cellar anyway|Wine Cellar]]</tw-passagedata>
+<tw-passagedata pid="110" name="Stay Hidden Delivery" tags="" position="950,800" size="100,100">{(set: $time to $time + 10)}
+
+You duck down behind the hedge, pressing yourself flat against the cold ground. Your heart pounds as you hear footsteps approaching.
+
+"Thought I saw something," one of the men says, his boots stopping just a few feet from your hiding spot.
+
+"Probably a deer. Let's keep moving. Boss wants this done before midnight."
+
+The footsteps retreat. You hear the truck doors slam, the engine start, and the vehicle pulling away. 
+
+After a long moment, you cautiously peek out. The driveway is empty again. The delivery is complete, and you got the photos you needed without being caught.
+
+{(set: $cluesFound to $cluesFound + (a: "Delivery completed successfully", "Avoided detection by hiding"))}
+
+You carefully make your way back toward the estate.
+
+[[Return to garden|Garden]]
+[[Head to greenhouse|Greenhouse]]</tw-passagedata>
 <tw-passagedata pid="109" name="Emergency Exit" tags="" position="1150,700" size="100,100">{(set: $time to $time + 2)
 (set: $suspicion to 100)}
 
@@ -2175,7 +2341,10 @@ You have seconds to decide.
 [[Run through the exit|Escape Attempt]]
 [[Surrender and explain|Caught Ending]]</tw-passagedata>
 <tw-passagedata pid="84" name="Hide From Joker" tags="joker" position="2300,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 10)}
+(if: $suspicionRaisedPassages does not contain "Hide From Joker")[
+  (set: $suspicion to $suspicion + 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Hide From Joker"))
+]}
 
 You try to slip into the crowd, using the other guests as cover. But they&#39;re not cooperating—everyone edges away from you, leaving you exposed.
 
@@ -2215,7 +2384,10 @@ Before you can react, they have your arms pinned. One reaches for your camera.
 [[Fight back|Caught Ending]]
 [[Let them take it|Camera Seized]]
 ]}</tw-passagedata><tw-passagedata pid="86" name="Escape Attempt" tags="joker" position="2300,600" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion + 30)}
+(if: $suspicionRaisedPassages does not contain "Escape Attempt")[
+  (set: $suspicion to $suspicion + 30)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Escape Attempt"))
+]}
 
 You make a run for the nearest exit. The crowd scatters out of your way, guests crying out in alarm.
 
