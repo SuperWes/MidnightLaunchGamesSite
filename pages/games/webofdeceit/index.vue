@@ -25,13 +25,25 @@
       </div>
 
       <div class="play-section">
-        <a
-          href="/games/webofdeceit/play/"
-          class="play-button"
-        >
-          <span class="play-icon">🎭</span>
-          <span>Enter the Ball</span>
-        </a>
+        <p class="version-label">Choose Your Experience</p>
+        <div class="play-buttons">
+          <a
+            href="/games/webofdeceit/play/"
+            class="play-button"
+          >
+            <span class="play-icon">🎭</span>
+            <span>Flutter App</span>
+            <span class="version-desc">Enhanced visuals & UI</span>
+          </a>
+          <a
+            href="/games/webofdeceit/twine.html"
+            class="play-button twine-button"
+          >
+            <span class="play-icon">📜</span>
+            <span>Classic Twine</span>
+            <span class="version-desc">Original text adventure</span>
+          </a>
+        </div>
       </div>
 
       <div class="features-grid">
@@ -225,20 +237,36 @@ export default {
   margin: 2.5rem 0;
 }
 
+.version-label {
+  color: #D4AF37;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.play-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
 .play-button {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.25rem;
   background: #2A2419;
   color: #D4AF37;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 2rem;
   border: 3px solid #8B7355;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: Georgia, 'Times New Roman', serif;
+  min-width: 180px;
 }
 
 .play-button:hover {
@@ -249,7 +277,15 @@ export default {
 }
 
 .play-icon {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.version-desc {
+  font-size: 0.8rem;
+  color: #9A8B7A;
+  font-weight: normal;
+  font-style: italic;
 }
 
 /* Features Grid */
