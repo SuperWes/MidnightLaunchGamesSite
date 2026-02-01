@@ -45,7 +45,13 @@ tw-story {
 (set: $photoTakenBallroom to false)
 (set: $photoTakenGallery to false)
 (set: $photoTakenRefreshments to false)
-(set: $photoTakenResort to false)}
+(set: $photoTakenResort to false)
+(set: $photoTakenGarden to false)
+(set: $photoTakenBalconyPrep to false)
+(set: $photoTakenBalconyDelivery to false)
+(set: $photoTakenSenatorLetters to false)
+(set: $photoTakenVictoriaDocs to false)
+(set: $photoTakenBathroom to false)}
 
 //BLACKWOOD MANOR//
 //Senator Blackwood&#39;s Annual Masquerade Ball//
@@ -1415,11 +1421,14 @@ These aren't just evidence of an affair. They're evidence of conspiracy—planni
 {(set: $evidence to $evidence + (a: "Love letters between Senator and Joey", "Letters discuss planning the fraud together"))
 (set: $cluesFound to $cluesFound + (a: "Senator and Joey's affair spans two years", "They planned the smuggling operation together", "Letters reference eliminating threats"))}
 
-{(if: $photosRemaining >= 3)[
+{(if: $photosRemaining >= 3 and not $photoTakenSenatorLetters)[
 (set: $photosRemaining to $photosRemaining - 3)
+(set: $photoTakenSenatorLetters to true)
 You photograph the most damaging letters.
 
 //Film remaining: {(print: $photosRemaining)}/30//
+](else-if: $photoTakenSenatorLetters)[
+//Already photographed these letters.//
 ](else:)[
 //Not enough film to photograph the letters!//
 ]}
@@ -1447,11 +1456,17 @@ She's been investigating too. Building her own case. Preparing her escape.
 {(set: $evidence to $evidence + (a: "Victoria's private financial documents", "Her analysis of Care Health fraud"))
 (set: $cluesFound to $cluesFound + (a: "Victoria has been building her own case against them", "She documented everything, planning her exit"))}
 
-{(if: $photosRemaining >= 3)[
+{(if: $photosRemaining >= 3 and not $photoTakenVictoriaDocs)[
 (set: $photosRemaining to $photosRemaining - 3)
+(set: $photoTakenVictoriaDocs to true)
 You photograph her annotated documents.
 
 //Film remaining: {(print: $photosRemaining)}/30//
+](else-if: $photoTakenVictoriaDocs)[
+//Already photographed these documents.//
+](else:)[
+//Not enough film to photograph the documents!//
+]}
 ](else:)[
 //Not enough film!//
 ]}
@@ -1551,16 +1566,20 @@ The balcony overlooks the gardens and greenhouse. From this vantage point, you c
 {(set: $cluesFound to $cluesFound + (a: "Observed delivery preparation from balcony", "Staff coordinating for 11 PM arrival"))}
 ]}
 
-{(if: $photosRemaining > 0)[
+{(if: $photosRemaining > 0 and not $photoTakenBalconyPrep)[
 [[Position yourself to photograph the delivery|Balcony Photograph Prep]]
+](else-if: $photoTakenBalconyPrep)[
+//Already photographed the delivery preparation.//
 ]}
 ]}
 
 {(if: $time >= 1100)[
 Below, a truck has arrived. You watch from above as crates are quickly unloaded and moved through the garden toward the greenhouse and wine cellar. From up here, you can see the full scope of the operation—at least a dozen people coordinating, armed security watching the perimeter.
 
-{(if: $photosRemaining >= 5)[
+{(if: $photosRemaining >= 5 and not $photoTakenBalconyDelivery)[
 [[Photograph the entire operation from above|Balcony Photograph Delivery]]
+](else-if: $photoTakenBalconyDelivery)[
+//Already photographed the delivery operation.//
 ](else:)[
 //Not enough film to document what you're seeing!//
 ]}
@@ -1591,7 +1610,8 @@ She looks deeply troubled, lips moving in what might be silent prayer.
 [[Observe the grounds|Balcony Observe]]
 [[Return inside|Second Floor Landing]]
 ]}</tw-passagedata><tw-passagedata pid="118" name="Balcony Photograph Prep" tags="" position="650,150" size="100,100">{(set: $time to $time + 5)
-(set: $photosRemaining to $photosRemaining - 2)}
+(set: $photosRemaining to $photosRemaining - 2)
+(set: $photoTakenBalconyPrep to true)}
 You position yourself at the corner of the balcony where the shadows are deepest. From here, you have a clear view of the delivery entrance and the paths to both the greenhouse and cellar.
 
 You take several shots of the preparation: staff clearing the area, someone checking the path for obstructions, security taking positions.
@@ -1612,10 +1632,15 @@ Finally, you hear the rumble of an engine in the distance. Headlights appear on 
 
 The delivery has arrived.
 
+{(if: not $photoTakenBalconyDelivery)[
 [[Photograph the operation|Balcony Photograph Delivery]]
+](else:)[
+//Already photographed the delivery.//
+]}
 [[Just observe|Balcony Observe]]</tw-passagedata><tw-passagedata pid="119" name="Balcony Photograph Delivery" tags="" position="700,150" size="100,100">{(set: $time to $time + 10)
 (set: $photosRemaining to $photosRemaining - 5)
-(set: $suspicion to $suspicion - 5)}
+(set: $suspicion to $suspicion - 5)
+(set: $photoTakenBalconyDelivery to true)}
 From your elevated position, you capture everything. The truck backing up. The crates being unloaded—at least twenty of them. The armed security forming a perimeter. The coordination between multiple teams.
 
 You get clear shots of faces, license plates, the shipping labels on the crates. From up here, they don't see you—you're just another shadow on a dark balcony.
@@ -1861,10 +1886,10 @@ From across the room, you see {(if: $alliedVictoria)[Victoria](else-if: $alliedP
 
 &quot;I&#39;m documenting a charity event. Nothing more.&quot;
 
-&quot;Nothing more?&quot; He laughs—a sound like breaking glass. &quot;Then you won&#39;t mind if we check that camera of yours. See what kind of &#39;documentation&#39; you&#39;ve been collecting.&quot;
+"Nothing more?" He laughs—a sound like breaking glass. "Then you won't mind if we check that camera of yours. See what kind of 'documentation' you've been collecting."
 
-{(if: ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Photos documenting the affair&quot;))[
-Your camera is full of incriminating evidence. If he gets it, everything you&#39;ve gathered is lost—and you&#39;re dead.
+{(if: ($evidence contains "Photos of fraudulent shipping manifests") or ($evidence contains "Photos documenting the affair") or ($evidence contains "Complete photographic documentation of delivery from balcony") or ($evidence contains "Photos show full scope of smuggling operation") or ($evidence contains "Photos of smuggling operation at back entrance") or ($evidence contains "Photos of delivery truck and operatives") or ($evidence contains "Photos of Senator and Joey Reed in intimate moment") or ($evidence contains "Photos of wine cellar smuggling operation") or ($evidence contains "Photos of unmarked delivery truck"))[
+Your camera is full of incriminating evidence. If he gets it, everything you've gathered is lost—and you're dead.
 
 [[Refuse to hand over the camera|Refuse Joker]]
 [[Try to escape|Escape Attempt]]
@@ -2202,7 +2227,7 @@ They grab you, holding you firmly but not roughly. Not yet.
 
 &quot;Now then,&quot; The Joker says, approaching slowly. &quot;Let&#39;s have a civilized conversation. Starting with what&#39;s on that camera.&quot;
 
-{(if: ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Real financial ledger from hidden compartment&quot;))[
+{(if: ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Real financial ledger from hidden compartment&quot;) or ($evidence contains &quot;Complete photographic documentation of delivery from balcony&quot;) or ($evidence contains &quot;Photos of smuggling operation at back entrance&quot;) or ($evidence contains &quot;Photos of wine cellar smuggling operation&quot;))[
 You have evidence that could bring down the entire operation. But you&#39;re caught.
 
 [[Try to fight free|Caught Ending]]
@@ -2215,7 +2240,7 @@ You have evidence that could bring down the entire operation. But you&#39;re cau
 
 The room goes completely silent.
 
-{(if: ($evidence contains &quot;Received flash drive from Eleanor with shipping manifests&quot;) or ($evidence contains &quot;Real financial ledger from hidden compartment&quot;) or ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;))[
+{(if: ($evidence contains &quot;Received flash drive from Eleanor with shipping manifests&quot;) or ($evidence contains &quot;Real financial ledger from hidden compartment&quot;) or ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Complete photographic documentation of delivery from balcony&quot;) or ($evidence contains &quot;Photos of smuggling operation at back entrance&quot;) or ($evidence contains &quot;Photos of wine cellar smuggling operation&quot;))[
 
 &quot;And I have proof. Ledgers, manifests, bank records. It&#39;s already been sent to federal authorities outside this corrupt network. You can kill me, but the evidence is already out there.&quot;
 
@@ -2388,7 +2413,7 @@ He walks away. You&#39;re alive, but you know you&#39;ve failed. The operation c
 
 You have until midnight. That gives you about {(print: (1080 - $time))} minutes to get everything in order.
 
-{(if: ($evidence contains &quot;Real financial ledger from hidden compartment&quot;) and ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;))[
+{(if: (($evidence contains &quot;Real financial ledger from hidden compartment&quot;) or ($evidence contains &quot;Complete photographic documentation of delivery from balcony&quot;) or ($evidence contains &quot;Photos of wine cellar smuggling operation&quot;)) and (($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Photos of smuggling operation at back entrance&quot;) or ($evidence contains &quot;Photos of delivery truck and operatives&quot;)))[
 You have substantial evidence—enough to expose the operation if you can get it to the right people.
 
 You quietly gather your materials and head for the exit. {(if: $alliedVictoria)[Victoria](else-if: $alliedDove)[Eleanor](else-if: $alliedCardinal)[Walker](else:)[Joey]} slips you a final piece of information: &quot;Federal investigator. Agent Morrison. She&#39;s not corrupt. She&#39;s at the field office downtown.&quot;
@@ -2443,7 +2468,7 @@ The Joker gives a small nod, and security closes in.
 
 The Joker studies you for a long moment. &quot;Show me what&#39;s on the camera.&quot;
 
-{(if: ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Photos documenting the affair&quot;))[
+{(if: ($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Photos documenting the affair&quot;) or ($evidence contains &quot;Complete photographic documentation of delivery from balcony&quot;) or ($evidence contains &quot;Photos of smuggling operation at back entrance&quot;) or ($evidence contains &quot;Photos of wine cellar smuggling operation&quot;) or ($evidence contains &quot;Photos of Senator and Joey Reed in intimate moment&quot;) or ($evidence contains &quot;Photos of unmarked delivery truck&quot;))[
 You can&#39;t. The evidence would condemn you.
 
 &quot;I&#39;d rather not.&quot;
