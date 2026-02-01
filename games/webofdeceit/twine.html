@@ -68,7 +68,8 @@ The mansion looms before you, every window blazing with golden light. Orchestra 
 
 Time to get to work.
 
-[[Enter the mansion|Grand Foyer]]</tw-passagedata><tw-passagedata pid="2" name="Stats Header" tags="header" position="200,50" size="100,100">(if: (passage:)&#39;s name is not &quot;Notebook&quot; and (passage:)&#39;s name is not &quot;Start&quot;)[(after: 1ms)[**Suspicion:** $suspicion/100 | **Time:** (if: $time &gt;= 900 and $time &lt; 960)[9:(if: ($time - 900) &lt; 10)[0](print: $time - 900) PM](else-if: $time &gt;= 960 and $time &lt; 1020)[10:(if: ($time - 960) &lt; 10)[0](print: $time - 960) PM](else-if: $time &gt;= 1020 and $time &lt; 1080)[11:(if: ($time - 1020) &lt; 10)[0](print: $time - 1020) PM](else-if: $time &gt;= 1080)[Midnight](if: $photosRemaining &gt; 0)[ | **Film:** $photosRemaining/30] | ][[📓 Notebook|Notebook]]]</tw-passagedata><tw-passagedata pid="3" name="Grand Foyer" tags="senator" position="600,200" size="100,100">{(set: $time to $time + 5)}
+[[Enter the mansion|Grand Foyer]]</tw-passagedata><tw-passagedata pid="2" name="Stats Header" tags="header" position="200,50" size="100,100">(if: (passage:)&#39;s name is not &quot;Notebook&quot; and (passage:)&#39;s name is not &quot;Start&quot;)[(after: 1ms)[**Suspicion:** $suspicion/100 | **Time:** (if: $time &gt;= 900 and $time &lt; 960)[9:(if: ($time - 900) &lt; 10)[0](print: $time - 900) PM](else-if: $time &gt;= 960 and $time &lt; 1020)[10:(if: ($time - 960) &lt; 10)[0](print: $time - 960) PM](else-if: $time &gt;= 1020 and $time &lt; 1080)[11:(if: ($time - 1020) &lt; 10)[0](print: $time - 1020) PM](else-if: $time &gt;= 1080)[Midnight](if: $photosRemaining &gt; 0)[ | **Film:** $photosRemaining/30] | ][[📓 Notebook|Notebook]]]</tw-passagedata><tw-passagedata pid="3" name="Grand Foyer" tags="senator" position="600,200" size="100,100">{(set: $time to $time + 5)
+(if: $time &gt;= 900 and $time &lt; 930)[(set: $identities to $identities + (dm: &quot;eagle&quot;, &quot;Senator Blackwood&quot;))]}
 The grand foyer takes your breath away. A sweeping marble staircase curves up to the second floor, its bannister gleaming gold. A massive chandelier hangs overhead, casting fractured light across the black and white checkered floor.
 
 A servant in a simple black mask stands by a coat check station. Music and laughter drift from the ballroom ahead.
@@ -82,7 +83,7 @@ A servant in a simple black mask stands by a coat check station. Music and laugh
 </tw-passagedata><tw-passagedata pid="4" name="Ballroom" tags="crowd" position="800,200" size="100,100">{(set: $time to $time + 5)}
 The ballroom is magnificent. Crystal chandeliers cast dancing light across the polished marble floor. The orchestra plays from an alcove, filling the space with a sophisticated waltz. Dozens of masked figures move through the room—some dancing, others clustered in conversation, all radiating wealth and secrecy.
 
-You notice the theme seems to be birds—peacocks, swans, doves, cardinals. Though interestingly, quite a few guests are wearing masks that have nothing to do with birds at all. A jester here, a venetian mask there, even what appears to be a cat. Either they didn't get the memo about the theme, or they simply decided the rules didn't apply to them. Typical for this crowd, probably.
+You notice the theme seems to be birds—peacocks, swans, ravens, phoenixes. Though interestingly, quite a few guests are wearing masks that have nothing to do with birds at all. A jester here, a venetian mask there, even what appears to be a cat. Either they didn't get the memo about the theme, or they simply decided the rules didn't apply to them. Typical for this crowd, probably.
 
 You spot several distinctive masks in the crowd:
 
@@ -90,9 +91,9 @@ You spot several distinctive masks in the crowd:
 
 (if: $time &gt;= 900)[**THE SWAN** - A woman in an elegant white mask sits alone at a small table, a champagne glass in hand. She looks sad despite the festive atmosphere.]
 
-(if: $time &gt;= 930)[**THE DOVE** - A woman in white wearing a prominent cross necklace speaks with other guests. She says &quot;Bless you&quot; frequently, even when no one has sneezed.]
+(if: $time &gt;= 930)[**THE RAVEN** - A woman in white wearing a prominent cross necklace speaks with other guests. She says &quot;Bless you&quot; frequently, even when no one has sneezed.]
 
-(if: $time &gt;= 900)[**THE CARDINAL** - A man in a red mask stays close to a younger woman who seems nervous. They keep checking phones.]
+(if: $time &gt;= 900)[**THE PHOENIX** - A man in a red mask stays close to a younger woman who seems nervous. They keep checking phones.]
 
 (if: $time &gt;= 1100)[**THE JOKER** - A man in a purple and gold mask has arrived. The entire ballroom seems to tense. He&#39;s scanning the crowd... and his eyes land on you.]
 
@@ -100,8 +101,8 @@ You spot several distinctive masks in the crowd:
 (if: $photosRemaining &gt; 0 and not $photoTakenBallroom)[[[Take a photo of the ballroom|Photo Ballroom]]](else-if: $photoTakenBallroom)[//Already photographed the ballroom.//](else:)[//Out of film.//]
 (if: $time &gt;= 900 and $time &lt; 1030)[[[Approach The Peacock|Talk Peacock]]]
 (if: $time &gt;= 900)[[[Approach The Swan|Talk Swan]]]
-(if: $time &gt;= 930)[[[Approach The Dove|Talk Dove]]]
-(if: $time &gt;= 900)[[[Approach The Cardinal|Talk Cardinal]]]
+(if: $time &gt;= 930)[[[Approach The Raven|Talk Raven]]]
+(if: $time &gt;= 900)[[[Approach The Phoenix|Talk Phoenix]]]
 (if: $time &gt;= 1100)[[[The Joker approaches you|Meet Joker]]]
 [[Go to the refreshment area|Refreshment Area]]
 [[Visit the gallery|Gallery]]
@@ -172,8 +173,8 @@ A few guests smile and pose. The Senator himself gives you a nod of approval fro
 **=== IDENTITIES ===**
 THE PEACOCK = (if: $identities contains &quot;peacock&quot;)[$identities&#39;s peacock](else:)[Unknown]
 THE SWAN = (if: $identities contains &quot;swan&quot;)[$identities&#39;s swan](else:)[Unknown]
-THE DOVE = (if: $identities contains &quot;dove&quot;)[$identities&#39;s dove](else:)[Unknown]
-THE CARDINAL = (if: $identities contains &quot;cardinal&quot;)[$identities&#39;s cardinal](else:)[Unknown]
+THE RAVEN = (if: $identities contains &quot;raven&quot;)[$identities&#39;s raven](else:)[Unknown]
+THE PHOENIX = (if: $identities contains &quot;phoenix&quot;)[$identities&#39;s phoenix](else:)[Unknown]
 THE JOKER = (if: $identities contains &quot;joker&quot;)[$identities&#39;s joker](else:)[Unknown]
 
 **=== STATUS ===**
@@ -293,7 +294,10 @@ Her eyes meet yours with surprising directness. &quot;You strike me as someone w
 [[Share what you&#39;ve found so far|Swan Alliance Start]]
 [[&quot;Just observing. This is quite an event.&quot;|Swan Deflect]]
 [[Ask about the charity foundation|Swan Charity]]</tw-passagedata><tw-passagedata pid="18" name="Swan Polite" tags="swan" position="950,500" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion - 5)}
+(if: $suspicionRaisedPassages does not contain "Swan Polite")[
+  (set: $suspicion to $suspicion - 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Swan Polite"))
+]}
 &quot;It is beautiful,&quot; Victoria says with a hollow laugh. &quot;My husband spares no expense for appearances. Everything must look perfect.&quot; 
 
 She traces the rim of her champagne glass. &quot;Do you know what it&#39;s like to be a beautiful decoration in someone else&#39;s house? To smile and nod while they build their empire on foundations you didn&#39;t know were crumbling?&quot;
@@ -377,11 +381,11 @@ It&#39;s a carefully worded offer.
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="24" name="Swan Guests" tags="swan" position="1150,450" size="100,100">{(set: $time to $time + 5)}
 &quot;Most of them,&quot; Victoria says. &quot;The usual crowd. Wealthy donors, political allies, people who want something from my husband.&quot; She glances around. &quot;Though there are a few interesting additions tonight.&quot;
 
-&quot;The woman in the dove mask—that&#39;s Eleanor Hartwick. Very involved in St. Michael&#39;s Parish charity work. She&#39;s been practically attached to my husband&#39;s foundation for years.&quot;
+&quot;The woman in the raven mask—that&#39;s Eleanor Hartwick. Very involved in St. Michael&#39;s Parish charity work. She&#39;s been practically attached to my husband&#39;s foundation for years.&quot;
 
-&quot;And that couple—the Cardinal and his nervous companion? Walker and Amanda Manning. He runs Care Health&#39;s board. She seems frightened of her own shadow.&quot;
+&quot;And that couple—the Phoenix and his nervous companion? Walker and Amanda Manning. He runs Care Health&#39;s board. She seems frightened of her own shadow.&quot;
 
-{(set: $cluesFound to $cluesFound + (a: &quot;The Dove is Eleanor Hartwick, connected to church charity&quot;, &quot;The Cardinal is Walker Manning, CEO of Care Health&quot;, &quot;Amanda Manning seems frightened&quot;))}
+{(set: $cluesFound to $cluesFound + (a: &quot;The Raven is Eleanor Hartwick, connected to church charity&quot;, &quot;The Phoenix is Walker Manning, CEO of Care Health&quot;, &quot;Amanda Manning seems frightened&quot;))}
 
 &quot;But the most interesting guests are always the ones people don&#39;t talk about. Like Joey Reed.&quot;
 
@@ -466,13 +470,15 @@ Her voice hardens. &quot;I need evidence. Real, photographable, undeniable evide
 
 She hesitates, then makes a decision. &quot;I have a key card. If you&#39;re serious about investigating this, I can give it to you. But you have to be careful—if security catches you, I can&#39;t protect you.&quot;
 
-[[Accept the key card|Swan Get Key]]
+&quot;There&#39;s a safe in there too,&quot; she adds quietly. &quot;If you want, I can give you the combination. It&#39;s where he keeps the most damning evidence.&quot;
+
+[[Accept the key card and safe code|Swan Get Key]]
 [[Decline for now|Swan Later]]</tw-passagedata><tw-passagedata pid="33" name="Swan Greenhouse Info" tags="swan" position="1250,500" size="100,100">{(set: $time to $time + 5)}
 &quot;The greenhouse,&quot; Victoria says, her voice dropping. &quot;Those crates labeled &#39;church supplies&#39;—they&#39;re never picked up during the day. Always late at night. And they&#39;re not books or religious materials.&quot;
 
 {(set: $cluesFound to $cluesFound + (a: &quot;Crates picked up late at night, not during day&quot;, &quot;Crates don&#39;t contain religious materials&quot;))}
 
-&quot;I don&#39;t know what&#39;s in them. But I know Joey Reed oversees deliveries, and Eleanor Hartwick—The Dove—is always involved in the &#39;charity coordination.&#39; It&#39;s all connected somehow.&quot;
+&quot;I don&#39;t know what&#39;s in them. But I know Joey Reed oversees deliveries, and Eleanor Hartwick—The Raven—is always involved in the &#39;charity coordination.&#39; It&#39;s all connected somehow.&quot;
 
 [[Ask her to investigate the crates together|Swan Crate Plan]]
 [[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="34" name="Swan Later" tags="swan" position="1250,550" size="100,100">{(set: $time to $time + 5)}
@@ -610,7 +616,7 @@ Joey looks around frantically, then grabs your arm and pulls you toward a quiete
 
 He&#39;s trembling now. &quot;The charity is fake. The money doesn&#39;t go to children—it goes to someone else. Someone who will hurt anyone who threatens the operation. And I&#39;m trapped in the middle of it because I know too much.&quot;
 
-[[Offer to help him|Peacock Alliance]]
+[[Offer protection in exchange for testimony|Peacock Alliance]]
 [[Ask who he&#39;s afraid of|Peacock Threat]]
 [[Demand more details|Peacock Details]]</tw-passagedata><tw-passagedata pid="43" name="Peacock Charity" tags="peacock" position="800,700" size="100,100">{(set: $time to $time + 5)}
 &quot;Have you done any construction work for Care Health? The children&#39;s charity?&quot;
@@ -652,7 +658,9 @@ He freezes. &quot;How do you—&quot; He catches himself. &quot;I don&#39;t know
 (set: $alliedPeacock to true)}
 &quot;What if I could help you?&quot; you say quietly. &quot;I&#39;m gathering evidence. If we work together, we can expose this—and get you out safely.&quot;
 
-Joey looks at you with desperate hope, then shakes his head. &quot;You don&#39;t know what you&#39;re promising. These people... they&#39;ve killed before. I&#39;m sure of it.&quot;
+Joey reaches up and removes his peacock mask, revealing a young face lined with exhaustion and fear. Without the elaborate plumage to hide behind, he looks barely older than a college kid—too young to be this deep in something this dangerous.
+
+He looks at you with desperate hope, then shakes his head. &quot;You don&#39;t know what you&#39;re promising. These people... they&#39;ve killed before. I&#39;m sure of it.&quot;
 
 &quot;Then we need to move fast,&quot; you insist. &quot;What can you tell me? What do you have access to?&quot;
 
@@ -662,9 +670,9 @@ He takes a shaky breath. &quot;The Senator keeps records. Physical files in his 
 
 &quot;And the shipments?&quot;
 
-&quot;They come through Care Health&#39;s network. Eleanor Hartwick—The Dove—coordinates them. Church donations, she calls them. But they&#39;re luxury goods. Smuggled items. High-value merchandise that bypasses customs. The charity is the perfect front.&quot;
+&quot;They come through Care Health&#39;s network. Eleanor Hartwick—The Raven—coordinates them. Church donations, she calls them. But they&#39;re luxury goods. Smuggled items. High-value merchandise that bypasses customs. The charity is the perfect front.&quot;
 
-{(set: $cluesFound to $cluesFound + (a: &quot;Eleanor Hartwick (The Dove) coordinates smuggling operation&quot;, &quot;Care Health used as customs bypass for luxury goods&quot;))}
+{(set: $cluesFound to $cluesFound + (a: &quot;Eleanor Hartwick (The Raven) coordinates smuggling operation&quot;, &quot;Care Health used as customs bypass for luxury goods&quot;))}
 
 &quot;Get the evidence,&quot; Joey whispers urgently. &quot;Photograph everything. Then get us both out of here before it&#39;s too late.&quot;
 
@@ -702,8 +710,8 @@ Joey looks torn between fear and anger. &quot;Fine. You want details? The charit
 
 [[Ask about The Joker|Peacock Threat]]
 [[Offer to help Joey escape|Peacock Alliance]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="48" name="Talk Dove" tags="dove" position="1000,400" size="100,100">{(set: $time to $time + 5)}
-You approach the woman in the white dove mask. Up close, you notice her prominent cross necklace and the way she holds her prayer book like a shield.
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="48" name="Talk Raven" tags="raven" position="1000,400" size="100,100">{(set: $time to $time + 5)}
+You approach the woman in the black raven mask. Up close, you notice her prominent cross necklace and the way she holds her prayer book like a shield.
 
 &quot;Good evening,&quot; you say. &quot;Quite a lovely party.&quot;
 
@@ -713,17 +721,17 @@ You approach the woman in the white dove mask. Up close, you notice her prominen
 
 Her eyes light up. &quot;Oh yes! I coordinate donations for St. Michael&#39;s Parish. We work closely with Care Health Children&#39;s Fund—such important work, helping those poor children. The Lord&#39;s work, truly.&quot;
 
-{(set: $identities to $identities + (dm: &quot;dove&quot;, &quot;Eleanor Hartwick - St. Michael&#39;s Parish&quot;))
-(set: $cluesFound to $cluesFound + (a: &quot;The Dove is Eleanor Hartwick from St. Michael&#39;s Parish&quot;, &quot;Eleanor coordinates donations between church and Care Health&quot;))}
+{(set: $identities to $identities + (dm: &quot;raven&quot;, &quot;Eleanor Hartwick - St. Michael&#39;s Parish&quot;))
+(set: $cluesFound to $cluesFound + (a: &quot;The Raven is Eleanor Hartwick from St. Michael&#39;s Parish&quot;, &quot;Eleanor coordinates donations between church and Care Health&quot;))}
 
 There&#39;s something too rehearsed about her response. Too smooth.
 
-[[Ask about the church donations|Dove Donations]]
-[[Ask about her relationship with the Senator|Dove Senator]]
-[[Ask about Care Health&#39;s programs|Dove Programs]]</tw-passagedata><tw-passagedata pid="49" name="Dove Donations" tags="dove" position="1000,500" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Dove Donations")[
+[[Ask about the church donations|Raven Donations]]
+[[Ask about her relationship with the Senator|Raven Senator]]
+[[Ask about Care Health&#39;s programs|Raven Programs]]</tw-passagedata><tw-passagedata pid="49" name="Raven Donations" tags="raven" position="1000,500" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Raven Donations")[
   (set: $suspicion to $suspicion + 5)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Donations"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Donations"))
 ]}
 &quot;What kind of donations does the church receive? For the children, you said?&quot;
 
@@ -739,9 +747,9 @@ Eleanor&#39;s smile becomes slightly fixed. &quot;Oh, all kinds! Medical supplie
 
 &quot;Did I?&quot; She laughs nervously. &quot;I meant to say the church grounds. Sometimes the Senator graciously allows us to use his greenhouse for temporary storage when our facilities are full. He&#39;s very... generous with his property.&quot;
 
-[[Press about the greenhouse arrangement|Dove Greenhouse]]
-[[Ask what&#39;s in the shipments|Dove Shipments]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="50" name="Dove Senator" tags="dove" position="1100,500" size="100,100">{(set: $time to $time + 5)}
+[[Press about the greenhouse arrangement|Raven Greenhouse]]
+[[Ask what&#39;s in the shipments|Raven Shipments]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="50" name="Raven Senator" tags="raven" position="1100,500" size="100,100">{(set: $time to $time + 5)}
 &quot;You seem to work closely with Senator Blackwood. How did that partnership begin?&quot;
 
 Eleanor&#39;s expression becomes reverent. &quot;The Senator came to me three years ago. He said he wanted to help the less fortunate, that God had blessed him with wealth and influence, and he needed guidance on how to use it righteously.&quot; She clutches her prayer book. &quot;I was honored to help him establish Care Health&#39;s relationship with the church.&quot;
@@ -754,8 +762,8 @@ Eleanor&#39;s expression becomes reverent. &quot;The Senator came to me three ye
 
 But you remember Victoria saying the programs haven&#39;t expanded despite growing budgets.
 
-[[Question the discrepancy|Dove Discrepancy]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="51" name="Dove Programs" tags="dove" position="1100,450" size="100,100">{(set: $time to $time + 5)}
+[[Question the discrepancy|Raven Discrepancy]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="51" name="Raven Programs" tags="raven" position="1100,450" size="100,100">{(set: $time to $time + 5)}
 &quot;What programs does Care Health run? What do they do for the children?&quot;
 
 Eleanor rattles off a list with the ease of someone who&#39;s given this speech many times: &quot;After-school tutoring, medical clinics, summer camps, scholarship funds, family support services...&quot;
@@ -772,11 +780,11 @@ Another hesitation. &quot;The Senator says it&#39;s better to work behind the sc
 
 It sounds like an excuse.
 
-[[Push harder|Dove Push]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="52" name="Dove Greenhouse" tags="dove" position="1000,600" size="100,100">{(set: $time to $time + 10)
-(if: $suspicionRaisedPassages does not contain "Dove Greenhouse")[
+[[Push harder|Raven Push]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="52" name="Raven Greenhouse" tags="raven" position="1000,600" size="100,100">{(set: $time to $time + 10)
+(if: $suspicionRaisedPassages does not contain "Raven Greenhouse")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Greenhouse"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Greenhouse"))
 ]}
 &quot;How often do you use the Senator&#39;s greenhouse for storage?&quot;
 
@@ -796,11 +804,11 @@ She turns to walk away, but not before you see genuine fear in her eyes.
 
 //Suspicion increased.//
 
-[[Follow her|Dove Follow]]
-[[Let her go|Ballroom]]</tw-passagedata><tw-passagedata pid="53" name="Dove Shipments" tags="dove" position="1100,600" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Dove Shipments")[
+[[Follow her|Raven Follow]]
+[[Let her go|Ballroom]]</tw-passagedata><tw-passagedata pid="53" name="Raven Shipments" tags="raven" position="1100,600" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Raven Shipments")[
   (set: $suspicion to $suspicion + 5)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Shipments"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Shipments"))
 ]}
 &quot;What&#39;s actually in those shipments, Ms. Hartwick? I&#39;ve heard they&#39;re not religious materials.&quot;
 
@@ -816,12 +824,12 @@ Eleanor&#39;s face goes through several expressions—fear, anger, guilt. &quot;
 
 &quot;The shipments aren&#39;t donations. They&#39;re merchandise. Expensive goods that bypass customs by using the church&#39;s tax-exempt status. And the money... it doesn&#39;t go to children. It goes to people who would kill to keep this secret.&quot;
 
-[[Offer to help her|Dove Help]]
-[[Ask who would kill|Dove Danger]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="54" name="Dove Discrepancy" tags="dove" position="1200,500" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Dove Discrepancy")[
+[[Offer to help her|Raven Help]]
+[[Ask who would kill|Raven Danger]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="54" name="Raven Discrepancy" tags="raven" position="1200,500" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Raven Discrepancy")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Discrepancy"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Discrepancy"))
 ]}
 &quot;Two million dollars is a lot of money. But I&#39;ve heard the actual programs haven&#39;t grown. Where does all that money go?&quot;
 
@@ -837,12 +845,12 @@ She looks stricken. &quot;The children are being helped. They must be. All those
 
 The question hits her like a physical blow. She can&#39;t answer. You can see the realization dawning in her eyes—she&#39;s been used.
 
-[[Press the advantage|Dove Truth]]
-[[Offer compassion|Dove Help]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="55" name="Dove Push" tags="dove" position="1200,450" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Dove Push")[
+[[Press the advantage|Raven Truth]]
+[[Offer compassion|Raven Help]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="55" name="Raven Push" tags="raven" position="1200,450" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Raven Push")[
   (set: $suspicion to $suspicion + 15)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Push"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Push"))
 ]}
 &quot;Ms. Hartwick, I think you know the truth. I think you&#39;ve known for a while. Those crates don&#39;t contain medical supplies or educational materials. They contain luxury goods—wine, jewelry, designer items. And you help smuggle them.&quot;
 
@@ -854,12 +862,12 @@ Eleanor&#39;s composure cracks completely. &quot;No! I mean... I didn&#39;t know
 
 She nods miserably. &quot;For about six months. I found manifests that didn&#39;t match. Values that made no sense. When I confronted the Senator, he said I should trust him, that everything was legal, that I was doing God&#39;s work.&quot; She wipes her eyes. &quot;But I know smuggling isn&#39;t God&#39;s work. I know fraud isn&#39;t charity.&quot;
 
-[[Ask why she continues|Dove Why]]
-[[Offer to help her escape|Dove Help]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="56" name="Dove Follow" tags="dove" position="1000,700" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Dove Follow")[
+[[Ask why she continues|Raven Why]]
+[[Offer to help her escape|Raven Help]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="56" name="Raven Follow" tags="raven" position="1000,700" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Raven Follow")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Dove Follow"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Raven Follow"))
 ]}
 You follow Eleanor at a distance as she hurries away from the ballroom. She goes to a quiet alcove and pulls out her phone, making a call with shaking hands.
 
@@ -877,11 +885,13 @@ She hangs up and stands there for a moment, looking small and frightened. When s
 
 &quot;The Joker. He handles... problems. And you&#39;re becoming a problem.&quot;
 
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="57" name="Dove Help" tags="dove" position="1200,600" size="100,100">{(set: $time to $time + 5)
-(set: $alliedDove to true)}
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="57" name="Raven Help" tags="raven" position="1200,600" size="100,100">{(set: $time to $time + 5)
+(set: $alliedRaven to true)}
 &quot;I can help you,&quot; you say quietly. &quot;I&#39;m gathering evidence to expose this. If you testify about what you know—the shipments, the manifests, the fraud—we can bring them down. Together.&quot;
 
-Eleanor looks at you with desperate hope. &quot;You&#39;d protect me? These people... they&#39;ve killed before. A reporter who asked too many questions. An accountant who found irregularities. They call it accidents, but I know.&quot;
+Eleanor reaches up and slowly removes her raven mask. Beneath it, her face is worn and weary—a woman who has carried secrets too long. Her eyes, no longer hidden, are filled with desperate hope.
+
+&quot;You&#39;d protect me? These people... they&#39;ve killed before. A reporter who asked too many questions. An accountant who found irregularities. They call it accidents, but I know.&quot;
 
 {(set: $cluesFound to $cluesFound + (a: &quot;Eleanor knows about previous murders (reporter, accountant)&quot;, &quot;Deaths covered up as &#39;accidents&#39;&quot;, &quot;Eleanor is willing to testify with protection&quot;))}
 
@@ -896,7 +906,7 @@ Eleanor looks at you with desperate hope. &quot;You&#39;d protect me? These peop
 
 &quot;Soon. Maybe already here. Please, just get this information out. Expose them. Before they kill us both.&quot;
 
-[[Promise to use the evidence|Ballroom]]</tw-passagedata><tw-passagedata pid="58" name="Dove Danger" tags="dove" position="1250,600" size="100,100">{(set: $time to $time + 5)}
+[[Promise to use the evidence|Ballroom]]</tw-passagedata><tw-passagedata pid="58" name="Raven Danger" tags="raven" position="1250,600" size="100,100">{(set: $time to $time + 5)}
 &quot;Who would kill to protect this? The Senator?&quot;
 
 Eleanor shakes her head. &quot;The Senator is just a figurehead. The real power is someone else. They call him The Joker—he arrives late at these parties. He&#39;s the enforcer. The one who makes sure no one talks.&quot;
@@ -909,19 +919,21 @@ Eleanor shakes her head. &quot;The Senator is just a figurehead. The real power 
 
 Her voice drops to a whisper. &quot;If you keep investigating, he&#39;ll come for you. And there&#39;s nothing the police can do—he has them in his pocket too.&quot;
 
-[[Ask about police corruption|Dove Police]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="59" name="Dove Truth" tags="dove" position="1250,500" size="100,100">{(set: $time to $time + 5)
-(set: $alliedDove to true)}
+[[Ask about police corruption|Raven Police]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="59" name="Raven Truth" tags="raven" position="1250,500" size="100,100">{(set: $time to $time + 5)
+(set: $alliedRaven to true)}
 &quot;You&#39;ve never seen a child helped by Care Health, have you? Because there are no children. It&#39;s all a front.&quot;
 
-Eleanor collapses into a nearby chair, the weight of the truth finally crushing her denial. &quot;I&#39;ve been a fool. A blind, stupid fool. I thought I was serving God, but I was serving... criminals. Smugglers. Murderers.&quot;
+Eleanor&#39;s hands tremble as she reaches for her mask. She pulls it away, revealing a face crumbling with shame and grief. Without the raven&#39;s dark elegance to hide behind, she looks older, fragile.
+
+She collapses into a nearby chair, the weight of the truth finally crushing her denial. &quot;I&#39;ve been a fool. A blind, stupid fool. I thought I was serving God, but I was serving... criminals. Smugglers. Murderers.&quot;
 
 She looks up at you with tears in her eyes. &quot;I have proof. Documents. I kept copies because something didn&#39;t feel right. I can give them to you. But you have to promise—you have to expose this. The children I thought I was helping... they were never real. And I need to atone for that.&quot;
 
 {(set: $cluesFound to $cluesFound + (a: &quot;Eleanor admits Care Health helps no actual children&quot;, &quot;Eleanor kept copies of incriminating documents&quot;, &quot;Eleanor wants to atone by helping expose the fraud&quot;))}
 
-[[Accept her help|Dove Help]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="60" name="Dove Why" tags="dove" position="1250,450" size="100,100">{(set: $time to $time + 5)}
+[[Accept her help|Raven Help]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="60" name="Raven Why" tags="raven" position="1250,450" size="100,100">{(set: $time to $time + 5)}
 &quot;If you know it&#39;s wrong, why do you keep doing it?&quot;
 
 Eleanor&#39;s face crumples. &quot;Because I&#39;m terrified. I&#39;ve seen what happens to people who try to leave. The reporter who investigated—dead in a car crash. The accountant who found discrepancies—suicide, they said, but I don&#39;t believe it. And they told me... they made it very clear that the same could happen to me.&quot;
@@ -932,8 +944,8 @@ Eleanor&#39;s face crumples. &quot;Because I&#39;m terrified. I&#39;ve seen what
 
 &quot;I&#39;m complicit,&quot; she corrects bitterly. &quot;I continued coordinating shipments even after I knew. I kept quiet. I&#39;ve lied to my parish, to myself, to God. And now...&quot; She looks around fearfully. &quot;Now I don&#39;t know how to get out.&quot;
 
-[[Offer her a way out|Dove Help]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="61" name="Dove Police" tags="dove" position="1300,600" size="100,100">{(set: $time to $time + 5)}
+[[Offer her a way out|Raven Help]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="61" name="Raven Police" tags="raven" position="1300,600" size="100,100">{(set: $time to $time + 5)}
 &quot;What do you mean the police are in his pocket?&quot;
 
 Eleanor leans closer. &quot;The police chief plays golf with the Senator every week. The district attorney got his campaign funded by Care Health &#39;donors.&#39; Even some FBI agents... I&#39;ve seen them at these parties, taking envelopes.&quot;
@@ -948,8 +960,8 @@ Eleanor leans closer. &quot;The police chief plays golf with the Senator every w
 
 &quot;The Senator&#39;s office. Second floor. Everything&#39;s there—the real records, not the sanitized versions. But security is tight, and if you&#39;re caught...&quot; She doesn&#39;t need to finish the sentence.
 
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="62" name="Talk Cardinal" tags="cardinal" position="1400,400" size="100,100">{(set: $time to $time + 5)}
-You approach the tall man in the cardinal red mask. He&#39;s nursing a scotch and examining the room with the calculating gaze of someone who measures everything in dollars and cents.
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="62" name="Talk Phoenix" tags="phoenix" position="1400,400" size="100,100">{(set: $time to $time + 5)}
+You approach the tall man in the fiery phoenix mask. He&#39;s nursing a scotch and examining the room with the calculating gaze of someone who measures everything in dollars and cents.
 
 &quot;Good evening,&quot; you say. &quot;I&#39;m with the paper, doing a piece on tonight&#39;s event.&quot;
 
@@ -961,14 +973,14 @@ His directness is surprising—most people here are guarded. But then you notice
 
 &quot;Indeed. We&#39;ve tripled our budget in three years. The Senator has been instrumental—his connections opened doors we never could have reached otherwise.&quot; He takes a sip of scotch. &quot;Of course, with growth comes complexity. More programs, more staff, more... oversight requirements.&quot;
 
-{(set: $identities to $identities + (dm: &quot;cardinal&quot;, &quot;Walker Manning - CEO of Care Health&quot;))
-(set: $cluesFound to $cluesFound + (a: &quot;The Cardinal is Walker Manning, CEO of Care Health&quot;, &quot;Care Health budget tripled in 3 years&quot;, &quot;Senator Blackwood opened doors for Care Health growth&quot;))}
+{(set: $identities to $identities + (dm: &quot;phoenix&quot;, &quot;Walker Manning - CEO of Care Health&quot;))
+(set: $cluesFound to $cluesFound + (a: &quot;The Phoenix is Walker Manning, CEO of Care Health&quot;, &quot;Care Health budget tripled in 3 years&quot;, &quot;Senator Blackwood opened doors for Care Health growth&quot;))}
 
 Something about the way he said &quot;oversight&quot; feels loaded.
 
-[[Ask about the programs Care Health runs|Cardinal Programs]]
-[[Ask about the budget growth|Cardinal Budget]]
-[[Ask about his relationship with the Senator|Cardinal Senator]]</tw-passagedata><tw-passagedata pid="63" name="Cardinal Programs" tags="cardinal" position="1400,500" size="100,100">{(set: $time to $time + 5)}
+[[Ask about the programs Care Health runs|Phoenix Programs]]
+[[Ask about the budget growth|Phoenix Budget]]
+[[Ask about his relationship with the Senator|Phoenix Senator]]</tw-passagedata><tw-passagedata pid="63" name="Phoenix Programs" tags="phoenix" position="1400,500" size="100,100">{(set: $time to $time + 5)}
 &quot;What programs does Care Health actually operate? I&#39;d love some specifics for the article.&quot;
 
 Walker&#39;s smile is smooth. &quot;We focus on comprehensive child welfare—education, health care, family support. Our after-school programs serve hundreds of children. Our mobile clinics provide free health screenings. Our scholarship fund has sent dozens of kids to college.&quot;
@@ -983,11 +995,11 @@ The smile tightens fractionally. &quot;Unfortunately, for privacy reasons, we do
 
 &quot;Of course. But those documents are confidential. Internal use only.&quot; His voice has taken on an edge. &quot;I&#39;m sure you understand the need to protect our clients&#39; privacy.&quot;
 
-[[Press about the lack of transparency|Cardinal Transparency]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="64" name="Cardinal Budget" tags="cardinal" position="1500,500" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Cardinal Budget")[
+[[Press about the lack of transparency|Phoenix Transparency]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="64" name="Phoenix Budget" tags="phoenix" position="1500,500" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Phoenix Budget")[
   (set: $suspicion to $suspicion + 5)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Budget"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Phoenix Budget"))
 ]}
 &quot;A tripled budget is remarkable. Where does all that money come from?&quot;
 
@@ -1005,8 +1017,8 @@ He hesitates. &quot;That&#39;s... complicated. Accounting standards allow for va
 
 You notice he&#39;s deflecting. For a CEO, he seems remarkably uncertain about his own organization&#39;s numbers.
 
-[[Challenge his vagueness|Cardinal Challenge]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="65" name="Cardinal Senator" tags="cardinal" position="1500,450" size="100,100">{(set: $time to $time + 5)}
+[[Challenge his vagueness|Phoenix Challenge]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="65" name="Phoenix Senator" tags="phoenix" position="1500,450" size="100,100">{(set: $time to $time + 5)}
 &quot;You mention the Senator frequently. How exactly did this partnership begin?&quot;
 
 Walker&#39;s expression becomes guarded. &quot;I approached him three years ago with a proposal. Care Health was struggling—good mission, poor execution. The Senator saw potential. He introduced me to donors, helped navigate regulatory challenges, provided strategic guidance.&quot;
@@ -1025,11 +1037,11 @@ His face pales. &quot;I don&#39;t know what you&#39;re implying—&quot;
 
 He looks around nervously. &quot;This conversation is over.&quot;
 
-[[Press harder|Cardinal Pressure]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="66" name="Cardinal Transparency" tags="cardinal" position="1400,600" size="100,100">{(set: $time to $time + 10)
-(if: $suspicionRaisedPassages does not contain "Cardinal Transparency")[
+[[Press harder|Phoenix Pressure]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="66" name="Phoenix Transparency" tags="phoenix" position="1400,600" size="100,100">{(set: $time to $time + 10)
+(if: $suspicionRaisedPassages does not contain "Phoenix Transparency")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Transparency"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Phoenix Transparency"))
 ]}
 &quot;For a charity claiming to help vulnerable children, you&#39;re remarkably opaque. No site visits, no statistics, no transparency. That raises questions, Mr. Manning.&quot;
 
@@ -1047,11 +1059,11 @@ Walker drains his scotch. &quot;You don&#39;t understand what you&#39;re involve
 
 //Suspicion increased.//
 
-[[Refuse to walk away|Cardinal Refuse]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="67" name="Cardinal Challenge" tags="cardinal" position="1500,600" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Cardinal Challenge")[
+[[Refuse to walk away|Phoenix Refuse]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="67" name="Phoenix Challenge" tags="phoenix" position="1500,600" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Phoenix Challenge")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Challenge"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Phoenix Challenge"))
 ]}
 &quot;You&#39;re the CEO and you can&#39;t give me a straight answer about how your charity spends its money? That&#39;s not &#39;complicated,&#39; Mr. Manning. That&#39;s evasive.&quot;
 
@@ -1071,11 +1083,11 @@ He looks like he&#39;s been struck. &quot;You have no proof of that.&quot;
 
 Walker&#39;s hand trembles slightly as he sets down his empty glass. &quot;You&#39;re making a fatal mistake. Literally.&quot;
 
-[[Ask what he means|Cardinal Threat]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="68" name="Cardinal Pressure" tags="cardinal" position="1600,450" size="100,100">{(set: $time to $time + 10)
-(if: $suspicionRaisedPassages does not contain "Cardinal Pressure")[
+[[Ask what he means|Phoenix Threat]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="68" name="Phoenix Pressure" tags="phoenix" position="1600,450" size="100,100">{(set: $time to $time + 10)
+(if: $suspicionRaisedPassages does not contain "Phoenix Pressure")[
   (set: $suspicion to $suspicion + 15)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Pressure"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Phoenix Pressure"))
 ]}
 &quot;Don&#39;t walk away, Mr. Manning. We&#39;re just getting to the truth. You&#39;re laundering money through Care Health. Using charity status to bypass scrutiny while moving millions in illegal funds. And you keep detailed records of every transaction—you&#39;re too meticulous not to.&quot;
 
@@ -1089,12 +1101,12 @@ Walker stops, his back still to you. When he turns, his face is a mixture of fea
 
 &quot;Testify?&quot; He laughs bitterly. &quot;With what protection? The police chief is on the payroll. The DA too. Even if I survived to trial, I&#39;d never make it to the courthouse.&quot; He looks utterly defeated. &quot;I took this job to help children. I really did. But then the Senator introduced me to his &#39;investors,&#39; and suddenly I was keeping two sets of books. And then I was in too deep to get out.&quot;
 
-[[Offer him a way out|Cardinal Alliance]]
-[[Ask about The Joker|Cardinal Joker]]
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="69" name="Cardinal Refuse" tags="cardinal" position="1400,700" size="100,100">{(set: $time to $time + 5)
-(if: $suspicionRaisedPassages does not contain "Cardinal Refuse")[
+[[Offer him protection in exchange for evidence and testimony|Phoenix Alliance]]
+[[Ask about The Joker|Phoenix Joker]]
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="69" name="Phoenix Refuse" tags="phoenix" position="1400,700" size="100,100">{(set: $time to $time + 5)
+(if: $suspicionRaisedPassages does not contain "Phoenix Refuse")[
   (set: $suspicion to $suspicion + 10)
-  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Cardinal Refuse"))
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Phoenix Refuse"))
 ]}
 &quot;I&#39;m not walking away. Too many people are being hurt by this fraud. The children you claim to help don&#39;t exist, but the criminals profiting from it certainly do.&quot;
 
@@ -1110,7 +1122,7 @@ He nods slowly. &quot;You know about those? Then you understand the stakes. The 
 
 &quot;I&#39;m trying to save your life,&quot; Walker says urgently. &quot;Get your evidence and run. Don&#39;t wait for midnight. Don&#39;t try to be a hero. Just get out.&quot;
 
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="70" name="Cardinal Threat" tags="cardinal" position="1550,650" size="100,100">{(set: $time to $time + 5)}
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="70" name="Phoenix Threat" tags="phoenix" position="1550,650" size="100,100">{(set: $time to $time + 5)}
 &quot;Fatal? Are you threatening me, Mr. Manning?&quot;
 
 &quot;Not me,&quot; he says quickly. &quot;The Joker. He&#39;s coming tonight—might already be here. And when he learns about you...&quot; Walker swallows hard. &quot;Just know that the last photographer who asked questions ended up in a &#39;car accident.&#39; No witnesses. No investigation. Just closed case.&quot;
@@ -1125,8 +1137,10 @@ He walks away quickly, leaving you with confirmation: Care Health is entirely fr
 
 {(set: $cluesFound to $cluesFound + (a: &quot;Walker admitted there are no children being helped&quot;, &quot;Care Health programs are fake&quot;))}
 
-[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="71" name="Cardinal Alliance" tags="cardinal" position="1650,450" size="100,100">{(set: $time to $time + 5)
-(set: $alliedCardinal to true)}
+[[Return to ballroom|Ballroom]]</tw-passagedata><tw-passagedata pid="71" name="Phoenix Alliance" tags="phoenix" position="1650,450" size="100,100">{(set: $time to $time + 5)
+(set: $alliedPhoenix to true)}
+Walker reaches up and removes his fiery phoenix mask, revealing the tired face of a man who has been carrying a terrible burden for too long. His eyes, no longer hidden behind the ornate disguise, show a mixture of relief and fear.
+
 &quot;Then let me help you. I&#39;m gathering enough evidence to go to federal authorities—people outside this corrupt network. With your testimony and financial records, we can bring down the entire operation.&quot;
 
 Walker studies you for a long moment. &quot;You&#39;d really do that? Risk going up against The Joker?&quot;
@@ -1144,7 +1158,7 @@ He pulls a small key from his pocket. &quot;This opens my filing cabinet in the 
 
 &quot;But you need to move fast. The Joker arrives around ten o&#39;clock. After that, security tightens. And if he catches you...&quot; Walker doesn&#39;t finish the sentence.
 
-[[Promise to get the evidence|Ballroom]]</tw-passagedata><tw-passagedata pid="72" name="Cardinal Joker" tags="cardinal" position="1700,450" size="100,100">{(set: $time to $time + 5)}
+[[Promise to get the evidence|Ballroom]]</tw-passagedata><tw-passagedata pid="72" name="Phoenix Joker" tags="phoenix" position="1700,450" size="100,100">{(set: $time to $time + 5)}
 &quot;Tell me about The Joker. Who is he really?&quot;
 
 Walker glances around nervously before answering in a hushed tone. &quot;No one knows his real identity. He&#39;s the one who set this all up—recruited the Senator, established the charity front, built the smuggling network. He stays in the shadows, lets others take the public role.&quot;
@@ -1402,12 +1416,14 @@ You photograph page after page of incriminating entries.
 //Not enough film to photograph the entire ledger!//
 ]}
 ](else:)[
-The filing cabinets are locked. Without Walker&#39;s key, you can&#39;t access the hidden ledger.
+The filing cabinets are locked. You try your office key card on the drawer—maybe it has a card reader? But no, these are old-school locks requiring a physical key. You try pulling on the drawers but they won&#39;t budge.
+
+//You need an actual physical key for these filing cabinets—not the electronic key card you used for the office door. Walker Manning is the CFO and probably has keys to his own files. If you can earn his trust, he might give you his filing cabinet key.//
 ]}
 
 Now for the safe. It&#39;s behind a painting of the Senator&#39;s estate—classic. You swing the painting aside to reveal a wall safe with a digital keypad.
 
-{(if: ($cluesFound contains &quot;Office safe code: 1-8-4-7 (their wedding date)&quot;) or ($cluesFound contains &quot;Joey confirmed safe code: 1-8-4-7&quot;) or ($cluesFound contains &quot;Walker confirmed safe code: 1-8-4-7&quot;))[
+{(if: $cluesFound contains &quot;Office safe code: 1-8-4-7 (their wedding date)&quot; or $cluesFound contains &quot;Joey confirmed safe code: 1-8-4-7&quot; or $cluesFound contains &quot;Walker confirmed safe code: 1-8-4-7&quot;)[
 You enter the code: 1-8-4-7. The wedding date.
 
 The safe clicks open.
@@ -1442,9 +1458,10 @@ You quickly finish, close the safe, rehang the painting, and slip out of the off
 
 [[Return downstairs|Ballroom]]
 ](else:)[
-But you don&#39;t know the combination. The keypad has ten digits—trying to guess would take forever and probably trigger an alarm.
+{(if: $cluesFound contains &quot;Victoria revealed Senator&#39;s office location (second floor, third door left)&quot;)[You know Victoria said something about the Senator keeping files here, but she didn&#39;t give you the safe code. ](else-if: $metVictoria)[You know Victoria is the Senator&#39;s wife—maybe the code is related to them? But you&#39;d need the actual numbers. ]}
+The keypad blinks, waiting for a 4-digit code. You could try random numbers, but there are 10,000 possible combinations, and you&#39;d probably trigger an alarm.
 
-You need the code. Maybe one of your allies knows it.
+//You need someone to actually tell you the specific 4-digit safe code. Victoria is his wife—she might know it. Joey Reed and Walker Manning work closely with the Senator—one of them might know it too. But you&#39;ll need to build enough trust that they&#39;ll share it. Just talking to them isn&#39;t enough—look for dialogue options that offer them protection or partnership in exchange for evidence.//
 
 [[Give up for now|Ballroom]]
 ]}</tw-passagedata><tw-passagedata pid="81" name="Library" tags="" position="2000,500" size="100,100">{(set: $time to $time + 10)
@@ -1616,7 +1633,10 @@ Eleanor's name is on an anxiety medication bottle. She mentioned being nervous, 
 
 [[Return to bedroom|Master Bedroom]]
 ]}</tw-passagedata><tw-passagedata pid="115" name="Hide in Bathroom" tags="" position="700,100" size="100,100">{(set: $time to $time + 10)
-(set: $suspicion to $suspicion - 10)}
+(if: $suspicionRaisedPassages does not contain "Hide in Bathroom")[
+  (set: $suspicion to $suspicion - 10)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Hide in Bathroom"))
+]}
 You quickly slip into the bathroom and ease the door almost closed, leaving just a crack to see through.
 
 Footsteps enter the bedroom. Two security guards, doing a sweep.
@@ -1716,7 +1736,7 @@ Victoria is standing at the railing, staring at the stars. She doesn't seem to n
 
 [[Talk with Victoria|Balcony Victoria]]
 [[Give her privacy|Second Floor Landing]]
-](else-if: $time >= 1015 and $time < 1100 and not ($identities's dove))[
+](else-if: $time >= 1015 and $time < 1100 and not ($identities's raven))[
 Eleanor Hartwick is on the balcony, hands clasped as if in prayer, staring out at the garden.
 
 She looks deeply troubled, lips moving in what might be silent prayer.
@@ -1910,7 +1930,7 @@ She pulls a folded paper from her clutch. "This is the name of a federal agent w
 ]}
 
 [[Thank her|Balcony]]
-[[Return inside together|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="126" name="Balcony Eleanor" tags="dove" position="1050,150" size="100,100">{(set: $time to $time + 10)}
+[[Return inside together|Second Floor Landing]]</tw-passagedata><tw-passagedata pid="126" name="Balcony Eleanor" tags="raven" position="1050,150" size="100,100">{(set: $time to $time + 10)}
 You approach quietly. Eleanor doesn't turn, but she knows you're there.
 
 "I pray here sometimes," she says. "When the parties get to be too much. When I need to remember why I'm doing this."
@@ -1923,7 +1943,7 @@ She turns to face you, and you see tears on her cheeks. "I was doing it for the 
 
 "No." Her voice breaks. "There are no children. Just crates of expensive liquor and designer goods. Just money laundering through a church. And I'm the face of it. Me, with my collar and my prayers. I'm the one who makes it look legitimate."
 
-{(set: $identities to $identities + (dm: "dove", "Eleanor Hartwick"))}
+{(set: $identities to $identities + (dm: "raven", "Eleanor Hartwick"))}
 {(set: $cluesFound to $cluesFound + (a: "Eleanor is wracked with guilt", "She believed she was helping children", "St. Michael's was struggling financially"))}
 
 "You can stop," you tell her. "Testify. Help bring them down."
@@ -1945,7 +1965,7 @@ She meets your eyes. "If I give that to you, if I testify, you promise they'll p
 
 She nods slowly. "Then I'll help. God forgive me, I should have done this months ago."
 
-{(set: $alliedDove to true)
+{(set: $alliedRaven to true)
 (set: $evidence to $evidence + (a: "Received flash drive from Eleanor with shipping manifests", "Complete donation and smuggling records"))}
 {(set: $cluesFound to $cluesFound + (a: "Eleanor is willing to testify with protection", "She has complete shipping and donation records"))}
 
@@ -1997,14 +2017,16 @@ He starts walking toward you, and the crowd parts like water. No one wants to be
 [[Announce you have evidence|Expose Operation]]
 ]}</tw-passagedata><tw-passagedata pid="83" name="Confront Joker" tags="joker" position="2200,500" size="100,100">{(set: $time to $time + 5)}
 
+The Joker slowly removes his mask, revealing his true face beneath. His eyes are cold, calculating—the face of a man who has ordered deaths without blinking.
+
 You plant your feet and meet his gaze. Running would only make you look guilty, and you&#39;re not ready to back down.
 
 &quot;Good evening,&quot; you say evenly. &quot;I&#39;m with the paper. Just covering the Senator&#39;s party.&quot;
 
 The Joker stops a few feet away, that frozen smile on his mask at odds with the cold calculation in his eyes. &quot;A journalist. How... quaint. And what exactly have you been covering? The champagne? The hors d&#39;oeuvres? Or perhaps the more... intimate details of our little operation?&quot;
 
-{(if: $alliedVictoria or $alliedPeacock or $alliedDove or $alliedCardinal)[
-From across the room, you see {(if: $alliedVictoria)[Victoria](else-if: $alliedPeacock)[Joey](else-if: $alliedDove)[Eleanor](else:)[Walker]} watching nervously. Your allies are here, but they&#39;re terrified to intervene.
+{(if: $alliedVictoria or $alliedPeacock or $alliedRaven or $alliedPhoenix)[
+From across the room, you see {(if: $alliedVictoria)[Victoria](else-if: $alliedPeacock)[Joey](else-if: $alliedRaven)[Eleanor](else:)[Walker]} watching nervously. Your allies are here, but they&#39;re terrified to intervene.
 ]}
 
 &quot;I&#39;m documenting a charity event. Nothing more.&quot;
@@ -2167,7 +2189,10 @@ The garden extends around the side of the mansion. You can see the driveway from
 [[Return to greenhouse|Greenhouse]]
 (if: $time < 1100)[[[Circle around to front of mansion|Grand Foyer]]]</tw-passagedata>
 <tw-passagedata pid="102" name="Kitchen Photograph" tags="" position="1150,350" size="100,100">{(set: $time to $time + 5)
-(set: $suspicion to $suspicion - 5)}
+(if: $suspicionRaisedPassages does not contain "Kitchen Photograph")[
+  (set: $suspicion to $suspicion - 5)
+  (set: $suspicionRaisedPassages to $suspicionRaisedPassages + (a: "Kitchen Photograph"))
+]}
 
 {(if: not ($cluesFound contains "Found delivery schedule confirming 11 PM shipment"))[
 The head chef considers this, then shrugs. "Sure, why not? Good publicity for the catering company."
@@ -2367,16 +2392,18 @@ Security guards have positioned themselves at all the exits. There&#39;s no easy
 [[Stop running and face him|Confront Joker]]
 [[Make a break for the exit|Escape Attempt]]</tw-passagedata><tw-passagedata pid="85" name="Refuse Joker" tags="joker" position="2200,600" size="100,100">{(set: $time to $time + 3)}
 
+His mask falls away, revealing the face beneath—sharp features twisted into something between amusement and contempt.
+
 &quot;I don&#39;t think so,&quot; you say. &quot;This is my equipment. My work. And last I checked, this was still a free country.&quot;
 
 The Joker&#39;s mask doesn&#39;t change, but you can feel his amusement. &quot;A free country. How delightfully naive.&quot; He snaps his fingers.
 
 Two security guards move forward to grab you.
 
-{(if: ($alliedVictoria and $alliedPeacock) or ($alliedDove and $alliedCardinal) or ($evidence contains &quot;Received flash drive from Eleanor with shipping manifests&quot;))[
+{(if: ($alliedVictoria and $alliedPeacock) or ($alliedRaven and $alliedPhoenix) or ($evidence contains &quot;Received flash drive from Eleanor with shipping manifests&quot;))[
 &quot;Wait!&quot; 
 
-{(if: $alliedVictoria)[Victoria Blackwood](else-if: $alliedDove)[Eleanor Hartwick](else-if: $alliedCardinal)[Walker Manning](else:)[Joey Reed]} steps forward, voice shaking but determined. &quot;You can&#39;t just assault guests. People will talk. The press will—&quot;
+{(if: $alliedVictoria)[Victoria Blackwood](else-if: $alliedRaven)[Eleanor Hartwick](else-if: $alliedPhoenix)[Walker Manning](else:)[Joey Reed]} steps forward, voice shaking but determined. &quot;You can&#39;t just assault guests. People will talk. The press will—&quot;
 
 &quot;The press will report what I tell them to report,&quot; The Joker says quietly. But he does pause. &quot;However, you raise a valid point. This is supposed to be a civilized gathering.&quot;
 
@@ -2424,8 +2451,8 @@ The room goes completely silent.
 
 &quot;And I have proof. Ledgers, manifests, bank records. It&#39;s already been sent to federal authorities outside this corrupt network. You can kill me, but the evidence is already out there.&quot;
 
-{(if: ($alliedDove or $alliedCardinal))[
-{(if: $alliedDove)[Eleanor](else:)[Walker]} speaks up, voice trembling: &quot;It&#39;s true. I gave the evidence to federal investigators this afternoon. They&#39;ll be here within the hour.&quot;
+{(if: ($alliedRaven or $alliedPhoenix))[
+{(if: $alliedRaven)[Eleanor](else:)[Walker]} speaks up, voice trembling: &quot;It&#39;s true. I gave the evidence to federal investigators this afternoon. They&#39;ll be here within the hour.&quot;
 
 The Joker&#39;s mask stays frozen, but his body language shifts. He&#39;s calculating. &quot;You&#39;re bluffing.&quot;
 
@@ -2596,7 +2623,7 @@ You have until midnight. That gives you about {(print: (1080 - $time))} minutes 
 {(if: (($evidence contains &quot;Real financial ledger from hidden compartment&quot;) or ($evidence contains &quot;Complete photographic documentation of delivery from balcony&quot;) or ($evidence contains &quot;Photos of wine cellar smuggling operation&quot;)) and (($evidence contains &quot;Photos of fraudulent shipping manifests&quot;) or ($evidence contains &quot;Photos of smuggling operation at back entrance&quot;) or ($evidence contains &quot;Photos of delivery truck and operatives&quot;)))[
 You have substantial evidence—enough to expose the operation if you can get it to the right people.
 
-You quietly gather your materials and head for the exit. {(if: $alliedVictoria)[Victoria](else-if: $alliedDove)[Eleanor](else-if: $alliedCardinal)[Walker](else:)[Joey]} slips you a final piece of information: &quot;Federal investigator. Agent Morrison. She&#39;s not corrupt. She&#39;s at the field office downtown.&quot;
+You quietly gather your materials and head for the exit. {(if: $alliedVictoria)[Victoria](else-if: $alliedRaven)[Eleanor](else-if: $alliedPhoenix)[Walker](else:)[Joey]} slips you a final piece of information: &quot;Federal investigator. Agent Morrison. She&#39;s not corrupt. She&#39;s at the field office downtown.&quot;
 
 You make it to your car without incident. As you drive away, you see The Joker watching from the ballroom window, that frozen smile mocking you.
 
@@ -2619,7 +2646,7 @@ You tried. But without the full evidence, without the complete picture, you coul
 
 The Joker&#39;s masked expression doesn&#39;t change, but his voice goes cold. &quot;Then you&#39;re a fool.&quot;
 
-{(if: ($alliedVictoria and $alliedPeacock and $alliedDove and $alliedCardinal))[
+{(if: ($alliedVictoria and $alliedPeacock and $alliedRaven and $alliedPhoenix))[
 Before he can give the order, all four of your allies step forward together.
 
 Victoria: &quot;I&#39;m testifying. I have bank records.&quot;
@@ -2694,11 +2721,11 @@ The Joker&#39;s mask stays frozen, but his posture shifts. He&#39;s calculating.
 Joey steps forward too. &quot;She&#39;s not alone. I have architectural evidence of the hidden storage facilities. Secure rooms built specifically for contraband.&quot;
 ]}
 
-{(if: $alliedDove)[
+{(if: $alliedRaven)[
 Eleanor joins them, clutching her prayer book like a shield. &quot;I have shipping manifests. The real ones, showing actual values.&quot;
 ]}
 
-{(if: $alliedCardinal)[
+{(if: $alliedPhoenix)[
 Walker straightens his shoulders. &quot;I have the financial ledgers. Every transaction, every payoff, every lie.&quot;
 ]}
 
