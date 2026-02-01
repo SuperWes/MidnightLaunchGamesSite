@@ -72,6 +72,44 @@
         </div>
       </div>
 
+      <!-- Character Gallery -->
+      <div class="characters-section">
+        <h2 class="section-title">The Guests</h2>
+        <p class="characters-intro">Behind every mask lies a secret. Who can you trust?</p>
+        <div class="characters-grid">
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/peacock_mask.png" alt="The Peacock" />
+            <h3>The Peacock</h3>
+            <p>Senator & Host</p>
+          </div>
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/swan_mask.png" alt="The Swan" />
+            <h3>The Swan</h3>
+            <p>Elegant & Elusive</p>
+          </div>
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/joker_mask.png" alt="The Joker" />
+            <h3>The Joker</h3>
+            <p>Wild Card</p>
+          </div>
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/eagle_mask.png" alt="The Eagle" />
+            <h3>The Eagle</h3>
+            <p>Sharp-Eyed Observer</p>
+          </div>
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/raven_mask.png" alt="The Raven" />
+            <h3>The Raven</h3>
+            <p>Dark & Mysterious</p>
+          </div>
+          <div class="character-card">
+            <img src="/games/webofdeceit/images/phoenix_mask.png" alt="The Phoenix" />
+            <h3>The Phoenix</h3>
+            <p>Rising from Ashes</p>
+          </div>
+        </div>
+      </div>
+
       <div class="story-panel credits-panel">
         <h2 class="section-title">About</h2>
         <p class="credits-text">
@@ -381,6 +419,70 @@ export default {
   color: #E0D5C7;
   font-size: 0.95rem;
   line-height: 1.6;
+  margin: 0;
+}
+
+/* Character Gallery */
+.characters-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.characters-intro {
+  color: #E0D5C7;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .characters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.character-card {
+  background: rgba(42, 36, 25, 0.7);
+  border: 2px solid #8B7355;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.character-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.character-card img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.character-card h3 {
+  color: #D4AF37;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.character-card p {
+  color: #9A8B7A;
+  font-size: 0.85rem;
+  font-style: italic;
   margin: 0;
 }
 
