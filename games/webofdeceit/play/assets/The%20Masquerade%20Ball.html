@@ -2169,6 +2169,7 @@ The garden extends around the side of the mansion. You can see the driveway from
 <tw-passagedata pid="102" name="Kitchen Photograph" tags="" position="1150,350" size="100,100">{(set: $time to $time + 5)
 (set: $suspicion to $suspicion - 5)}
 
+{(if: not ($cluesFound contains "Found delivery schedule confirming 11 PM shipment"))[
 The head chef considers this, then shrugs. "Sure, why not? Good publicity for the catering company."
 
 You take a few shots of the kitchen staff at work—excellent cover while scanning for anything useful.
@@ -2181,6 +2182,13 @@ Near the service hallway door, you spot a clipboard with delivery schedules. Ton
 //Film remaining: {(print: $photosRemaining)}/30//
 
 //Good cover. Suspicion decreased.//
+](else:)[
+The head chef nods. "Sure, go ahead."
+
+You take a few more photos of the kitchen operations, but you've already documented everything useful here.
+
+//You already photographed the kitchen and found the delivery schedule.//
+]}
 
 [[Thank them and leave|Kitchen]]</tw-passagedata>
 <tw-passagedata pid="103" name="Back Entrance" tags="" position="1250,850" size="100,100">{(set: $time to $time + 3)
