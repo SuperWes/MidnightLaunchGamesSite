@@ -25,6 +25,7 @@
       </div>
 
       <div class="play-section">
+        <p class="play-now-label">PLAY NOW</p>
         <p class="version-label">Choose Your Experience</p>
         <div class="play-buttons">
           <a
@@ -32,7 +33,8 @@
             class="play-button"
           >
             <span class="play-icon">🎭</span>
-            <span>Flutter App</span>
+            <span class="button-action">Play</span>
+            <span class="button-title">Flutter App</span>
             <span class="version-desc">Enhanced visuals & UI</span>
           </a>
           <a
@@ -40,7 +42,8 @@
             class="play-button twine-button"
           >
             <span class="play-icon">📜</span>
-            <span>Classic Twine</span>
+            <span class="button-action">Play</span>
+            <span class="button-title">Classic Twine</span>
             <span class="version-desc">Original text adventure</span>
           </a>
         </div>
@@ -234,20 +237,32 @@ export default {
 /* Play Section */
 .play-section {
   text-align: center;
-  margin: 2.5rem 0;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.1), transparent);
+  border-radius: 12px;
+}
+
+.play-now-label {
+  color: #D4AF37;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  letter-spacing: 0.1em;
 }
 
 .version-label {
-  color: #D4AF37;
+  color: #E0D5C7;
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
 }
 
 .play-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -255,37 +270,64 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
-  background: #2A2419;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #3A3429 0%, #2A2419 100%);
   color: #D4AF37;
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 1.25rem 2rem;
-  border: 3px solid #8B7355;
-  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.75rem 2.5rem;
+  border: 4px solid #D4AF37;
+  border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: Georgia, 'Times New Roman', serif;
-  min-width: 180px;
+  min-width: 220px;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .play-button:hover {
-  background: #3A3429;
-  border-color: #D4AF37;
+  background: linear-gradient(135deg, #4A4439 0%, #3A3429 100%);
+  border-color: #F0D060;
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.play-button:active {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
 }
 
 .play-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.25rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.button-action {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #E0D5C7;
+  font-weight: normal;
+}
+
+.button-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #D4AF37;
 }
 
 .version-desc {
-  font-size: 0.8rem;
-  color: #9A8B7A;
+  font-size: 0.85rem;
+  color: #E0D5C7;
   font-weight: normal;
   font-style: italic;
+  margin-top: 0.25rem;
 }
 
 /* Features Grid */
