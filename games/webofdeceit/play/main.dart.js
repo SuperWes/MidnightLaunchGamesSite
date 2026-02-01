@@ -25695,7 +25695,7 @@ s.toString
 p=s}A.cp("[AudioService Web] document.baseUri = "+p)
 r=B.c.eX(p,"/")?p:p+"/"
 A.cp("[AudioService Web] base = "+r)
-q=r+a
+q=r+"assets/"+a
 A.cp("[AudioService Web] final URL = "+q)
 return q}},B={}
 var w=[A,J,B]
