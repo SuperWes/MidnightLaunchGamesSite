@@ -4,6 +4,7 @@
     <div class="hero-section">
       <div class="hero-overlay"></div>
       <div class="hero-content">
+        <img src="/games/webofdeceit/logo.png" alt="Web of Deceit" class="game-logo" />
         <h1 class="game-title">Web of Deceit</h1>
         <p class="game-subtitle">A Masquerade Mystery</p>
         <p class="game-jam-badge">Global Game Jam 2026</p>
@@ -214,6 +215,15 @@ export default {
   z-index: 1;
   text-align: center;
   padding: 2rem;
+}
+
+.game-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.3);
+  border: 3px solid #D4AF37;
 }
 
 .game-title {
