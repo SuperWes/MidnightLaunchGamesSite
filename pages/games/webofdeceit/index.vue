@@ -111,14 +111,40 @@
       </div>
 
       <div class="story-panel credits-panel">
-        <h2 class="section-title">About</h2>
-        <p class="credits-text">
-          Created for <strong>Global Game Jam 2026</strong>
-        </p>
-        <p class="credits-text">
-          An interactive mystery built with Flutter, featuring branching narratives 
-          and multiple endings based on your choices.
-        </p>
+        <h2 class="section-title">Credits</h2>
+        <p class="jam-banner">2026 St. Louis Global Game Jam</p>
+        
+        <div class="credits-grid">
+          <div class="credit-entry">
+            <h3>Brian Simcoke</h3>
+            <p>Background Art Procurement, Writing, and Design</p>
+          </div>
+          <div class="credit-entry">
+            <h3>Cam Womack</h3>
+            <p>Writing and Design</p>
+          </div>
+          <div class="credit-entry">
+            <h3>Colin Schulte</h3>
+            <p>Writing, Design, and Testing</p>
+          </div>
+          <div class="credit-entry">
+            <h3>Laz Richardson</h3>
+            <p>Music and Sound Effects</p>
+          </div>
+          <div class="credit-entry">
+            <h3>Tim Snyder</h3>
+            <p>Character Art, Writing, and Design</p>
+          </div>
+          <div class="credit-entry">
+            <h3>Wes Ehrlichman</h3>
+            <p>Programming, Writing, and Design</p>
+          </div>
+        </div>
+
+        <div class="credits-footer">
+          <p>Built with Flutter | Story powered by Twine/Harlowe</p>
+          <p class="made-in">Made in St. Louis</p>
+        </div>
       </div>
     </div>
 
@@ -511,15 +537,61 @@ export default {
   margin-bottom: 1rem;
 }
 
-.credits-text {
-  color: #E0D5C7;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+.jam-banner {
+  color: #D4AF37;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #D4AF37;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
-.credits-text strong {
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .credits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.credit-entry h3 {
   color: #D4AF37;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.credit-entry p {
+  color: #E0D5C7;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.credits-footer {
+  padding-top: 1.5rem;
+  border-top: 2px solid #8B7355;
+}
+
+.credits-footer p {
+  color: #8B7355;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.credits-footer .made-in {
+  color: #E0D5C7;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 /* Footer */
