@@ -149,7 +149,9 @@ export default {
           property: 'og:description',
           content: 'Navigate a treacherous masquerade ball where nothing is as it seems. An interactive mystery experience created for Global Game Jam 2026.'
         },
-        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/webofdeceit-logo.png' },
+        { hid: 'og:image:width', property: 'og:image:width', content: '512' },
+        { hid: 'og:image:height', property: 'og:image:height', content: '512' },
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/webofdeceit/' },
@@ -159,7 +161,7 @@ export default {
           name: 'twitter:description',
           content: 'Navigate a treacherous masquerade ball where nothing is as it seems. An interactive mystery experience created for Global Game Jam 2026.'
         },
-        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/webofdeceit-logo.png' },
         // Prevent search engine indexing for unlisted page
         { hid: 'robots', name: 'robots', content: 'noindex, nofollow' }
       ]
