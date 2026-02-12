@@ -1,0 +1,27 @@
+{
+  "force_update_enabled": false,
+  "minimum_version": {
+    "ios": "0.1.0",
+    "android": "0.1.0"
+  },
+  "store_urls": {
+    "ios": "https://apps.apple.com/app/dicehard/id...",
+    "android": "https://play.google.com/store/apps/details?id=com.midnightlaunchgames.dicehard"
+  },
+  "update_message": {
+    "en": "A new version is available with important fixes."
+  },
+  "news": [
+    {
+      "title": "Welcome to Dice Hard!",
+      "message": "Roll the dice, embrace the chaos, and see how far you can go!",
+      "date": "2026-02-12",
+      "priority": 1
+    }
+  ],
+  "tips": [
+    "Each die roll determines your fate - plan your moves wisely!",
+    "Higher risk often means higher reward.",
+    "Watch your health - retreating is sometimes the smartest play."
+  ]
+}
