@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/games/dicehard", {data:[{}],fetch:[],mutations:[]});
