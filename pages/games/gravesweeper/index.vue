@@ -40,6 +40,12 @@
           </a>
 
           <a
+            href="https://superwes.itch.io/gravesweeper"
+            target="_blank"
+            class="itch-button"
+          >🖥️ Windows / Mac on itch.io</a>
+
+          <a
             href="/games/gravesweeper/reapers_run/"
             target="_blank"
             class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
@@ -146,6 +152,12 @@
               class="store-badge"
             />
           </a>
+
+          <a
+            href="https://superwes.itch.io/gravesweeper"
+            target="_blank"
+            class="itch-button"
+          >🖥️ Windows / Mac on itch.io</a>
 
           <a
             href="/games/gravesweeper/reapers_run/"
@@ -261,6 +273,25 @@ export default {
 
 .store-badge:hover {
   opacity: 0.8;
+}
+
+/* itch.io Button */
+.itch-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #fa5c5c 0%, #d14141 100%);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(250, 92, 92, 0.3);
+}
+
+.itch-button:hover {
+  background: linear-gradient(135deg, #ff6b6b 0%, #e54545 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(250, 92, 92, 0.4);
 }
 
 /* Carousel Styles */
