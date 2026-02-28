@@ -18,13 +18,13 @@
   "news": [
     {
       "title": "🎵 New: Music & Sound!",
-      "message": "The dungeon now has a soundtrack! Featuring original music by Lazarus D. Richardson. Listen to the full album at lazarusrichardson.bandcamp.com/album/gravesweeper",
+      "message": "The dungeon now has a soundtrack! Featuring original music by Lazarus D. Richardson. Listen to the full album at https://lazarusrichardson.bandcamp.com/album/gravesweeper",
       "date": "2026-02-28T00:00:00Z",
       "priority": 4
     },
     {
       "title": "🖥️ Now on Windows & Mac!",
-      "message": "Gravesweeper is now available for desktop! Play on Windows or Mac for just $4 at superwes.itch.io/gravesweeper — bigger screen, same spooky fun!",
+      "message": "Gravesweeper is now available for desktop! Play on Windows or Mac for just $4 at https://superwes.itch.io/gravesweeper — bigger screen, same spooky fun!",
       "date": "2026-02-27T00:00:00Z",
       "priority": 3
     },
