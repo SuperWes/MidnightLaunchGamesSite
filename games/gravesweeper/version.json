@@ -17,6 +17,18 @@
   },
   "news": [
     {
+      "title": "🎵 New: Music & Sound!",
+      "message": "The dungeon now has a soundtrack! Featuring original music by Lazarus D. Richardson. Listen to the full album at lazarusrichardson.bandcamp.com/album/gravesweeper",
+      "date": "2026-02-28T00:00:00Z",
+      "priority": 4
+    },
+    {
+      "title": "🖥️ Now on Windows & Mac!",
+      "message": "Gravesweeper is now available for desktop! Play on Windows or Mac for just $4 at superwes.itch.io/gravesweeper — bigger screen, same spooky fun!",
+      "date": "2026-02-27T00:00:00Z",
+      "priority": 3
+    },
+    {
       "title": "💣 Trap Counter Now Shows Progress",
       "message": "The Trap Counter upgrade now displays how many gravestones you've placed vs total traps (e.g., '💣 12/45'). The counter turns green when you've marked all traps! This helps you track your progress and know when you've found everything.",
       "date": "2025-11-10T00:00:00Z",
