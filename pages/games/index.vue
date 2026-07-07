@@ -8,7 +8,7 @@
           <img src="~/assets/Gravesweeper-logo.png" />
         </nuxt-link>
       </div>
-      <div class="md:flex-1 md:w-1/2 card">
+      <div class="md:flex-1 md:w-1/2 card card-dark">
         <nuxt-link to="/games/timetorogue">
           <h1 class="gameTitle mb-3">Time to Rogue</h1>
           <img src="~/assets/TimeToRogue-logo.png" />
@@ -99,5 +99,14 @@ h1.gameTitle {
   @apply m-5;
   background-color: #78d5dd;
   border-radius: 0.5rem;
+}
+
+/* Time to Rogue's neon logo is designed for a dark background. */
+.card.card-dark {
+  background-color: #0b1220;
+}
+
+.card-dark h1.gameTitle {
+  color: #ffffff;
 }
 </style>
