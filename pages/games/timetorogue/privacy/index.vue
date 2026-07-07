@@ -37,7 +37,7 @@
           <p class="mb-3">
             If a leaderboard is offered, ranking is handled through Apple's Game Center and is optional.
             Any data involved is managed by Apple under
-            <a href="https://www.apple.com/legal/privacy/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Apple's Privacy Policy</a>.
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" class="ttr-link">Apple's Privacy Policy</a>.
             We do not receive personal information from Game Center.
           </p>
         </section>
@@ -88,13 +88,13 @@
             If you have any questions about this Privacy Policy, please contact us:
           </p>
           <p>
-            <nuxt-link to="/contact" class="text-blue-400 hover:text-blue-300 underline">
+            <nuxt-link to="/contact" class="ttr-link">
               Contact Page
             </nuxt-link>
           </p>
           <p class="mt-3">
             For game support and FAQs, visit our
-            <nuxt-link to="/games/timetorogue/support" class="text-blue-400 hover:text-blue-300 underline">
+            <nuxt-link to="/games/timetorogue/support" class="ttr-link">
               Support Page
             </nuxt-link>
           </p>
@@ -103,11 +103,11 @@
         <div class="text-center mt-8 mb-4 flex gap-3 justify-center">
           <nuxt-link
             to="/games/timetorogue"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+            class="ttr-btn"
           >Back to Time to Rogue</nuxt-link>
           <nuxt-link
             to="/games/timetorogue/support"
-            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded"
+            class="ttr-btn-alt"
           >Get Support</nuxt-link>
         </div>
       </div>
@@ -133,17 +133,44 @@ export default {
 </script>
 
 <style scoped>
+/* Dark Time to Rogue canvas, breaking out of the site's blue-purple bg */
 .content {
-  margin: auto;
-  max-width: 800px;
-  padding: 20px;
+  margin: 0;
+  min-height: 100%;
+  padding: 2.5rem 1rem 1rem;
+  background:
+    radial-gradient(1000px 500px at 50% -80px, rgba(56, 189, 248, 0.10), transparent 70%),
+    linear-gradient(180deg, #05070d 0%, #090d18 55%, #05070d 100%);
+  color: #dbe4f0;
 }
 
 .privacy-policy {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(56, 189, 248, 0.035);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 12px;
   padding: 2rem;
-  margin: 1rem;
+}
+
+.privacy-policy h1 {
+  color: #7dd3fc;
+}
+
+.policy-content {
+  color: #dbe4f0;
+}
+
+.policy-content h2 {
+  color: #38bdf8;
+}
+
+.policy-content h3 {
+  color: #cbd5e1;
+}
+
+.policy-content strong {
+  color: #fde047;
 }
 
 .policy-content p,
@@ -157,5 +184,48 @@ export default {
 
 .policy-content section {
   margin-bottom: 2rem;
+}
+
+.ttr-link {
+  color: #38bdf8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+  transition: color 0.2s ease;
+}
+
+.ttr-link:hover {
+  color: #7dd3fc;
+}
+
+.ttr-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #facc15 0%, #fde047 100%);
+  color: #1a1400;
+  font-weight: 800;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.ttr-btn:hover {
+  box-shadow: 0 0 26px rgba(250, 204, 21, 0.55);
+}
+
+.ttr-btn-alt {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ttr-btn-alt:hover {
+  background: rgba(56, 189, 248, 0.24);
 }
 </style>

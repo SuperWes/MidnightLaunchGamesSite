@@ -21,14 +21,14 @@
           <div class="text-center my-4">
             <p class="mb-3">
               <strong>Email:</strong>
-              <a href="mailto:superwes@gmail.com" class="text-blue-400 hover:text-blue-300 underline">
+              <a href="mailto:superwes@gmail.com" class="ttr-link">
                 superwes@gmail.com
               </a>
             </p>
             <p class="text-sm text-gray-400 mb-4">Or use our contact form:</p>
             <nuxt-link
               to="/contact"
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 border border-blue-700 rounded inline-block"
+              class="ttr-btn"
             >
               📧 Contact Form
             </nuxt-link>
@@ -134,7 +134,7 @@
           </ul>
           <p>
             Use the
-            <nuxt-link to="/contact" class="text-blue-400 hover:text-blue-300 underline">
+            <nuxt-link to="/contact" class="ttr-link">
               contact form
             </nuxt-link>
             to submit bug reports.
@@ -144,7 +144,7 @@
         <section class="mb-6">
           <h2 class="text-xl font-semibold mb-3">Privacy &amp; Terms</h2>
           <p>
-            <nuxt-link to="/games/timetorogue/privacy" class="text-blue-400 hover:text-blue-300 underline">
+            <nuxt-link to="/games/timetorogue/privacy" class="ttr-link">
               View our Privacy Policy
             </nuxt-link>
           </p>
@@ -153,7 +153,7 @@
         <div class="text-center mt-8 mb-4">
           <nuxt-link
             to="/games/timetorogue"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+            class="ttr-btn"
           >Back to Time to Rogue</nuxt-link>
         </div>
       </div>
@@ -179,17 +179,44 @@ export default {
 </script>
 
 <style scoped>
+/* Dark Time to Rogue canvas, breaking out of the site's blue-purple bg */
 .content {
-  margin: auto;
-  max-width: 800px;
-  padding: 20px;
+  margin: 0;
+  min-height: 100%;
+  padding: 2.5rem 1rem 1rem;
+  background:
+    radial-gradient(1000px 500px at 50% -80px, rgba(56, 189, 248, 0.10), transparent 70%),
+    linear-gradient(180deg, #05070d 0%, #090d18 55%, #05070d 100%);
+  color: #dbe4f0;
 }
 
 .support-page {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(56, 189, 248, 0.035);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 12px;
   padding: 2rem;
-  margin: 1rem;
+}
+
+.support-page h1 {
+  color: #7dd3fc;
+}
+
+.support-content {
+  color: #dbe4f0;
+}
+
+.support-content h2 {
+  color: #38bdf8;
+}
+
+.support-content h3 {
+  color: #cbd5e1;
+}
+
+.support-content strong {
+  color: #fde047;
 }
 
 .support-content p,
@@ -206,9 +233,40 @@ export default {
 }
 
 .faq-item {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-left: 3px solid #0ea5e9;
+  background: rgba(5, 7, 13, 0.55);
+  border-left: 3px solid #38bdf8;
   padding: 1rem;
   border-radius: 0.25rem;
+}
+
+.ttr-link {
+  color: #38bdf8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+  transition: color 0.2s ease;
+}
+
+.ttr-link:hover {
+  color: #7dd3fc;
+}
+
+.ttr-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #facc15 0%, #fde047 100%);
+  color: #1a1400;
+  font-weight: 800;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.ttr-btn:hover {
+  box-shadow: 0 0 26px rgba(250, 204, 21, 0.55);
+}
+
+.ttr-btn:active {
+  transform: translateY(1px);
 }
 </style>
