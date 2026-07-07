@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/games/timetorogue/privacy", {data:[{}],fetch:[],mutations:[]});
