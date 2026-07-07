@@ -17,7 +17,8 @@
           <h2 class="text-xl font-semibold mb-3">Information We Collect</h2>
           <p class="mb-3">
             We do not collect, transmit, or store any personal information. Time to Rogue has no
-            analytics, no advertising, and no accounts.
+            analytics, no advertising, and no accounts of our own. Optional leaderboards use your
+            Apple Game Center account — see below.
           </p>
 
           <h3 class="text-lg font-semibold mb-2 mt-4">Game Progress Data</h3>
@@ -35,10 +36,13 @@
 
           <h3 class="text-lg font-semibold mb-2 mt-4">Leaderboards (Game Center)</h3>
           <p class="mb-3">
-            If a leaderboard is offered, ranking is handled through Apple's Game Center and is optional.
-            Any data involved is managed by Apple under
+            Time to Rogue includes leaderboards powered by Apple's Game Center. Participation is
+            optional — you choose whether to sign in. When you submit a score, Apple associates it
+            with your Game Center account and public nickname; this is handled entirely by Apple under
             <a href="https://www.apple.com/legal/privacy/" target="_blank" class="ttr-link">Apple's Privacy Policy</a>.
-            We do not receive personal information from Game Center.
+            We can see the public nicknames and scores that appear on the leaderboard, but we never
+            receive your real name, email, or other personal details, and we don't store any of it on
+            our own servers.
           </p>
         </section>
 
@@ -46,7 +50,7 @@
           <h2 class="text-xl font-semibold mb-3">Third-Party Services</h2>
           <p>
             Time to Rogue does not integrate any third-party analytics, advertising, or tracking
-            services. The only Apple service it may use is Game Center, for optional leaderboards.
+            services. The only Apple service it uses is Game Center, for optional leaderboards.
           </p>
         </section>
 
