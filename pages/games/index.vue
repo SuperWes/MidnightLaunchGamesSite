@@ -9,24 +9,34 @@
         </nuxt-link>
       </div>
       <div class="md:flex-1 md:w-1/2 card">
+        <nuxt-link to="/games/timetorogue">
+          <h1 class="gameTitle mb-3">Time to Rogue</h1>
+          <img src="~/assets/TimeToRogue-logo.png" />
+        </nuxt-link>
+      </div>
+    </div>
+    <!-- Hidden for now — re-enable when ready:
+    <div class="md:flex mb-2">
+      <div class="md:flex-1 md:w-1/2 card">
         <nuxt-link to="/games/jigsawarmada">
           <h1 class="gameTitle mb-3">Jigsaw Armada</h1>
           <img src="~/assets/JigsawArmada-boxtop.png" />
         </nuxt-link>
       </div>
-    </div>
-    <div class="md:flex mb-2">
       <div class="md:flex-1 md:w-1/2 card">
         <nuxt-link to="/games/bumpitup">
           <h1 class="gameTitle mb-3">Bump it Up!</h1>
           <img src="~/assets/BumpItUp-boxtop.png" />
         </nuxt-link>
       </div>
+    </div>
+    <div class="md:flex mb-2">
       <div class="md:flex-1 md:w-1/2 card">
         <h1 class="gameTitle mb-3">Spectrum 12</h1>
         <img class="justify-center w-1/2 m-auto" src="~/assets/Spectrum12-boxtop.png" />
       </div>
     </div>
+    -->
   </div>
 </template>
 
