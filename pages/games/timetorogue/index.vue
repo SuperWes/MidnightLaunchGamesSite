@@ -9,7 +9,7 @@
             A Roguelike That Plays Out Across Your Day
           </p>
           <p class="text-white text-base mb-4">
-            A dungeon crawler built for Apple Watch, where the resource isn't mana or gold — it's real-world time. Every action spends focus and narrows your view; focus returns over hours. Descend as deep as you can before the dungeon catches you — even while the app is closed.
+            A dungeon crawler built for Apple Watch, where the resource isn't mana or gold — it's real-world time. Every action spends focus and narrows your view; focus returns over hours. The maze holds still while you recover, but rest too long and it starts to hunt — even while the app is closed.
           </p>
 
           <p class="ttr-accent font-semibold text-lg mb-2">⌚ Coming soon to Apple Watch</p>
@@ -48,7 +48,7 @@
                 </div>
                 <div>
                   <h3 class="font-semibold text-lg">The maze moves while you're away</h3>
-                  <p class="text-sm">The dungeon takes its turns even when the app is closed. Leave yourself exposed and it can find you before you return.</p>
+                  <p class="text-sm">You're safe while you recover — up to about 10 hours if you left exhausted. But once you're fully rested, the maze starts taking its turns, even while the app is closed, and it can reach you before you return.</p>
                 </div>
                 <div>
                   <h3 class="font-semibold text-lg">Push your luck</h3>

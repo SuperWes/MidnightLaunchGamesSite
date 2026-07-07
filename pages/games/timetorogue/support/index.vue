@@ -62,10 +62,15 @@
 
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">Does the dungeon really move while the app is closed?</h3>
-            <p>
-              Yes. The dungeon takes its turns in real time even when the app isn't open. If you leave
-              yourself exposed and don't come back, an enemy can reach you while you're away. Check in
-              before you're cornered — that tension is the point.
+            <p class="mb-2">
+              Eventually, yes — but not right away. The maze holds still while you recover your focus,
+              so closing the app for a bit is safe. Only once you're fully rested does it begin taking
+              turns in real time, and from then on an enemy can reach you even while the app is closed.
+            </p>
+            <p class="text-sm text-gray-400">
+              Concretely: the maze stays still until your focus is full — <strong>up to about 10 hours</strong>
+              if you left exhausted, or as little as a couple of hours if you left rested. So resting is safe;
+              lingering fully-rested is what gets dangerous. Check in before you're cornered.
             </p>
           </div>
 
