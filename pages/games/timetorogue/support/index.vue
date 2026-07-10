@@ -116,7 +116,7 @@
             <h3 class="text-lg font-semibold mb-2">What devices does it run on?</h3>
             <p>
               Time to Rogue is built exclusively for Apple Watch (watchOS). It's designed to be played
-              in short glances across your day, right on your wrist.
+              in short glances throughout your day, right on your wrist.
             </p>
           </div>
         </section>

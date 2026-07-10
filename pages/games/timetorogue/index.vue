@@ -6,9 +6,9 @@
       <!-- Hero -->
       <header class="ttr-hero">
         <div class="hero-glow" aria-hidden="true"></div>
-        <img class="hero-logo" src="~/assets/TimeToRogue-logo.png" alt="Time to Rogue - A Roguelike Across Your Day" />
+        <img class="hero-logo" src="~/assets/TimeToRogue-logo.png" alt="Time to Rogue - A Roguelike Throughout Your Day" />
 
-        <p class="hero-tagline">A Roguelike That Plays Out Across Your Day</p>
+        <p class="hero-tagline">A Roguelike That Plays Out Throughout Your Day</p>
         <p class="hero-sub">
           A dungeon crawler built for Apple Watch, where the resource isn't mana or gold — it's
           <span class="hl">real-world time</span>. Every action spends focus and narrows your view;
@@ -23,7 +23,16 @@
           <span class="mono-label muted">recovering…</span>
         </div>
 
-        <span class="coming-soon-badge">⌚ Apple Watch · watchOS · Coming Soon</span>
+        <p class="out-now">⌚ Out now on Apple Watch</p>
+        <a
+          href="https://apps.apple.com/us/app/time-to-rogue/id6786902468"
+          target="_blank"
+          rel="noopener"
+          class="store-link"
+          aria-label="Download Time to Rogue on the App Store"
+        >
+          <img src="~/assets/app-store-badge.svg" alt="Download on the App Store" class="store-badge" />
+        </a>
       </header>
 
       <!-- Core Gameplay -->
@@ -44,7 +53,7 @@
         <div class="tile-grid">
           <div class="tile">
             <h3>Time is the resource</h3>
-            <p>Play in glances across your day, not one long session. Focus recovers over hours — rest is a move, not a menu.</p>
+            <p>Play in glances throughout your day, not one long session. Focus recovers over hours — rest is a move, not a menu.</p>
           </div>
           <div class="tile">
             <h3>The maze moves while you're away</h3>
@@ -109,7 +118,16 @@
       </section>
 
       <div class="closing">
-        <p class="coming-soon-line">⌚ Coming soon to Apple Watch</p>
+        <p class="out-now">⌚ Out now on Apple Watch</p>
+        <a
+          href="https://apps.apple.com/us/app/time-to-rogue/id6786902468"
+          target="_blank"
+          rel="noopener"
+          class="store-link"
+          aria-label="Download Time to Rogue on the App Store"
+        >
+          <img src="~/assets/app-store-badge.svg" alt="Download on the App Store" class="store-badge" />
+        </a>
         <div class="closing-links">
           <nuxt-link to="/games/timetorogue/support" class="ttr-link">Support &amp; FAQ</nuxt-link>
           <nuxt-link to="/games/timetorogue/privacy" class="ttr-link">Privacy Policy</nuxt-link>
@@ -158,7 +176,7 @@ export default {
   },
   head() {
     return {
-      title: 'Time to Rogue - A Roguelike Across Your Day',
+      title: 'Time to Rogue - A Roguelike Throughout Your Day',
       meta: [
         {
           hid: 'description',
@@ -168,7 +186,7 @@ export default {
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:url', property: 'og:url', content: 'https://midnightlaunchgames.com/games/timetorogue/' },
-        { hid: 'og:title', property: 'og:title', content: 'Time to Rogue - A Roguelike Across Your Day' },
+        { hid: 'og:title', property: 'og:title', content: 'Time to Rogue - A Roguelike Throughout Your Day' },
         {
           hid: 'og:description',
           property: 'og:description',
@@ -178,7 +196,7 @@ export default {
         // Twitter
         { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twitter:url', name: 'twitter:url', content: 'https://midnightlaunchgames.com/games/timetorogue/' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'Time to Rogue - A Roguelike Across Your Day' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Time to Rogue - A Roguelike Throughout Your Day' },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
@@ -334,16 +352,33 @@ export default {
   .focus-fill { animation: none; width: 78%; }
 }
 
-/* Coming-soon pill — echoes the in-game yellow START glow */
-.coming-soon-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #facc15 0%, #fde047 100%);
-  color: #1a1400;
+/* "Out now" eyebrow — yellow, echoing the in-game START glow */
+.out-now {
+  color: #fde047;
   font-weight: 800;
   letter-spacing: 0.03em;
-  padding: 0.7rem 1.5rem;
-  border-radius: 999px;
-  box-shadow: 0 0 22px rgba(250, 204, 21, 0.45);
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+  text-shadow: 0 0 18px rgba(250, 204, 21, 0.4);
+}
+
+/* App Store download badge — soft glow so Apple's dark badge reads on black */
+.store-link {
+  display: inline-block;
+  border-radius: 12px;
+  transition: transform 0.15s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.3));
+}
+
+.store-link:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 22px rgba(56, 189, 248, 0.5));
+}
+
+.store-badge {
+  height: 3.25rem;
+  width: auto;
+  display: block;
 }
 
 /* ── Panels ──────────────────────────────────────────── */
@@ -543,11 +578,8 @@ export default {
   padding: 0.5rem 0 1.5rem;
 }
 
-.coming-soon-line {
-  color: #7dd3fc;
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 1.25rem;
+.closing .store-link {
+  margin-bottom: 1.5rem;
 }
 
 .closing-links {
