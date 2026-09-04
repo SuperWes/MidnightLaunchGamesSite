@@ -62,6 +62,15 @@
             storage area on your device. This information is used only to show your current game status
             and is not sent to Midnight Launch Games.
           </p>
+
+          <h3 class="text-lg font-semibold mb-2 mt-4">News and Tips</h3>
+          <p class="mb-3">
+            The iPhone app periodically downloads a public news and tips file from
+            midnightlaunchgames.com. The request does not include your save, Game Center identity,
+            purchase history, or a device identifier. As with any website request, ordinary connection
+            information such as an IP address may be processed by our website hosting provider to
+            deliver the file. We do not use this request to track you or build a user profile.
+          </p>
         </section>
 
         <section class="mb-6">
@@ -70,7 +79,7 @@
             Time to Rogue does not integrate any third-party analytics, advertising, or tracking
             services. It uses Apple platform services for optional Game Center leaderboards, App Store
             purchases, communication between a paired iPhone and Apple Watch, notifications, widgets,
-            and complications.
+            and complications. Public news and tips are delivered by our website hosting provider.
           </p>
         </section>
 
