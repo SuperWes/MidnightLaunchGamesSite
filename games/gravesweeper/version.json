@@ -17,6 +17,14 @@
   },
   "news": [
     {
+      "title": "⏱️ Time to Rogue is now on iPhone!",
+      "message": "Time to Rogue is a roguelike played in glances throughout your day. Focus recovers over real-world hours, and the dungeon hunts while you're away. Play the full game free on iPhone or Apple Watch: https://apps.apple.com/us/app/time-to-rogue/id6786902468",
+      "date": "2026-09-04T00:00:00Z",
+      "priority": 5,
+      "platform": "ios",
+      "image_url": "https://midnightlaunchgames.com/TimeToRogue-logo.png"
+    },
+    {
       "title": "🎵 New: Music & Sound!",
       "message": "The dungeon now has a soundtrack! Featuring original music by Lazarus D. Richardson. Listen to the full album at https://lazarusrichardson.bandcamp.com/album/gravesweeper",
       "date": "2026-02-28T00:00:00Z",
@@ -61,4 +69,3 @@
     "Share your scores with your friends in text threads and social media using the share button"
   ]
 }
-

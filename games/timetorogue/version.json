@@ -1,0 +1,34 @@
+{
+  "force_update_enabled": false,
+  "minimum_version": {
+    "ios": "1.1.0",
+    "watchos": "1.1.0"
+  },
+  "store_urls": {
+    "ios": "https://apps.apple.com/us/app/time-to-rogue/id6786902468",
+    "watchos": "https://apps.apple.com/us/app/time-to-rogue/id6786902468"
+  },
+  "update_message": {
+    "en": "A new version of Time to Rogue is available."
+  },
+  "news": [
+    {
+      "title": "Play on iPhone and Apple Watch",
+      "message": "Time to Rogue is playable on iPhone and Apple Watch. Continue the same run on either device, then check your Focus from the iPhone widget or Watch complication.",
+      "date": "2026-09-04T00:00:00Z",
+      "priority": 5,
+      "platform": "ios",
+      "link_url": "https://midnightlaunchgames.com/games/timetorogue/",
+      "link_label": "Visit Time to Rogue"
+    }
+  ],
+  "tips": [
+    "Movement, attacks, and waiting spend Focus. Using an item does not.",
+    "Focus is your field of view. Let real-world time pass to see farther again.",
+    "The dungeon waits while Focus recovers, then starts taking turns while you are away.",
+    "Finding the stairs quickly keeps the rising danger behind you.",
+    "A time-reverse can undo a fatal move, if you still have one when it counts.",
+    "Your iPhone and paired Apple Watch continue the same run.",
+    "The iPhone widget and Watch complication show when you are ready to return."
+  ]
+}
