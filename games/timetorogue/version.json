@@ -23,12 +23,13 @@
     }
   ],
   "tips": [
-    "Movement, attacks, and waiting spend Focus. Using an item does not.",
-    "Focus is your field of view. Let real-world time pass to see farther again.",
-    "The dungeon waits while Focus recovers, then starts taking turns while you are away.",
-    "Finding the stairs quickly keeps the rising danger behind you.",
-    "A time-reverse can undo a fatal move, if you still have one when it counts.",
-    "Your iPhone and paired Apple Watch continue the same run.",
-    "The iPhone widget and Watch complication show when you are ready to return."
+    "If a monster is two tiles away and your Focus meter is cyan, Wait. It will step into range, letting you attack first.",
+    "At low Focus, a monster that moves next to you can ambush immediately for 50% extra damage.",
+    "The dungeon gets harder in two ways: enemies scale with depth, and taking too many real-world days to descend makes later floors even tougher.",
+    "You can hold only three items. Do not hoard them, using an item costs no Focus and gives monsters no turn.",
+    "You can reverse time at most three times per run. Each use rewinds one turn.",
+    "Use a Surge right away when you get it. Its +1 Attack lasts for the rest of your run.",
+    "Kills at low Focus grant 50% more XP. The danger can be worth it.",
+    "Reaching the stairs below 45% Focus grants a 70% Focus refund."
   ]
 }
