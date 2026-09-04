@@ -7,9 +7,9 @@
         <section class="mb-6">
           <h2 class="text-xl font-semibold mb-3">Need Help?</h2>
           <p>
-            Welcome to Time to Rogue support! Time to Rogue is an Apple Watch roguelike where the
-            resource is real-world time. If something feels off — or you just want to understand the
-            mechanics — this page should help.
+            Welcome to Time to Rogue support! Time to Rogue is an iPhone and Apple Watch roguelike where the
+            resource is real-world time. If something feels off, or you just want to understand the
+            mechanics, this page should help.
           </p>
         </section>
 
@@ -44,10 +44,11 @@
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">Why am I dying so quickly? Is it broken?</h3>
             <p>
-              It's working as designed. Time to Rogue is a game of patience, not fast tapping. Every
-              action spends <strong>focus</strong>, and focus recovers over real-world <strong>time</strong>
-              (hours, not seconds). Acting on empty focus is dangerous. The skill is knowing when to make a
-              move and when to walk away and come back later. Early deaths are part of learning the rhythm.
+              It's working as designed. Time to Rogue is a game of patience, not fast tapping.
+              Movement, attacks, and waiting spend <strong>focus</strong>, and focus recovers over
+              real-world <strong>time</strong> (hours, not seconds). Using an item does not spend focus
+              or advance enemies. The skill is knowing when to make a move and when to walk away and
+              come back later. Early deaths are part of learning the rhythm.
             </p>
           </div>
 
@@ -55,7 +56,7 @@
             <h3 class="text-lg font-semibold mb-2">Why is my view zoomed in so tightly?</h3>
             <p>
               Your view <em>is</em> your focus. As focus drains, the camera closes in and you can see less
-              of the dungeon. Rest and let real time pass — focus recovers and the view widens back out.
+              of the dungeon. Rest and let real time pass. Focus recovers and the view widens back out.
               A full focus meter means a full view.
             </p>
           </div>
@@ -63,12 +64,12 @@
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">Does the dungeon really move while the app is closed?</h3>
             <p class="mb-2">
-              Eventually, yes — but not right away. The maze holds still while you recover your focus,
+              Eventually, yes, but not right away. The maze holds still while you recover your focus,
               so closing the app for a bit is safe. Only once you're fully rested does it begin taking
               turns in real time, and from then on an enemy can reach you even while the app is closed.
             </p>
             <p class="text-sm text-gray-400">
-              Concretely: the maze stays still until your focus is full — <strong>up to about 10 hours</strong>
+              Concretely: the maze stays still until your focus is full, <strong>up to about 10 hours</strong>
               if you left exhausted, or as little as a couple of hours if you left rested. So resting is safe;
               lingering fully-rested is what gets dangerous. Check in before you're cornered.
             </p>
@@ -79,7 +80,27 @@
             <p>
               You earn one free time-reverse each day you play (up to a small cap). If a move would end
               your run, the death screen gives you the option to spend a reverse and undo it. If you'd
-              rather keep the charge, just choose <strong>End Run</strong> instead — it's always your call.
+              rather keep the charge, just choose <strong>End Run</strong> instead. It's always your call.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Can I continue the same run on iPhone and Apple Watch?</h3>
+            <p>
+              Yes. When you have a paired Apple Watch, Time to Rogue automatically transfers the latest
+              complete save between the two apps. Finish your moves on one device, then give the other a
+              moment to sync before continuing. You can also play the complete game on iPhone without an
+              Apple Watch.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">How do I add the iPhone widget?</h3>
+            <p>
+              Touch and hold the iPhone Home Screen until the apps jiggle, tap <strong>Edit</strong>, then
+              <strong>Add Widget</strong>. Search for <strong>Time to Rogue</strong> and choose a size. The
+              small widget shows your focus and run status. The medium widget also shows a read-only view
+              of your current dungeon. Tap either widget to open the game.
             </p>
           </div>
 
@@ -99,24 +120,36 @@
               notifications are enabled for the app:
             </p>
             <ul class="list-disc list-inside ml-4">
-              <li>On your iPhone: <strong>Watch app → Notifications → Time to Rogue</strong></li>
-              <li>Or on the watch: <strong>Settings → Notifications</strong></li>
+              <li>On iPhone: <strong>Settings → Notifications → Time to Rogue</strong></li>
+              <li>For Apple Watch: <strong>Watch app → Notifications → Time to Rogue</strong></li>
             </ul>
           </div>
 
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">Is my run lost if I close the app?</h3>
             <p>
-              No. Your run is saved on your device and continues in real time. Closing the app doesn't
-              end your run — but remember the dungeon keeps taking its turns while you're gone.
+              No. Your run is saved and continues in real time. Closing the app doesn't end your run,
+              but remember the dungeon can begin taking its turns while you're gone.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">What does the Supporter Pack include?</h3>
+            <p>
+              The Supporter Pack is an optional, one-time purchase. It unlocks the clockwork Timekeeper
+              dungeon theme and adds a supporter heart to the title screen. It does not change gameplay,
+              difficulty, focus recovery, or time-reverse availability. The complete game remains free.
+              If a previous purchase is missing, open <strong>Supporter Pack</strong> from the title screen
+              and tap <strong>Restore Purchases</strong>.
             </p>
           </div>
 
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">What devices does it run on?</h3>
             <p>
-              Time to Rogue is built exclusively for Apple Watch (watchOS). It's designed to be played
-              in short glances throughout your day, right on your wrist.
+              Time to Rogue includes the complete game on iPhone and Apple Watch. An Apple Watch is not
+              required. Both versions use the same carefully limited dungeon view, so playing on the
+              larger screen does not reveal more of the maze.
             </p>
           </div>
         </section>
@@ -128,7 +161,7 @@
           </p>
           <ul class="list-disc list-inside ml-4 mb-3">
             <li>Description of the bug and how to reproduce it</li>
-            <li>Your Apple Watch model and watchOS version</li>
+            <li>Your iPhone or Apple Watch model and OS version</li>
             <li>App version</li>
             <li>Screenshots if applicable</li>
           </ul>
@@ -163,14 +196,14 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       title: 'Time to Rogue Support',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Support and FAQ for Time to Rogue, the Apple Watch roguelike where the resource is real-world time.'
+          content: 'Support and FAQ for Time to Rogue, the iPhone and Apple Watch roguelike where the resource is real-world time.'
         }
       ]
     }

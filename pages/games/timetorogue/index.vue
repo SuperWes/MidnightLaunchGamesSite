@@ -10,10 +10,10 @@
 
         <p class="hero-tagline">A Roguelike That Plays Out Throughout Your Day</p>
         <p class="hero-sub">
-          A dungeon crawler built for Apple Watch, where the resource isn't mana or gold — it's
-          <span class="hl">real-world time</span>. Every action spends focus and narrows your view;
-          focus returns over hours. The maze holds still while you recover, but rest too long and it
-          starts to hunt — even while the app is closed.
+          A dungeon crawler for iPhone and Apple Watch, where the resource isn't mana or gold, it's
+          <span class="hl">real-world time</span>. Movement, attacks, and waiting spend focus and
+          narrow your view. Focus returns over hours. The maze holds still while you recover, but
+          rest too long and it starts to hunt, even while the app is closed.
         </p>
 
         <!-- Time-as-resource motif: a focus meter that slowly refills -->
@@ -23,7 +23,7 @@
           <span class="mono-label muted">recovering…</span>
         </div>
 
-        <p class="out-now">⌚ Out now on Apple Watch</p>
+        <p class="out-now">Out now on iPhone and Apple Watch</p>
         <a
           href="https://apps.apple.com/us/app/time-to-rogue/id6786902468"
           target="_blank"
@@ -39,11 +39,11 @@
       <section class="panel">
         <div class="kicker">// CORE_GAMEPLAY</div>
         <ul class="feature-list">
-          <li>Tap to move, fight, and descend through a neon dungeon on your wrist</li>
-          <li>Every action spends focus — and your view narrows as it drains</li>
+          <li>Swipe to move, fight, and descend through a neon dungeon</li>
+          <li>Movement, attacks, and waiting spend focus, and your view narrows as it drains</li>
           <li>Focus recovers over <span class="hl">real-world time</span>, so knowing when to walk away is the skill</li>
-          <li>Find the stairs down and dive deeper — the floors grow larger and more dangerous</li>
-          <li>Every run is different, and death is permanent. Your one <span class="hl">time-reverse</span> can undo a fatal move — if you've still got it when it counts</li>
+          <li>Find the stairs down and dive deeper, where the floors grow larger and more dangerous</li>
+          <li>Every run is different, and death is permanent. A <span class="hl">time-reverse</span> can undo a fatal move, if you've still got one when it counts</li>
         </ul>
       </section>
 
@@ -53,11 +53,11 @@
         <div class="tile-grid">
           <div class="tile">
             <h3>Time is the resource</h3>
-            <p>Play in glances throughout your day, not one long session. Focus recovers over hours — rest is a move, not a menu.</p>
+            <p>Play in glances throughout your day, not one long session. Focus recovers over hours. Rest is a move, not a menu.</p>
           </div>
           <div class="tile">
             <h3>The maze moves while you're away</h3>
-            <p>You're safe while you recover — up to about 10 hours if you left exhausted. But once you're fully rested, the maze starts taking its turns, even while the app is closed, and it can reach you before you return.</p>
+            <p>You're safe while you recover, up to about 10 hours if you left exhausted. But once you're fully rested, the maze starts taking its turns, even while the app is closed, and it can reach you before you return.</p>
           </div>
           <div class="tile">
             <h3>Push your luck</h3>
@@ -70,20 +70,63 @@
         </div>
       </section>
 
-      <!-- Built for Apple Watch -->
+      <!-- iPhone and Apple Watch -->
       <section class="panel">
-        <div class="kicker">// BUILT_FOR_APPLE_WATCH</div>
+        <div class="kicker">// IPHONE_AND_APPLE_WATCH</div>
         <ul class="feature-list">
-          <li>A watch complication shows your focus recovering at a glance</li>
+          <li>Play one shared run across iPhone and Apple Watch</li>
+          <li>Both versions preserve the same carefully limited dungeon view</li>
+          <li>Check your focus and current dungeon from an iPhone Home Screen widget</li>
+          <li>A Watch complication shows your focus recovering at a glance</li>
           <li>A nudge when you're rested and ready to dive again</li>
           <li>Deepest-floor leaderboard with fresh monthly runs</li>
-          <li>Designed to be checked in seconds, anywhere</li>
         </ul>
+      </section>
+
+      <!-- Supporter Pack -->
+      <section class="panel supporter-panel">
+        <div class="kicker">// OPTIONAL_SUPPORTER_PACK</div>
+        <div class="supporter-copy">
+          <div class="supporter-heart" aria-hidden="true">♥</div>
+          <div>
+            <h2>Enter the Timekeeper dungeon</h2>
+            <p>
+              The full game is free. The optional, one-time Supporter Pack unlocks the clockwork
+              Timekeeper dungeon theme and adds a supporter heart to the title screen. It changes
+              the look, never the rules.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- iPhone screenshots -->
+      <section class="panel screenshots">
+        <div class="kicker center">// PLAY_ON_IPHONE</div>
+        <div class="phone-gallery">
+          <figure class="phone-shot">
+            <div class="phone-frame">
+              <img src="~/assets/timetorogue_screenshots/iphone_gameplay.png" alt="Time to Rogue gameplay on iPhone" />
+            </div>
+            <figcaption>One shared run</figcaption>
+          </figure>
+          <figure class="phone-shot">
+            <div class="phone-frame">
+              <img src="~/assets/timetorogue_screenshots/iphone_timekeeper.png" alt="The Timekeeper dungeon theme on iPhone" />
+            </div>
+            <figcaption>Timekeeper theme</figcaption>
+          </figure>
+          <figure class="phone-shot">
+            <div class="phone-frame">
+              <img src="~/assets/timetorogue_screenshots/iphone_title.png" alt="Time to Rogue title screen on iPhone" />
+            </div>
+            <figcaption>Built for quick glances</figcaption>
+          </figure>
+        </div>
       </section>
 
       <!-- Screenshots Carousel, framed in an Apple Watch -->
       <section class="panel screenshots">
-        <div class="kicker center">// SCREENSHOTS</div>
+        <div class="kicker center">// PLAY_ON_APPLE_WATCH</div>
         <div class="carousel-container">
           <button @click="prevScreenshot" class="carousel-button carousel-button-left" aria-label="Previous screenshot">
             ‹
@@ -118,7 +161,7 @@
       </section>
 
       <div class="closing">
-        <p class="out-now">⌚ Out now on Apple Watch</p>
+        <p class="out-now">Out now on iPhone and Apple Watch</p>
         <a
           href="https://apps.apple.com/us/app/time-to-rogue/id6786902468"
           target="_blank"
@@ -143,7 +186,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       currentScreenshot: 0,
       screenshots: [
@@ -156,32 +199,33 @@ export default {
       ],
       screenshotAlts: [
         'Descending a neon dungeon on your wrist',
-        'Low focus, cornered — push your luck',
+        'Low focus, cornered, push your luck',
         'The maze took its turns while you were away',
         'A complication that shows your focus recovering',
         'Spend a time-reverse to undo a fatal move',
-        'Title screen — how deep can you get?'
+        'Title screen, how deep can you get?'
       ]
     }
   },
   methods: {
-    nextScreenshot() {
+    nextScreenshot () {
       this.currentScreenshot = (this.currentScreenshot + 1) % this.screenshots.length
     },
-    prevScreenshot() {
+    prevScreenshot () {
       this.currentScreenshot = this.currentScreenshot === 0
         ? this.screenshots.length - 1
         : this.currentScreenshot - 1
-    },
+    }
   },
-  head() {
+  head () {
     return {
       title: 'Time to Rogue - A Roguelike Throughout Your Day',
       meta: [
+        { hid: 'apple-itunes-app', name: 'apple-itunes-app', content: 'app-id=6786902468' },
         {
           hid: 'description',
           name: 'description',
-          content: "A roguelike for Apple Watch where the resource is real-world time. Every action spends focus; focus recovers over hours. The dungeon keeps moving while the app is closed. How deep can you get?"
+          content: 'A roguelike for iPhone and Apple Watch where the resource is real-world time. Focus recovers over hours, and one run follows you between devices. How deep can you get?'
         },
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -190,7 +234,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: "A roguelike for Apple Watch where the resource is real-world time. The dungeon keeps moving while the app is closed — reach the deepest floor before it finds you."
+          content: 'A roguelike for iPhone and Apple Watch where the resource is real-world time. The dungeon keeps moving while the app is closed. Reach the deepest floor before it finds you.'
         },
         { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/TimeToRogue-logo.png' },
         // Twitter
@@ -200,7 +244,7 @@ export default {
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: "A roguelike for Apple Watch where the resource is real-world time. Reach the deepest floor before the dungeon finds you."
+          content: 'A roguelike for iPhone and Apple Watch where the resource is real-world time. Reach the deepest floor before the dungeon finds you.'
         },
         { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/TimeToRogue-logo.png' }
       ]
@@ -448,6 +492,77 @@ export default {
   line-height: 1.5;
 }
 
+/* ── Supporter Pack ──────────────────────────────────── */
+.supporter-panel {
+  border-color: rgba(255, 45, 146, 0.35);
+  background:
+    radial-gradient(circle at 8% 50%, rgba(255, 45, 146, 0.10), transparent 32%),
+    rgba(56, 189, 248, 0.035);
+}
+
+.supporter-copy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.supporter-heart {
+  color: #ff2d92;
+  font-size: 2.4rem;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(255, 45, 146, 0.65);
+}
+
+.supporter-copy h2 {
+  color: #7dd3fc;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.supporter-copy p {
+  color: #b6c2d4;
+  line-height: 1.55;
+}
+
+/* ── iPhone screenshots ──────────────────────────────── */
+.phone-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.phone-shot {
+  min-width: 0;
+  margin: 0;
+}
+
+.phone-frame {
+  padding: 6px;
+  background: linear-gradient(145deg, #303643 0%, #11151e 55%, #05070d 100%);
+  border-radius: 28px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 12px 28px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 23px;
+  background: #000;
+}
+
+.phone-shot figcaption {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-top: 0.65rem;
+  text-align: center;
+}
+
 /* ── Screenshots in an Apple Watch ───────────────────── */
 .screenshots {
   text-align: center;
@@ -617,6 +732,23 @@ export default {
 
   .ttr-hero {
     padding-top: 2.5rem;
+  }
+
+  .supporter-copy {
+    align-items: flex-start;
+  }
+
+  .phone-gallery {
+    display: flex;
+    gap: 0.9rem;
+    overflow-x: auto;
+    padding: 0.25rem 0.25rem 0.9rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .phone-shot {
+    flex: 0 0 min(72vw, 220px);
+    scroll-snap-align: center;
   }
 
   .carousel-button {

@@ -5,10 +5,10 @@
 
       <div class="policy-content text-white">
         <section class="mb-6">
-          <h2 class="text-xl font-semibold mb-3">Last Updated: July 7, 2026</h2>
+          <h2 class="text-xl font-semibold mb-3">Last Updated: September 4, 2026</h2>
           <p>
             This Privacy Policy describes how Midnight Launch Games ("we", "us", or "our") handles
-            information when you use the Time to Rogue app for Apple Watch. In short:
+            information when you use Time to Rogue on iPhone or Apple Watch. In short:
             <strong>Time to Rogue does not collect any personal data.</strong>
           </p>
         </section>
@@ -17,32 +17,50 @@
           <h2 class="text-xl font-semibold mb-3">Information We Collect</h2>
           <p class="mb-3">
             We do not collect, transmit, or store any personal information. Time to Rogue has no
-            analytics, no advertising, and no accounts of our own. Optional leaderboards use your
-            Apple Game Center account — see below.
+            analytics, no advertising, and no accounts of our own. Optional leaderboards and purchases
+            use Apple services, as described below.
           </p>
 
           <h3 class="text-lg font-semibold mb-2 mt-4">Game Progress Data</h3>
           <p class="mb-3">
-            Your run, best floor, and settings are stored locally on your device only. This data never
-            leaves your Apple Watch and iPhone, and we cannot see it. Uninstalling the app removes it.
+            Your run, best floor, and settings are stored locally on your devices. If you use both the
+            iPhone and Apple Watch apps, the latest complete save is transferred between your paired
+            devices using Apple's Watch Connectivity framework. Midnight Launch Games does not operate
+            a server for this transfer and cannot see your save data. Uninstalling the app from both
+            devices removes the locally stored game data.
           </p>
 
           <h3 class="text-lg font-semibold mb-2 mt-4">Notifications</h3>
           <p class="mb-3">
             Time to Rogue can send you a local notification when your focus has fully recovered. These
-            notifications are scheduled on your device — there is no server involved and nothing is sent
+            notifications are scheduled on your device. There is no server involved and nothing is sent
             to us. You can disable them anytime in your notification settings.
           </p>
 
           <h3 class="text-lg font-semibold mb-2 mt-4">Leaderboards (Game Center)</h3>
           <p class="mb-3">
             Time to Rogue includes leaderboards powered by Apple's Game Center. Participation is
-            optional — you choose whether to sign in. When you submit a score, Apple associates it
+            optional. You choose whether to sign in. When you submit a score, Apple associates it
             with your Game Center account and public nickname; this is handled entirely by Apple under
             <a href="https://www.apple.com/legal/privacy/" target="_blank" class="ttr-link">Apple's Privacy Policy</a>.
             We can see the public nicknames and scores that appear on the leaderboard, but we never
             receive your real name, email, or other personal details, and we don't store any of it on
             our own servers.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2 mt-4">Supporter Pack Purchases</h3>
+          <p class="mb-3">
+            Time to Rogue offers an optional, non-consumable Supporter Pack through Apple's App Store.
+            Apple processes the transaction and provides the app with the purchase entitlement needed
+            to unlock it. We do not receive or store your payment information. Purchases are subject to
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" class="ttr-link">Apple's Privacy Policy</a>.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2 mt-4">Widgets and Complications</h3>
+          <p class="mb-3">
+            The iPhone widget and Apple Watch complication read a limited game snapshot from a shared
+            storage area on your device. This information is used only to show your current game status
+            and is not sent to Midnight Launch Games.
           </p>
         </section>
 
@@ -50,7 +68,9 @@
           <h2 class="text-xl font-semibold mb-3">Third-Party Services</h2>
           <p>
             Time to Rogue does not integrate any third-party analytics, advertising, or tracking
-            services. The only Apple service it uses is Game Center, for optional leaderboards.
+            services. It uses Apple platform services for optional Game Center leaderboards, App Store
+            purchases, communication between a paired iPhone and Apple Watch, notifications, widgets,
+            and complications.
           </p>
         </section>
 
@@ -73,7 +93,7 @@
           <h2 class="text-xl font-semibold mb-3">Your Rights</h2>
           <p class="mb-3">You can:</p>
           <ul class="list-disc list-inside mb-3">
-            <li>Delete all local game data by uninstalling the app</li>
+            <li>Delete locally stored game data by uninstalling the app from your devices</li>
             <li>Turn off notifications in your device settings at any time</li>
           </ul>
         </section>
@@ -121,14 +141,14 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       title: 'Time to Rogue Privacy Policy',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Privacy Policy for Time to Rogue. We do not collect any personal data — all game data stays on your device.'
+          content: 'Privacy Policy for Time to Rogue on iPhone and Apple Watch. Midnight Launch Games does not collect personal data.'
         }
       ]
     }

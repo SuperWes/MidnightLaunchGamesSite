@@ -42,14 +42,14 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       title: 'Games - Midnight Launch Games',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Explore our collection of indie puzzle and adventure games including Gravesweeper, Jigsaw Armada, and Bump it Up! Free to download on mobile platforms.'
+          content: 'Explore Time to Rogue, a real-time roguelike for iPhone and Apple Watch, and Gravesweeper, a Halloween dungeon crawler.'
         },
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -58,7 +58,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Discover unique indie games: Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and Bump it Up! (physics puzzle game).'
+          content: 'Discover Time to Rogue, a roguelike for iPhone and Apple Watch, and Gravesweeper, a Halloween dungeon crawler.'
         },
         { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' },
         // Twitter
@@ -68,7 +68,7 @@ export default {
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: 'Discover unique indie games: Gravesweeper (Halloween dungeon crawler), Jigsaw Armada (naval strategy), and Bump it Up! (physics puzzle game).'
+          content: 'Discover Time to Rogue, a roguelike for iPhone and Apple Watch, and Gravesweeper, a Halloween dungeon crawler.'
         },
         { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/mlgLogo_dark.png' }
       ]
