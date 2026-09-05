@@ -21,7 +21,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom! Free to download on iOS and Android.'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -30,7 +30,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' },
         { hid: 'og:image:width', property: 'og:image:width', content: '400' },
@@ -42,7 +42,7 @@ export default {
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' }
       ]
@@ -50,4 +50,3 @@ export default {
   }
 }
 </script>
-

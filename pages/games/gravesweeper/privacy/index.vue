@@ -5,7 +5,7 @@
       
       <div class="policy-content text-white">
         <section class="mb-6">
-          <h2 class="text-xl font-semibold mb-3">Last Updated: October 24, 2025</h2>
+          <h2 class="text-xl font-semibold mb-3">Last Updated: September 4, 2026</h2>
           <p>
             This Privacy Policy describes how Midnight Launch Games ("we", "us", or "our") 
             collects, uses, and shares information when you use the Gravesweeper mobile application.
@@ -37,6 +37,20 @@
             <li>Purchased items (stored locally and verified with app stores)</li>
           </ul>
 
+          <h3 class="text-lg font-semibold mb-2 mt-4">Game Services</h3>
+          <p class="mb-3">
+            When you are signed into Game Center on supported Apple devices, or Google Play Games
+            in an Android version that includes that integration, Gravesweeper sends achievement
+            unlocks and leaderboard scores to the platform provider. These features use your platform
+            gaming profile. Your gaming name and submitted scores may appear to other players according
+            to the platform's settings. You can play without signing in.
+          </p>
+          <p class="mb-3">
+            In versions with platform saved games enabled, selected progress and settings may also be
+            sent to the platform's cloud-save service. Platform saves are separate from local save files
+            and may not include a complete active run.
+          </p>
+
           <h3 class="text-lg font-semibold mb-2 mt-4">In-App Purchase Information</h3>
           <p class="mb-3">
             When you make in-app purchases, transaction information is processed by Apple App Store 
@@ -53,6 +67,7 @@
             <li>Analyze game usage patterns and popular features</li>
             <li>Fix bugs and technical issues</li>
             <li>Manage in-app purchases and unlock purchased content</li>
+            <li>Record achievements, submit leaderboard scores, and synchronize supported progress when platform game services are enabled</li>
             <li>Send push notifications (only if you opt-in)</li>
           </ul>
         </section>
@@ -70,6 +85,10 @@
             <li>
               <strong>Apple App Store / Google Play Store:</strong> For in-app purchases
             </li>
+            <li>
+              <strong>Apple Game Center / Google Play Games:</strong> For achievements, leaderboards,
+              and supported platform saved games in versions that include these features
+            </li>
           </ul>
         </section>
 
@@ -78,6 +97,8 @@
           <p>
             Analytics data is retained according to Firebase's data retention policies (typically 2-14 months). 
             Local game data remains on your device until you uninstall the app or clear app data.
+            Data held by Apple or Google through game services is subject to the provider's retention
+            policies and account controls. Uninstalling Gravesweeper does not necessarily remove that data.
           </p>
         </section>
 
@@ -104,6 +125,7 @@
           <p class="mb-3">You have the right to:</p>
           <ul class="list-disc list-inside mb-3">
             <li>Delete your local game data by uninstalling the app</li>
+            <li>Manage your gaming profile and visibility through Game Center or Google Play Games settings</li>
             <li>Opt-out of analytics by disabling analytics in your device settings</li>
             <li>Request information about data we may have collected</li>
           </ul>
@@ -135,7 +157,7 @@
           </p>
         </section>
 
-        <div class="text-center mt-8 mb-4 flex gap-3 justify-center">
+        <div class="text-center mt-8 mb-4 flex flex-col sm:flex-row gap-3 justify-center">
           <nuxt-link
             to="/games/gravesweeper"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
@@ -177,4 +199,3 @@
   margin-bottom: 2rem;
 }
 </style>
-

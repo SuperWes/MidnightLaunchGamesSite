@@ -9,10 +9,10 @@
           Halloween Puzzle Dungeon
         </p>
         <p class="text-white text-base mb-4">
-          Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!
+          Minesweeper meets a haunted dungeon adventure. Read the clues, dodge traps, collect candy, and build your way through dangerous floors. Play the free Campaign and Daily Run, or unlock Reaper's Run for a fresh roguelike challenge.
         </p>
 
-        <p class="text-green-400 font-semibold text-lg mb-2">🎁 FREE TO DOWNLOAD</p>
+        <p class="text-green-400 font-semibold text-lg mb-2">Free on iPhone and Android. Optional one-time purchases.</p>
 
         <div class="flex flex-col items-center gap-4 mt-6 mb-6">
           <a
@@ -39,6 +39,10 @@
             />
           </a>
 
+        </div>
+
+        <p class="text-white text-sm mt-6">Buy the desktop edition or try the web demo:</p>
+        <div class="flex flex-col items-center gap-4 mt-3 mb-6">
           <a
             href="https://superwes.itch.io/gravesweeper"
             target="_blank"
@@ -51,6 +55,18 @@
             class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 border border-purple-700 rounded"
           >🎮 Play Web Demo</a>
         </div>
+
+        <section class="text-white text-left border-t border-b border-gray-700 py-6 mb-6" aria-labelledby="game-center-heading">
+          <p class="text-green-400 text-sm font-semibold mb-2">New on iPhone and iPad in 1.0.9</p>
+          <h2 id="game-center-heading" class="text-xl font-bold mb-3 text-purple-300">Game Center achievements and leaderboards</h2>
+          <p class="mb-3">
+            Earn 23 achievements for reaching new floors, collecting candy, and completing costume challenges. Previously unlocked costumes count when you sign in, too.
+          </p>
+          <p class="mb-3">
+            Climb the leaderboards for campaign progress, Reaper's Run, and lifetime candy collection. Set a new personal best and see how your records compare with other players.
+          </p>
+          <p class="text-sm text-gray-400">Game Center is optional. Version 1.0.9 also includes stability improvements and requires iOS or iPadOS 15.6 or later.</p>
+        </section>
 
         <div class="text-white text-left mb-6 space-y-4">
           <div>
@@ -73,11 +89,11 @@
               </div>
               <div>
                 <h3 class="font-semibold text-lg">Reaper's Run (Roguelike Mode)</h3>
-                <p class="text-sm">Pure skill-based challenge with permanent death! Draft abilities every few floors to build unique combos. No shop, no saves - just you vs the dungeon.</p>
+                <p class="text-sm">Draft abilities as you climb and discover combinations that help you survive. Every run is a new attempt, and death ends the run. Unlock this mode with a one-time purchase on mobile.</p>
               </div>
               <div>
                 <h3 class="font-semibold text-lg">Daily Run</h3>
-                <p class="text-sm">Fresh challenge every 24 hours with pre-selected abilities. Compete with friends on the same seed and track your performance in the calendar!</p>
+                <p class="text-sm">Unlocks at level 10. Play a new challenge each day with a shared dungeon seed and preselected abilities. Track your results in the calendar and share your score with friends. Today's run is free; the optional Rewind Pass lets you revisit past Daily Runs and retry them.</p>
               </div>
             </div>
           </div>
@@ -85,12 +101,14 @@
           <div>
             <h2 class="text-xl font-bold mb-2 text-purple-300">✨ Key Features</h2>
             <ul class="list-disc list-inside space-y-1">
+              <li>Earn 23 Game Center achievements for costume milestones on iOS in version 1.0.9</li>
+              <li>Climb Game Center leaderboards for campaign progress, Reaper's Run, and lifetime candy on iOS in version 1.0.9</li>
               <li>50+ unlockable abilities (Second Chance, Oracle Vision, Invincibility Burst, and more!)</li>
-              <li>20+ unlockable costumes (Ghost, Vampire, Witch, Demon...)</li>
+              <li>Collect 23 unlockable costumes through progress and special challenges</li>
               <li>Beautiful Halloween-themed graphics with multiple biomes</li>
               <li>Heat Levels - extra challenging floors with 1.5x traps</li>
               <li>Perfect Play rewards for clearing levels without mistakes</li>
-              <li>3 Save Slots + Auto-Save</li>
+              <li>Three local save slots with auto-save</li>
             </ul>
           </div>
         </div>
@@ -125,7 +143,7 @@
           </div>
         </div>
 
-        <p class="text-green-400 font-semibold text-lg mb-2 text-center">🎁 FREE TO DOWNLOAD</p>
+        <p class="text-green-400 font-semibold text-lg mb-2 text-center">Free on iPhone and Android. Optional one-time purchases.</p>
 
         <!-- Bottom Download Links -->
         <div class="flex flex-col items-center gap-4 mt-8 mb-4">
@@ -153,6 +171,10 @@
             />
           </a>
 
+        </div>
+
+        <p class="text-white text-sm mt-6">Buy the desktop edition or try the web demo:</p>
+        <div class="flex flex-col items-center gap-4 mt-3 mb-4">
           <a
             href="https://superwes.itch.io/gravesweeper"
             target="_blank"
@@ -224,7 +246,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom! Free to download on iOS and Android.'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         // Open Graph / Facebook
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -233,7 +255,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         { hid: 'og:image', property: 'og:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' },
         { hid: 'og:image:width', property: 'og:image:width', content: '400' },
@@ -245,7 +267,7 @@ export default {
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: 'Navigate through haunted dungeons as a brave skeleton, using Minesweeper-style logic to avoid deadly traps and find your way to freedom!'
+          content: "Minesweeper meets a haunted dungeon. Play Campaign and Daily Run free on mobile, unlock abilities and costumes, and try Reaper's Run with a one-time purchase."
         },
         { hid: 'twitter:image', name: 'twitter:image', content: 'https://midnightlaunchgames.com/Gravesweeper-logo-solid.png' }
       ]
@@ -260,7 +282,8 @@ export default {
 }
 
 .BoxTop {
-  max-width: 400px;
+  width: 400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -423,4 +446,3 @@ export default {
   background: rgba(168, 85, 247, 0.8);
 }
 </style>
-

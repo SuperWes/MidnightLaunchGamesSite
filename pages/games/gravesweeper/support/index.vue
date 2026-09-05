@@ -43,9 +43,36 @@
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">How do I play Gravesweeper?</h3>
             <p>
-              Gravesweeper is a Halloween-themed Minesweeper game. Tap cells to reveal numbers 
-              indicating nearby traps. Use logic to avoid traps and find the stairs to advance! 
-              The in-game tutorial will guide you through the basics.
+              Swipe or tap to move your character through the dungeon. Numbers tell you how many
+              traps surround a tile. Use those clues to plan a safe route to the stairs. The tutorial
+              introduces movement, trap markers, and abilities.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Where are achievements and leaderboards?</h3>
+            <p>
+              In Gravesweeper 1.0.9 or later on iPhone and iPad, sign into Game Center in your device
+              settings, then reopen the game. Achievements and Leaderboards appear on the title screen
+              after successful sign-in. You can still play without signing in.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Do my existing costumes count toward achievements?</h3>
+            <p>
+              Yes. When you sign into Game Center, Gravesweeper reports the costumes already unlocked
+              in your loaded save. Those milestones count toward the corresponding achievements;
+              you do not need to unlock them again.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Which scores appear on the leaderboards?</h3>
+            <p>
+              Compare your highest campaign floor, best Reaper's Run, and lifetime candy total on
+              Game Center leaderboards. Sign in to submit your records and view the rankings.
+              Reaper's Run is an optional one-time purchase on mobile.
             </p>
           </div>
 
@@ -65,9 +92,27 @@
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">My game progress was lost. Can I recover it?</h3>
             <p>
-              Game progress is saved locally on your device. If you've uninstalled the app or 
-              cleared app data, your progress cannot be recovered. We recommend using the multiple 
-              save slots feature to backup your progress regularly.
+              Gravesweeper saves progress locally on your device. Save slots are separate playthroughs,
+              not backups. Before uninstalling the app or clearing its data, contact us if you need help
+              protecting your progress. We cannot promise recovery of a deleted local save. Restoring a
+              purchase restores access to purchased content; it does not restore your run or progression.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Which iOS versions are supported?</h3>
+            <p>
+              Gravesweeper 1.0.9 requires iOS or iPadOS 15.6 or later. Check your device's software
+              version before updating.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">Can I play with a controller?</h3>
+            <p>
+              On iPhone and iPad with Gravesweeper 1.0.9 or later, connect a compatible controller
+              before playing. Controller support covers movement, ability targeting, shops, and menus.
+              System dialogs and text entry may still need touch input.
             </p>
           </div>
 
@@ -189,4 +234,3 @@
   border-radius: 0.25rem;
 }
 </style>
-
