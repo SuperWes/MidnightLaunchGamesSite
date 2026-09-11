@@ -13,6 +13,15 @@
   },
   "news": [
     {
+      "title": "Time to Rogue 1.2.0 is here",
+      "message": "Shape your run with perks, face guardians every five floors, and discover a fresh look with themes earned by reaching deeper floors or playing on Apple Watch. Reverses no longer have a per-run cap, but take a turn before your run's deadline. Update both iPhone and Watch to play with the new rules.",
+      "date": "2026-09-11T00:00:00Z",
+      "priority": 10,
+      "platform": "ios",
+      "link_url": "https://apps.apple.com/us/app/time-to-rogue/id6786902468",
+      "link_label": "View update on the App Store"
+    },
+    {
       "title": "Play on iPhone and Apple Watch",
       "message": "Time to Rogue is playable on iPhone and Apple Watch. Continue the same run on either device, then check your Focus from the iPhone widget or Watch complication.",
       "date": "2026-09-04T00:00:00Z",
@@ -27,7 +36,8 @@
     "At low Focus, a monster that moves next to you can ambush immediately for 50% extra damage.",
     "The dungeon gets harder in two ways: enemies scale with depth, and taking too many real-world days to descend makes later floors even tougher.",
     "You can hold only three items. Do not hoard them, using an item costs no Focus and gives monsters no turn.",
-    "You can reverse time at most three times per run. Each use rewinds one turn.",
+    "In version 1.2.0 and later, each reverse rewinds one turn with no per-run limit. Earn one each day you play and hold up to 14. Use them before your run's deadline.",
+    "In version 1.2.0 and later, take a turn within 24 hours of maximum Focus (140%), even on a cleared floor. Opening the app, using items, and reversing do not extend the deadline.",
     "Use a Surge right away when you get it. Its +1 Attack lasts for the rest of your run.",
     "Kills at low Focus grant 50% more XP. The danger can be worth it.",
     "Reaching the stairs below 45% Focus grants a 70% Focus refund."
