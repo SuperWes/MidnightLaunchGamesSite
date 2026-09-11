@@ -69,18 +69,57 @@
               turns in real time, and from then on an enemy can reach you even while the app is closed.
             </p>
             <p class="text-sm text-gray-400">
-              Concretely: the maze stays still until your focus is full, <strong>up to about 10 hours</strong>
-              if you left exhausted, or as little as a couple of hours if you left rested. So resting is safe;
-              lingering fully-rested is what gets dangerous. Check in before you're cornered.
+              From empty, Focus takes about <strong>eight hours to reach 100%</strong>, then another
+              <strong>two hours to reach its 140% maximum</strong>. The maze stays still during recovery,
+              then starts taking turns. If you leave partly rested, the safe recovery period is shorter.
             </p>
           </div>
 
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">What is the time-reverse, and how do I use it?</h3>
             <p>
-              You earn one free time-reverse each day you play (up to a small cap). If a move would end
-              your run, the death screen gives you the option to spend a reverse and undo it. If you'd
-              rather keep the charge, just choose <strong>End Run</strong> instead. It's always your call.
+              Earn one free time-reverse each calendar day you play and hold up to <strong>14 charges</strong>.
+              In version 1.2.0 and later, there is <strong>no per-run limit</strong>. Each use spends one
+              charge to rewind one turn on your current floor, and cannot undo a descent. Use Reverse
+              in the iPhone action buttons or the Watch's hold menu, or use it from the death screen
+              while your rescue window is open.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">When does a run expire?</h3>
+            <p class="mb-2">
+              In version 1.2.0 and later, take a turn within <strong>24 hours after Focus reaches its
+              140% maximum</strong>. From empty Focus, that's at most about 34 hours without a turn.
+              This applies even on a cleared floor. Move, attack, wait, or descend to set a new
+              deadline based on your remaining Focus. Just opening the app, choosing a perk,
+              using an item, or reversing does not extend it. Check the in-game countdown.
+            </p>
+            <p>
+              Dying during active play gives you 24 hours from death to use a reverse. A death while
+              you're away keeps the run's existing deadline. Once the deadline expires, the run is
+              over permanently and cannot be reversed.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">What are perks and guardians?</h3>
+            <p>
+              On Floors 2, 5, and 8, choose a perk that lasts for the rest of that run. Perks can improve
+              healing, Focus Cells, or your opening attack, without taking an item slot. Every fifth
+              floor has a guardian, defeat it to unseal the stairs and continue deeper.
+            </p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h3 class="text-lg font-semibold mb-2">How do I unlock and change themes?</h3>
+            <p>
+              Dead Signal is available from the start. Reach Floor 5 for <strong>Ink &amp; Ember</strong>
+              and Floor 10 for <strong>Pocket Crypt</strong>. Take a successful move, attack, wait, or
+              descent on Apple Watch to earn the <strong>Classic ASCII theme</strong>. Existing best
+              floors count toward the floor rewards. Earned themes stay unlocked between runs and
+              sync to your paired device. Select a look in <strong>Themes</strong> on the title screen,
+              you can use a different look on each device. Themes do not change gameplay.
             </p>
           </div>
 
@@ -129,17 +168,19 @@
             <h3 class="text-lg font-semibold mb-2">Is my run lost if I close the app?</h3>
             <p>
               No. Your run is saved and continues in real time. Closing the app doesn't end your run,
-              but remember the dungeon can begin taking its turns while you're gone.
+              but remember the dungeon can begin taking its turns while you're gone, and the run
+              can expire if you miss its deadline. Update both iPhone and Watch to use the same rules.
             </p>
           </div>
 
           <div class="faq-item mb-4">
             <h3 class="text-lg font-semibold mb-2">What does the Supporter Pack include?</h3>
             <p>
-              The Supporter Pack is an optional, one-time purchase. It unlocks the clockwork Timekeeper
+              The Supporter Pack is an optional, one-time purchase. It unlocks the Clockwork Reliquary
               dungeon theme and adds a supporter heart to the title screen. It does not change gameplay,
               difficulty, focus recovery, or time-reverse availability. The complete game remains free.
-              If a previous purchase is missing, open <strong>Supporter Pack</strong> from the title screen
+              Clockwork Reliquary replaces the previous Timekeeper look, existing owners do not need
+              to buy it again. If a previous purchase is missing, open <strong>Supporter Pack</strong> from the title screen
               and tap <strong>Restore Purchases</strong>.
             </p>
           </div>

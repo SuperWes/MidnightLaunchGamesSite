@@ -35,15 +35,25 @@
         </a>
       </header>
 
+      <section class="panel" aria-labelledby="release-heading">
+        <div class="kicker">// NEW_IN_1.2.0</div>
+        <h2 id="release-heading" class="release-heading">More ways to make a run your own</h2>
+        <ul class="feature-list">
+          <li>Choose perks as you descend, and face a guardian every five floors</li>
+          <li>A fresh dungeon look, with free themes earned through deeper runs and Watch play</li>
+          <li>No more three-reverse limit per run, use your saved charges before time runs out</li>
+        </ul>
+      </section>
+
       <!-- Core Gameplay -->
       <section class="panel">
         <div class="kicker">// CORE_GAMEPLAY</div>
         <ul class="feature-list">
-          <li>Swipe to move, fight, and descend through a neon dungeon</li>
+          <li>Swipe to move, fight, and descend through a dungeon that changes with every run</li>
           <li>Movement, attacks, and waiting spend focus, and your view narrows as it drains</li>
           <li>Focus recovers over <span class="hl">real-world time</span>, so knowing when to walk away is the skill</li>
           <li>Find the stairs down and dive deeper, where the floors grow larger and more dangerous</li>
-          <li>Every run is different, and death is permanent. A <span class="hl">time-reverse</span> can undo a fatal move, if you've still got one when it counts</li>
+          <li>A <span class="hl">time-reverse</span> can undo a fatal move, if you have a charge and your rescue window is still open</li>
         </ul>
       </section>
 
@@ -64,8 +74,8 @@
             <p>Act on empty focus and you'll fight half-blind and take damage. Rest too long and the danger rises. Read the moment.</p>
           </div>
           <div class="tile">
-            <h3>One rewind a day</h3>
-            <p>A daily <span class="hl">time-reverse</span> lets you undo a single fatal move. Bank it, or spend it to save a deep run.</p>
+            <h3>Bank your second chances</h3>
+            <p>Earn one <span class="hl">time-reverse</span> each day you play and hold up to 14. Each charge rewinds one turn on your current floor, with no per-run cap. Spend them before the run's deadline.</p>
           </div>
         </div>
       </section>
@@ -83,17 +93,33 @@
         </ul>
       </section>
 
+      <section class="panel">
+        <div class="kicker">// MAKE_THE_NEXT_MOVE</div>
+        <p class="release-copy">Rest, but don't abandon the dungeon. Take a turn within 24 hours of reaching maximum Focus (140%), even if you've cleared the floor. Opening the app, using an item, or reversing does not extend that deadline.</p>
+      </section>
+
+      <section class="panel">
+        <div class="kicker">// EARN_YOUR_LOOK</div>
+        <ul class="feature-list">
+          <li><span class="hl">Dead Signal</span> is your new starting look</li>
+          <li>Reach Floor 5 to unlock <span class="hl">Ink &amp; Ember</span>, and Floor 10 for <span class="hl">Pocket Crypt</span></li>
+          <li>Take a gameplay turn on Apple Watch to unlock <span class="hl">Classic</span>, a traditional ASCII dungeon, on both devices</li>
+          <li>Earned themes stay unlocked between runs. Choose your look from Themes on the title screen</li>
+        </ul>
+      </section>
+
       <!-- Supporter Pack -->
       <section class="panel supporter-panel">
         <div class="kicker">// OPTIONAL_SUPPORTER_PACK</div>
         <div class="supporter-copy">
           <div class="supporter-heart" aria-hidden="true">♥</div>
           <div>
-            <h2>Enter the Timekeeper dungeon</h2>
+            <h2>Enter the Clockwork Reliquary</h2>
             <p>
-              The full game is free. The optional, one-time Supporter Pack unlocks the clockwork
-              Timekeeper dungeon theme and adds a supporter heart to the title screen. It changes
-              the look, never the rules.
+              The full game is free. The optional, one-time Supporter Pack unlocks the
+              Clockwork Reliquary dungeon theme and adds a supporter heart to the title screen.
+              It changes the look, never the rules. Already own the pack? This refreshed theme
+              replaces Timekeeper at no additional cost.
             </p>
           </div>
         </div>
@@ -107,19 +133,19 @@
             <div class="phone-frame">
               <img src="~/assets/timetorogue_screenshots/iphone_gameplay.png" alt="Time to Rogue gameplay on iPhone" />
             </div>
-            <figcaption>One shared run</figcaption>
+            <figcaption>Play in glances</figcaption>
           </figure>
           <figure class="phone-shot">
             <div class="phone-frame">
-              <img src="~/assets/timetorogue_screenshots/iphone_timekeeper.png" alt="The Timekeeper dungeon theme on iPhone" />
+              <img src="~/assets/timetorogue_screenshots/iphone_low_focus.png" alt="The same dungeon view narrowed by low Focus on iPhone" />
             </div>
-            <figcaption>Timekeeper theme</figcaption>
+            <figcaption>Focus is your sight</figcaption>
           </figure>
           <figure class="phone-shot">
             <div class="phone-frame">
-              <img src="~/assets/timetorogue_screenshots/iphone_title.png" alt="Time to Rogue title screen on iPhone" />
+              <img src="~/assets/timetorogue_screenshots/iphone_perks.png" alt="Choosing between First Strike and Field Medic perks on iPhone" />
             </div>
-            <figcaption>Built for quick glances</figcaption>
+            <figcaption>Shape your run</figcaption>
           </figure>
         </div>
       </section>
@@ -193,17 +219,15 @@ export default {
         '01_gameplay',
         '02_close_call',
         '03_death',
-        '04_complication',
-        '05_time_reverse',
-        '06_title'
+        '04_guardian',
+        '05_deep_floor'
       ],
       screenshotAlts: [
-        'Descending a neon dungeon on your wrist',
+        'A roguelike you play in glances',
         'Low focus, cornered, push your luck',
         'The maze took its turns while you were away',
-        'A complication that shows your focus recovering',
-        'Spend a time-reverse to undo a fatal move',
-        'Title screen, how deep can you get?'
+        'Defeat the guardian to open the stairs',
+        'How deep can you get?'
       ]
     }
   },
@@ -443,6 +467,19 @@ export default {
 
 .kicker.center {
   text-align: center;
+}
+
+.release-heading {
+  color: #7dd3fc;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.release-copy {
+  color: #dbe4f0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .feature-list {
