@@ -1,0 +1,23 @@
+:root{color-scheme:light;--table:#e9e2d2;--ink:#171c19;--muted:#696457;--gold:#ae3b27;--line:#c9c0ae;--red:#ae3b27;--green:#345c40;--serif:Rockwell,Georgia,serif}
+body{background:var(--table)}
+.brand>img{width:210px;height:auto;object-fit:contain;filter:none;mix-blend-mode:normal}
+.masthead{margin-bottom:18px}.brand{gap:0}
+.primary,.route-button.active,.selected .select-card,.choice-card.chosen>button:last-child{background:#171c19;border-color:#171c19;color:#eee4cb}
+.primary:hover:not(:disabled){background:#393a31}
+.quiet:hover,.route-button:hover{background:#171c190a}
+.select-card,.choice-card>button:last-child{background:#f5efdf;color:var(--ink)}
+.hand-card.selected>.card-zoom,.choice-card.chosen>.card-zoom{outline-color:#ae3b27}
+.pips i{background:#171c1922}.pips i.filled{background:#ae3b27}
+.current-targets b,.tally b{color:#ae3b27}
+.encounter-blocked{background:#f3d9cc}.end-screen{background:#eef0e5}.end-screen.defeat{background:#f0ded4}
+.reward,.retreat-result,.difficulty-option{background:#f3eddf}
+.reward.chosen,.difficulty-option:has(input:checked){background:#e7dbc5}
+.draw-preview img{box-shadow:3px 3px #cad0c2,6px 6px #f1ecdf,7px 7px #9fa996}
+.printed-face{box-shadow:0 5px 12px #171c1926}.tracker-space img{box-shadow:0 3px 9px #171c1926}
+.card-zoom:hover{filter:brightness(1.025)}
+dialog{background:#f1e8d7;color:var(--ink);border-color:#89988a}
+.dialog-heading h2,.zone-heading h2,.aftermath h2,.dealing h2{font-weight:600}
+.dark-rule{white-space:normal}
+@media(max-width:760px){.brand>img{width:180px;height:auto}.masthead{gap:12px}}
+
+footer a{color:inherit;text-underline-offset:3px}

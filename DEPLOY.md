@@ -54,3 +54,11 @@ gh-pages --dotfiles --dist dist --repo git@github.com:SuperWes/MidnightLaunchGam
 - Verify all asset paths use `~/assets/` in your Vue files
 - Check that the `dist` folder has all the necessary files after running `npm run generate`
 
+
+## Disturbing the Peace
+
+The standalone game is at `/games/disturbingthepeace/`. It is intentionally absent from the Games list; do not add a Nuxt page for this route. `generate.exclude` preserves its static HTML.
+
+The source project is the sibling `the_other_side` repository. Run `python3 site/scripts/build-web-release.py` there (Pillow and `rsvg-convert` required), then copy the contents of `tmp/web-release/games/disturbingthepeace/` into this repository's `static/games/disturbingthepeace/`. Exported artwork is optimized for the web; downloadable PDFs remain the print masters. The release manifest records source hashes and every exported file. Do not copy the entire game development site or edit the release directly.
+
+Run `npm run generate`, serve `dist`, and verify the nested game URL, difficulty selection, card gallery, and print downloads before deploying. The usual deployment command includes the game with the rest of the website.

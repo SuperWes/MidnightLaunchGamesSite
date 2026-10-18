@@ -90,7 +90,8 @@ export default {
   generate: {
     exclude: [
       /^\/games\/gravesweeper\/reapers_run/,  // Exclude Flutter demo from route generation
-      /^\/games\/webofdeceit\/play/  // Exclude Web of Deceit Flutter app from route generation
+      /^\/games\/webofdeceit\/play/,  // Exclude Web of Deceit Flutter app from route generation
+      /^\/games\/disturbingthepeace(?:\/|$)/  // Preserve the standalone card game
     ]
   },
   /*
