@@ -1,24 +1,20 @@
 {
   "game": "Disturbing the Peace",
-  "release": "27722b1e86f8",
+  "release": "0a141da5ae3f",
   "url": "https://midnightlaunchgames.com/games/disturbingthepeace/",
+  "edition": "base-only",
   "source_sha256": {
     "index.html": "ae4139e8860a4a230f7941e408ecca0c7a4960bdf617795ec068b029fcd10884",
     "resistance-app.mjs": "0c73271eb26559106d89c8903e7f6b55cc4a540aad11c0534e89846a794beab8",
     "resistance-theme.mjs": "ab5018331634ee4d330116950acc6a9ef634cce00f6fcbc14e5196d89be4313e",
-    "resistance-deck.html": "9a0b9edd614146b7d7a1b3f90ef6d9631ce76a34a40485c5a3dcf15894e8269b",
-    "resistance-deck.mjs": "49c884d24bd5746677e2fb984991c54cf8b13b6637b6278befe432c573d344c9",
-    "resistance-print.html": "51fe53b813b09bc8ec4a197f124c85bcdf545ba58287e7ae98b8b86c8f0fa029",
+    "play-rules.mjs": "07be29dbd23868d8226277423e2a9007b330618e527f9aee979c7c852b3599c4",
     "style.css": "4be8706fd1b4ca83292da15d7ce42ee412aa78dc1ab09344d1fddc20588b9916",
     "resistance-game.css": "044764ae8341167deebc5e346db8642ed754c97dde0370f678514fb67c0dfd5e",
     "resistance-edition.css": "903cf027dc1e8cfc9cdda652982feb2491e45700cc59e9e2d5d2147d74a10c35",
     "game.mjs": "843f9b128399ddabf2d064e5a639437ebe3847ba5165ecc8add537a12f937ed5",
-    "play-rules.mjs": "07be29dbd23868d8226277423e2a9007b330618e527f9aee979c7c852b3599c4",
     "resistance-cards.json": "1a44107d3ba6b1b47fd05cdcb30f06e43932226b20244791d57b4264072a9152",
     "assets/resistance/deck-v1/disturbing-the-peace-illustrated-cards.pdf": "14ed2d9232c6ef6f3e29cbdcc5fe64ef22c505447e6dbf5363d6aabf348bcdf9",
     "assets/resistance/deck-v1/disturbing-the-peace-ink-saver-cards.pdf": "db857225af55b79fa4f79000c223034b099c5d3d390e9e1f5caf8af094dddc79",
-    "assets/resistance/deck-v1/disturbing-the-peace-rules.pdf": "eb8b9d402e3863f9c43da1039bdd4d3551170367e73628e2385da62143ba3634",
-    "assets/resistance/packaging-v1/disturbing-the-peace-hook-box-letter-proof.pdf": "78648cc429c9817b6b0018c84e8252f63a2b168234019e0fa09fc9cffdbc68f0",
     "assets/resistance/deck-v1/faces/sword-light.png": "53b5690b6c6e91a9444871802e5071e8c0157352ea41012506f863acfff2acf6",
     "assets/resistance/deck-v1/faces/sword-dark.png": "0dc1a4f5cd425052559f9adbc688abd380f8586be1fe49076fb1e263c178b632",
     "assets/resistance/deck-v1/faces/lantern-light.png": "fd5bf0bf974f53dfd1ae5bb40693e1f486e462ea5697d8bee95580fa962e0c18",
@@ -49,53 +45,24 @@
     "assets/resistance/deck-v1/faces/key-dark.png": "71401b350c297080ea7ff7d50af9b5556f890fb08014f0b5ab4f64269e0172d5",
     "assets/resistance/deck-v1/faces/rations-light.png": "9f7c721ef6f6ef905a5350d02ee0afa587a0036815e7b929fd9056c526503e1f",
     "assets/resistance/deck-v1/faces/rations-dark.png": "d1dbba52be2e80abe219261d44f9e9305266313905d7f21a3c40a37f9996eb76",
-    "assets/resistance/deck-v1/faces/spear-light.png": "ffb540a0e10a39cd2683fb96b2fe1d09aab3bc79416492fbf03d0eeabfe98b45",
-    "assets/resistance/deck-v1/faces/spear-dark.png": "d843e9839e16efc1b91b677f0b1291a5c0fd5651200410d6703670ea7af0cf9a",
-    "assets/resistance/deck-v1/faces/astrolabe-light.png": "886673b878aa17d970f982b082c7cd36bb159a0561154077698f317b3abed06d",
-    "assets/resistance/deck-v1/faces/astrolabe-dark.png": "83c9f4b49ce3e480683883dd31cc06eb52a5771c86661c93d5bdc0ab4b6db0bb",
-    "assets/resistance/deck-v1/faces/compass-light.png": "7321fd82d69774bd24f04e0fef7eb53db548ba481058d4c4fadf18d6828353e0",
-    "assets/resistance/deck-v1/faces/compass-dark.png": "17a8e92271b239cd20adaee0676b9bbf21a3132f42eb9b7042b32b09e6dafe81",
     "assets/resistance/deck-v1/faces/resolve-easy.png": "33b678443429f425e9d45c07a0bcb9322bfb1b4cb8f3bbd84a6b8eb19f329392",
     "assets/resistance/deck-v1/faces/resolve-standard.png": "178b546b721dc3ac9dfb728ef78264e4b64ecd1576ed326df9f4d8ef98795140",
     "assets/resistance/deck-v1/faces/momentum-standard.png": "199508d609aa25e7d7e4b08e8f0ca8e27c359585ecaebe51bb5a3ce1711718b8",
     "assets/resistance/deck-v1/faces/momentum-hard.png": "4b8658304387e4057cdfbfea9eefb3b9a17292c1dd75ec651e0c9aef7bdd4d07",
     "assets/resistance/deck-v1/faces/helper-setup.png": "af5f0863395af5ca36a34eb469bfe9f0df4e1f723eb2c611a27e941760fdaf70",
     "assets/resistance/deck-v1/faces/helper-play.png": "0445cb375a0b91beffa19156c71493f7113bf65d9562de349787c1fe8922199e",
-    "assets/resistance/deck-v1/sheets/illustrated-1.png": "15843ddc9c6bfb6b9bf23c377face2981e5c4307006e47b7164dac49dde6c23f",
-    "assets/resistance/deck-v1/sheets/illustrated-2.png": "3a5e715420ef40d359be9c39d18ed8ebdb2f805428f3474d2ecb9f4dba2ee3f7",
-    "assets/resistance/deck-v1/sheets/illustrated-3.png": "4478bbbdc8092f35248ef9b2c5b237930eb74a73d8ddce20719908553a64ae47",
-    "assets/resistance/deck-v1/sheets/illustrated-4.png": "74460a767270a2c61b7c2862e220a0dcae6197b2e12bf5449ab9dc80513ce959",
-    "assets/resistance/deck-v1/sheets/illustrated-5.png": "c8856266585d52953f5e7787369e1eb17be4f63b62713b9548c41036e606a9c5",
-    "assets/resistance/deck-v1/sheets/illustrated-6.png": "497493732dfa79c2c24ac3e3fb29849cba410bd76e2244ef0db0b8f380848e5d",
-    "assets/resistance/deck-v1/sheets/ink-saver-1.png": "d92b7349e56e0a5d2e3782eb7c7bb5cb08ce4e34e6652a7334215090e1935d0d",
-    "assets/resistance/deck-v1/sheets/ink-saver-2.png": "d4e5a48f0b1cb12510ce25745d3a658e9a4b4985ffe362a998bd538e78cb54f8",
-    "assets/resistance/deck-v1/sheets/ink-saver-3.png": "5cedce5efe2879929e889f1b85bd93312bac9ce6e7ab945ccdb83a6537928a1d",
-    "assets/resistance/deck-v1/sheets/ink-saver-4.png": "35d110f87051b78f1e6f675c0a8798fab309e14f27a42d0ef16927a499891856",
-    "assets/resistance/deck-v1/sheets/ink-saver-5.png": "fae6d57498e0a5dd1f318a695cb9f29bfde4ca091656b2089428a784a199ae60",
-    "assets/resistance/deck-v1/sheets/ink-saver-6.png": "f7092b53549cb2dda268425f3202121c013aa4ecf10e096673f6857a5e9a6ca2",
     "assets/resistance/woodcut-v1/wordmark.svg": "2fc09a217681ca5cd00e534bbff3c0dc4c6901614a0d6a8dcc4f6c932229585c",
-    "assets/resistance/woodcut-v1/art/dove-emblem.png": "11ad70be079701edb9f1c5a5915eda25cc8ecbc046024d45e6486cc072ccf88b"
+    "assets/resistance/woodcut-v1/art/dove-emblem.png": "11ad70be079701edb9f1c5a5915eda25cc8ecbc046024d45e6486cc072ccf88b",
+    "../templates/web-print.html": "e71d22de7a9302e22212ad823b4baf7a86d6ede42ccd56410d9946d28c3ef1c7"
   },
   "files": {
     "assets/resistance/deck-v1/disturbing-the-peace-illustrated-cards.pdf": {
-      "bytes": 38437432,
-      "sha256": "14ed2d9232c6ef6f3e29cbdcc5fe64ef22c505447e6dbf5363d6aabf348bcdf9"
+      "bytes": 32504704,
+      "sha256": "0601f74f7a09d2574d6c1723c8e638805f51e9ee1ad1f7f2a0aa6ef928dc17f3"
     },
     "assets/resistance/deck-v1/disturbing-the-peace-ink-saver-cards.pdf": {
-      "bytes": 107020,
-      "sha256": "db857225af55b79fa4f79000c223034b099c5d3d390e9e1f5caf8af094dddc79"
-    },
-    "assets/resistance/deck-v1/disturbing-the-peace-rules.pdf": {
-      "bytes": 83752,
-      "sha256": "eb8b9d402e3863f9c43da1039bdd4d3551170367e73628e2385da62143ba3634"
-    },
-    "assets/resistance/deck-v1/faces/astrolabe-dark.webp": {
-      "bytes": 111720,
-      "sha256": "a95134c7d6834a4ce336a5ea70c0278071c6928c58895946432a61838c87ab6e"
-    },
-    "assets/resistance/deck-v1/faces/astrolabe-light.webp": {
-      "bytes": 180752,
-      "sha256": "3765d1879ab80d6a6e24bb4c85bf2e2d0be85df35411468c26dbefe0ba453c62"
+      "bytes": 103754,
+      "sha256": "ac5be70a05edc0be0a3362e97b8f7e04987c176e76f771d826d95e1385b76676"
     },
     "assets/resistance/deck-v1/faces/axe-dark.webp": {
       "bytes": 110034,
@@ -121,14 +88,6 @@
       "bytes": 170050,
       "sha256": "ba796686a3df624c329e05e96f2e259664511ba5169e1a033446b5bebff722a7"
     },
-    "assets/resistance/deck-v1/faces/compass-dark.webp": {
-      "bytes": 104760,
-      "sha256": "df15ab0a879aa7e9f9aa3a8c3fc7f8752e78ec6439c667f2f9b33029df4125c9"
-    },
-    "assets/resistance/deck-v1/faces/compass-light.webp": {
-      "bytes": 183996,
-      "sha256": "0e744c40609f74efd61dd101e6ecbbcb21da02f67a03ba358803edc4e0521edf"
-    },
     "assets/resistance/deck-v1/faces/flint-dark.webp": {
       "bytes": 108728,
       "sha256": "aef48c2042e9a16e6ad3fa86741336ce9b93552602daf8c37775176158b89b0a"
@@ -146,12 +105,12 @@
       "sha256": "67c52d75bc9598d0f34a6a53dbfe4f9231032b5419beab0ccccd3dd41f5e71bb"
     },
     "assets/resistance/deck-v1/faces/helper-play.webp": {
-      "bytes": 38626,
-      "sha256": "40dadf19e77fa9478fe2f9247f27abc26a08207d753291a3c9e4ba11394e8af1"
+      "bytes": 38592,
+      "sha256": "df2ca32bad0555bf7e8c9ac305d67b09fd75bddf1cbd4e4121c6e6c1e9bb1efb"
     },
     "assets/resistance/deck-v1/faces/helper-setup.webp": {
-      "bytes": 22552,
-      "sha256": "dc098d777892dc96f1c5304f19ed89a4797006710c6e94afe4c0c9820df265b5"
+      "bytes": 22576,
+      "sha256": "a929b646d642861929b2fee1b4228e57068bff0007851c44639c9cf37de3d42b"
     },
     "assets/resistance/deck-v1/faces/herbs-dark.webp": {
       "bytes": 122070,
@@ -241,14 +200,6 @@
       "bytes": 178576,
       "sha256": "d04e18ed079be06a4d85fea2bdbf8ce45298ab45568c49099b4ee99f3fb83602"
     },
-    "assets/resistance/deck-v1/faces/spear-dark.webp": {
-      "bytes": 109580,
-      "sha256": "895cef6ef0ca282a5bbb33c7ed202e0b1112613b351c9e0cfc57d1ce0c876e39"
-    },
-    "assets/resistance/deck-v1/faces/spear-light.webp": {
-      "bytes": 189696,
-      "sha256": "82ecb551d3c12468f3c380b4b6864402024b2298bb08c23807da2e3f7100f35c"
-    },
     "assets/resistance/deck-v1/faces/sword-dark.webp": {
       "bytes": 108212,
       "sha256": "ea67f2aa60a87fc3e0e9569968eb78cec8f6c5c3932f5a2182e95026b9c3afc6"
@@ -256,58 +207,6 @@
     "assets/resistance/deck-v1/faces/sword-light.webp": {
       "bytes": 186908,
       "sha256": "0959e0ac8140a98c56e86af71d076e6d4d6a4dc04c3e128302ffbf5caf7c210f"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-1.webp": {
-      "bytes": 280334,
-      "sha256": "1547fb606880c15c6a42702b115a41a93e686caef3dac1d2a9e491cab9a15a10"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-2.webp": {
-      "bytes": 205248,
-      "sha256": "6a9c2b31c7843263c08ef61dd769089b1253c556b7fb1e42958a95b3c2868efe"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-3.webp": {
-      "bytes": 218624,
-      "sha256": "a2d79747da93bc026bc13b71aeb9beafd1c6e5b6e35ae9282251b73c0373053f"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-4.webp": {
-      "bytes": 177778,
-      "sha256": "5ba082abec9029d9bb7b1bfc7736e6d4aa6c732f33b6a9f3f50b39eaccc9fe7f"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-5.webp": {
-      "bytes": 96700,
-      "sha256": "33760c07e0126ae457353cef00ee23de87326aa98fd8897914016f55f5247854"
-    },
-    "assets/resistance/deck-v1/sheets/illustrated-6.webp": {
-      "bytes": 66980,
-      "sha256": "454a482b6b3a97aeb383656a14d4afc64eab1c6c3b7b8de2c3f1a3f93afc54fd"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-1.webp": {
-      "bytes": 17358,
-      "sha256": "6868a6b55e01886b1fa6d86f987bf435df530dcd4d63269187c11e0c048087fe"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-2.webp": {
-      "bytes": 29624,
-      "sha256": "189ff46b0b113f59d5c8d0f6045d609a81538eed781e24e5eea99e882f54cb91"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-3.webp": {
-      "bytes": 25980,
-      "sha256": "5c0a67693a357943750ea0b2bf88aac9f2f0301f5b835760d289d41bbe530d7e"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-4.webp": {
-      "bytes": 41276,
-      "sha256": "98d8cd4169bc9dfc1ac6ebb73258c8de0e7173d3a4e00873830243adbec8888d"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-5.webp": {
-      "bytes": 7676,
-      "sha256": "7421d081e23226742ab2219a7982cfc6897e6f1bd0cb3796a375c2cb2bf92c1c"
-    },
-    "assets/resistance/deck-v1/sheets/ink-saver-6.webp": {
-      "bytes": 13320,
-      "sha256": "7dff1bcf786e76aea6441c542582d3d5a7463a253f4475bf4dbdb020c6118546"
-    },
-    "assets/resistance/packaging-v1/disturbing-the-peace-hook-box-letter-proof.pdf": {
-      "bytes": 9036412,
-      "sha256": "78648cc429c9817b6b0018c84e8252f63a2b168234019e0fa09fc9cffdbc68f0"
     },
     "assets/resistance/woodcut-v1/wordmark.svg": {
       "bytes": 237184,
@@ -322,28 +221,20 @@
       "sha256": "843f9b128399ddabf2d064e5a639437ebe3847ba5165ecc8add537a12f937ed5"
     },
     "index.html": {
-      "bytes": 3522,
-      "sha256": "075f85ee35d27e273f96b9eb49c5b4abc094d09f43271766cbc504caeae1426a"
+      "bytes": 3349,
+      "sha256": "8c3fa701fb5a7e2354ebde0ed9c5bdb1a6d67cb910a081096ab6810419bf9c8d"
     },
     "play-rules.mjs": {
-      "bytes": 2978,
-      "sha256": "07be29dbd23868d8226277423e2a9007b330618e527f9aee979c7c852b3599c4"
+      "bytes": 2982,
+      "sha256": "edd8b934636a07e936c970db9c7b148a0a76c8a1e54e2f3a900622b3496bb142"
     },
     "resistance-app.mjs": {
       "bytes": 30444,
-      "sha256": "dfdbf2e7a64e7d7b92781fbbea74b7eaf73e363c2967ac4906108978c118988c"
+      "sha256": "6c16cd64d4559e32c6e27b1df337d97b90752245c082afb9323cd2c9c44710cf"
     },
     "resistance-cards.json": {
-      "bytes": 6505,
-      "sha256": "1a44107d3ba6b1b47fd05cdcb30f06e43932226b20244791d57b4264072a9152"
-    },
-    "resistance-deck.html": {
-      "bytes": 22174,
-      "sha256": "a890f04a3d20c0a9b9634b8f15b01730b5c0b97b93d7b0008b0acb136d58a996"
-    },
-    "resistance-deck.mjs": {
-      "bytes": 666,
-      "sha256": "49c884d24bd5746677e2fb984991c54cf8b13b6637b6278befe432c573d344c9"
+      "bytes": 5451,
+      "sha256": "27f29f73a4f7ade2b610d26ecf78387ccf110439336a4efe09269e4ad816b312"
     },
     "resistance-edition.css": {
       "bytes": 4352,
@@ -354,12 +245,12 @@
       "sha256": "7f794ac2f121bf42d80b67cdd03aace7fe3f1c5c0c5cfdda3f387a5075ae9d43"
     },
     "resistance-print.html": {
-      "bytes": 5487,
-      "sha256": "4dbcfaa4dd8bd02fef8f39feed9aff66b42b7e4acc9a73d153548192fa881011"
+      "bytes": 3044,
+      "sha256": "0595a613e41532ef32f44f8c988939d64cd81e917ad369e3c63a4ca44fb66350"
     },
     "resistance-theme.mjs": {
       "bytes": 2975,
-      "sha256": "79ea67b9992d2997ee4d8eda42ff5939e77a73a59d5c2641f889a63b8474ddec"
+      "sha256": "d82b8fc100b1afd0c0d52b62662cc11157ab12841637cef277672af8c2185544"
     },
     "share.jpg": {
       "bytes": 77223,

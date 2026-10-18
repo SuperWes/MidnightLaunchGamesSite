@@ -17,5 +17,5 @@ export function themeHTML(markup){
 }
 export function facePath(id,side){
  const support={health:{light:'resolve-easy',dark:'resolve-standard'},sparks:{light:'momentum-standard',dark:'momentum-hard'},helper:{light:'helper-setup',dark:'helper-play'}};
- return `assets/resistance/deck-v1/faces/${support[id]?.[side]??`${id}-${side}`}.webp?v=27722b1e86f8`;
+ return `assets/resistance/deck-v1/faces/${support[id]?.[side]??`${id}-${side}`}.webp?v=0a141da5ae3f`;
 }

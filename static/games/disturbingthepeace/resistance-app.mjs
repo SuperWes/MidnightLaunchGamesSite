@@ -1,6 +1,6 @@
-import {themeText, themeHTML, facePath} from './resistance-theme.mjs?v=27722b1e86f8';
-import { RULES, DIFFICULTIES, rulesFor, newGame, inspectPlay, drawExtra, overcome, retreat, choicesAfter, continueJourney, dread, cardPower, encounterStatus, retreatRecovery, activeRules, extraDrawDread, chooseStartingLight, chooseOpeningSwap, extraDrawCost } from './game.mjs?v=27722b1e86f8';
-import { playRules } from './play-rules.mjs?v=27722b1e86f8';
+import {themeText, themeHTML, facePath} from './resistance-theme.mjs?v=0a141da5ae3f';
+import { RULES, DIFFICULTIES, rulesFor, newGame, inspectPlay, drawExtra, overcome, retreat, choicesAfter, continueJourney, dread, cardPower, encounterStatus, retreatRecovery, activeRules, extraDrawDread, chooseStartingLight, chooseOpeningSwap, extraDrawCost } from './game.mjs?v=0a141da5ae3f';
+import { playRules } from './play-rules.mjs?v=0a141da5ae3f';
 
 const root = document.getElementById('game');
 const announce = document.getElementById('announcement');
@@ -187,7 +187,7 @@ function registerGameTools(){
   for(const tool of tools)try{Promise.resolve(document.modelContext.registerTool({...tool,description:themeText(tool.description)})).catch(()=>{});}catch{}
 }
 try{
-  const response=await fetch('./resistance-cards.json?v=27722b1e86f8');
+  const response=await fetch('./resistance-cards.json?v=0a141da5ae3f');
   if(!response.ok)throw new Error('The cards could not be loaded.');
   definitions=await response.json();
   const params=new URLSearchParams(location.search),seed=params.get('seed'),difficulty=params.get('difficulty');
