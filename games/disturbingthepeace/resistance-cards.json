@@ -223,50 +223,5 @@
     "condition": "Spend only printed Influence 0-2.",
     "flavor": "",
     "set": "core"
-  },
-  {
-    "id": "spear",
-    "light": "Mutual Aid",
-    "strength": 4,
-    "insight": 0,
-    "dark": "Bans on Assembly",
-    "fight": 7,
-    "understand": 7,
-    "rule": "two_card_limit",
-    "twist": "Spend at most 2 cards.",
-    "carry": "exact",
-    "condition": "Meet target + Retaliation exactly.",
-    "flavor": "",
-    "set": "promo"
-  },
-  {
-    "id": "astrolabe",
-    "light": "Pirate Radio",
-    "strength": 0,
-    "insight": 4,
-    "dark": "Mass Surveillance",
-    "fight": 8,
-    "understand": 7,
-    "rule": "double_dread",
-    "twist": "Each extra draw adds 2 Retaliation.",
-    "carry": "strength",
-    "condition": "Win with Pressure.",
-    "flavor": "",
-    "set": "promo"
-  },
-  {
-    "id": "compass",
-    "light": "Locked Arms",
-    "strength": 2,
-    "insight": 2,
-    "dark": "Rigged Elections",
-    "fight": 6,
-    "understand": 8,
-    "rule": "exact_payment",
-    "twist": "Meet target + Retaliation exactly.\nNo overpaying.",
-    "carry": "strength",
-    "condition": "Win with Pressure.",
-    "flavor": "",
-    "set": "promo"
   }
 ]
